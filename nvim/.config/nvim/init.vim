@@ -80,6 +80,8 @@ colorscheme gruvbox
 set background=dark
 highlight Normal guibg=none
 
+lua require("stx")
+
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
@@ -136,46 +138,3 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 command! -nargs=0 Format :call CocAction('format')
 
 let g:netrw_liststyle=3
-" LUA
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-enable = true,              -- false will disable the whole extension
-disable = { "c", "rust" },  -- list of language that will be disabled
--- Setting this to true will run `:h syntax` and tree-sitter at the same time.
--- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
--- Using this option may slow down your editor, and you may see some duplicate highlights.
--- Instead of true it can also be a list of languages
-additional_vim_regex_highlighting = false,
-},
-}
-
-require'lualine'.setup {
-options = {
-icons_enabled = true,
-theme = 'gruvbox',
-component_separators = {'', ''},
-section_separators = {'', ''},
-disabled_filetypes = {}
-},
-sections = {
-lualine_a = {'mode'},
-lualine_b = {'branch'},
-lualine_c = {'filename'},
-lualine_x = {'encoding', 'fileformat', 'filetype'},
-lualine_y = {'progress'},
-lualine_z = {'location'}
-},
-inactive_sections = {
-lualine_a = {},
-lualine_b = {},
-lualine_c = {'filename'},
-lualine_x = {'location'},
-lualine_y = {},
-lualine_z = {}
-},
-tabline = {},
-extensions = {}
-}
-EOF
