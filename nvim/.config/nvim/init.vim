@@ -71,6 +71,8 @@ Plug 'skanehira/gh.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'hoob3rt/lualine.nvim'
+
 Plug 'tpope/vim-surround'
 call plug#end()
 
@@ -133,8 +135,8 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 command! -nargs=0 Format :call CocAction('format')
 
-" Treesitter
 let g:netrw_liststyle=3
+" LUA
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
@@ -147,5 +149,33 @@ disable = { "c", "rust" },  -- list of language that will be disabled
 -- Instead of true it can also be a list of languages
 additional_vim_regex_highlighting = false,
 },
+}
+
+require'lualine'.setup {
+options = {
+icons_enabled = true,
+theme = 'gruvbox',
+component_separators = {'', ''},
+section_separators = {'', ''},
+disabled_filetypes = {}
+},
+sections = {
+lualine_a = {'mode'},
+lualine_b = {'branch'},
+lualine_c = {'filename'},
+lualine_x = {'encoding', 'fileformat', 'filetype'},
+lualine_y = {'progress'},
+lualine_z = {'location'}
+},
+inactive_sections = {
+lualine_a = {},
+lualine_b = {},
+lualine_c = {'filename'},
+lualine_x = {'location'},
+lualine_y = {},
+lualine_z = {}
+},
+tabline = {},
+extensions = {}
 }
 EOF
