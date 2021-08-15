@@ -76,6 +76,8 @@ Plug 'hoob3rt/lualine.nvim'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
+
+Plug 'ggandor/lightspeed.nvim'
 call plug#end()
 
 colorscheme gruvbox
