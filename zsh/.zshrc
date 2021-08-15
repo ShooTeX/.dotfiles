@@ -10,7 +10,7 @@ fi
 # Volta
 
 # Load Antigen
-source antigen.zsh
+source $HOME/antigen.zsh
 
 # Load Antigen configurations
 antigen init $HOME/.antigenrc
