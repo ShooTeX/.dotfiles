@@ -78,6 +78,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
 Plug 'ggandor/lightspeed.nvim'
+
+Plug 'vim-test/vim-test'
 call plug#end()
 
 colorscheme gruvbox
@@ -142,3 +144,5 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 command! -nargs=0 Format :call CocAction('format')
 
 let g:netrw_liststyle=3
+
+let test#strategy = "neovim"
