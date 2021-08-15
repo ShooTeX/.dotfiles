@@ -75,6 +75,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'hoob3rt/lualine.nvim'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 call plug#end()
 
 colorscheme gruvbox
