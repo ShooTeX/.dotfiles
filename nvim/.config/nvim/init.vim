@@ -94,6 +94,7 @@ let g:coc_global_extensions = [
       \ 'coc-styled-components',
       \ 'coc-json',
       \ 'coc-angular',
+      \ 'coc-emmet',
       \ ]
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
