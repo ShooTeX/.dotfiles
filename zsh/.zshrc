@@ -19,3 +19,5 @@ antigen init $HOME/.antigenrc
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source $HOME/.zsh_profile
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

@@ -70,7 +70,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'pwntester/octo.nvim'
 
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'hoob3rt/lualine.nvim'
 
@@ -86,6 +86,7 @@ colorscheme gruvbox
 set background=dark
 
 lua require("stx")
+lua require("gitsigns").setup()
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
