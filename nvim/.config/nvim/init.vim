@@ -55,6 +55,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'gruvbox-community/gruvbox'
+Plug 'drewtempelmeyer/palenight.vim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-angular'
@@ -78,7 +79,6 @@ call plug#end()
 
 colorscheme gruvbox
 set background=dark
-highlight Normal guibg=none
 
 lua require("stx")
 
