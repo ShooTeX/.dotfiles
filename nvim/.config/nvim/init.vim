@@ -86,7 +86,6 @@ colorscheme gruvbox
 set background=dark
 
 lua require("stx")
-lua require("gitsigns").setup()
 
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
