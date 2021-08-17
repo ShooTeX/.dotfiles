@@ -21,3 +21,5 @@ antigen init $HOME/.antigenrc
 source $HOME/.zsh_profile
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export PATH=$PATH:~/.composer/vendor/bin
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"

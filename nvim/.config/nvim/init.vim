@@ -79,6 +79,8 @@ Plug 'tpope/vim-commentary'
 
 Plug 'ggandor/lightspeed.nvim'
 
+Plug 'dbeniamine/cheat.sh-vim'
+
 Plug 'vim-test/vim-test'
 call plug#end()
 
