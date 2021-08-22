@@ -9,8 +9,8 @@ require'lualine'.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {'filename', 'b:gitsigns_status' },
-    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_c = {'filename', 'diff' },
+    lualine_x = {'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -22,6 +22,14 @@ require'lualine'.setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {'hostname'},
+    lualine_c = {
+      {
+        'diagnostics',
+        sources = {'coc'}
+      }
+    }
+  },
   extensions = {}
 }
