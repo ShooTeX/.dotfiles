@@ -9,7 +9,7 @@ require'lualine'.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'branch'},
-    lualine_c = {'filename', 'diff' },
+    lualine_c = {},
     lualine_x = {'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
@@ -23,7 +23,8 @@ require'lualine'.setup {
     lualine_z = {}
   },
   tabline = {
-    lualine_a = {'hostname'},
+    lualine_a = {'filename'},
+    lualine_b = {'diff'},
     lualine_c = {
       {
         'diagnostics',
