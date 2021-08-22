@@ -5,5 +5,10 @@
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
   "diagnostic.locationlistUpdate": true,
-  "diagnostic.refreshOnInsertMode": true
+  "diagnostic.refreshOnInsertMode": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextLines": 3,
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.virtualTextPrefix": " ",
+  "diagnostic.virtualTextLineSeparator": " \\ "
 }
