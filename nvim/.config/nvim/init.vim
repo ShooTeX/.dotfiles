@@ -81,6 +81,8 @@ Plug 'tpope/vim-commentary'
 Plug 'dbeniamine/cheat.sh-vim'
 
 Plug 'vim-test/vim-test'
+
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 colorscheme gruvbox
