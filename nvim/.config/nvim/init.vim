@@ -81,6 +81,8 @@ Plug 'tpope/vim-commentary'
 Plug 'dbeniamine/cheat.sh-vim'
 
 Plug 'vim-test/vim-test'
+
+Plug 'ThePrimeagen/harpoon'
 call plug#end()
 
 colorscheme gruvbox
@@ -91,3 +93,8 @@ lua require("stx")
 let g:netrw_liststyle=3
 
 let test#strategy = "neovim"
+
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+augroup END
