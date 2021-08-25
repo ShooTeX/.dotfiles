@@ -60,6 +60,8 @@ Plug 'drewtempelmeyer/palenight.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-angular'
 
+Plug 'pantharshit00/vim-prisma'
+
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'folke/trouble.nvim'
 
