@@ -10,5 +10,7 @@
   "diagnostic.virtualTextLines": 3,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.virtualTextPrefix": " ",
-  "diagnostic.virtualTextLineSeparator": " \\ "
+  "diagnostic.virtualTextLineSeparator": " \\ ",
+
+  "prisma.prismaFmtBinPath": ""
 }
