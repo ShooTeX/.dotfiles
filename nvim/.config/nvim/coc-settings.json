@@ -12,5 +12,13 @@
   "diagnostic.virtualTextPrefix": " ",
   "diagnostic.virtualTextLineSeparator": " \\ ",
 
-  "prisma.prismaFmtBinPath": ""
+  "prisma.prismaFmtBinPath": "",
+
+  "go.goplsOptions": {
+    "gofumpt": true
+  },
+
+  "coc.preferences.formatOnSaveFiletypes": [
+    "go"
+  ]
 }
