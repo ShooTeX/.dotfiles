@@ -22,6 +22,8 @@ set updatetime=300
 set shortmess+=c
 set splitbelow
 set splitright
+set colorcolumn=120
+
 
 set path+=**
 "Nice menu when typing `:find *.py`
@@ -85,6 +87,7 @@ Plug 'tpope/vim-commentary'
 Plug 'dbeniamine/cheat.sh-vim'
 
 Plug 'vim-test/vim-test'
+Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
 Plug 'ThePrimeagen/harpoon'
 call plug#end()
@@ -102,3 +105,16 @@ augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
+
+augroup UltestRunner
+    au!
+    au BufWritePost * UltestNearest
+augroup END
+
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif

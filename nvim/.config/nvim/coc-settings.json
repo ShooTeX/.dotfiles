@@ -15,7 +15,8 @@
   "prisma.prismaFmtBinPath": "",
 
   "go.goplsOptions": {
-    "gofumpt": true
+    "gofumpt": true,
+    "staticcheck": true
   },
 
   "coc.preferences.formatOnSaveFiletypes": [
