@@ -89,7 +89,14 @@ Plug 'dbeniamine/cheat.sh-vim'
 Plug 'vim-test/vim-test'
 Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+
 Plug 'ThePrimeagen/harpoon'
+
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-obsession'
+Plug 'nvim-telescope/telescope-project.nvim'
 call plug#end()
 
 colorscheme gruvbox
@@ -100,6 +107,8 @@ lua require("stx")
 let g:netrw_liststyle=3
 
 let test#strategy = "neovim"
+
+let g:maximizer_default_mapping_key = '<C-W>m'
 
 augroup highlight_yank
     autocmd!
