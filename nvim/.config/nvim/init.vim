@@ -97,6 +97,10 @@ Plug 'ThePrimeagen/harpoon'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-obsession'
 Plug 'nvim-telescope/telescope-project.nvim'
+
+Plug 's1n7ax/nvim-comment-frame'
+
+Plug 'nvim-telescope/telescope-symbols.nvim'
 call plug#end()
 
 colorscheme gruvbox
