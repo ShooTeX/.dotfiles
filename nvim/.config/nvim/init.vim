@@ -111,6 +111,12 @@ lua require("stx")
 let g:netrw_liststyle=3
 
 let test#strategy = "neovim"
+let test#javascript#jest#options = "--color=always"
+let g:test#javascript#runner = 'jest'
+let g:ultest_use_pty = 1
+let g:ultest_pass_sign = "●" 
+let g:ultest_fail_sign = "●" 
+let g:ultest_running_sign = "●" 
 
 let g:maximizer_default_mapping_key = '<C-W>m'
 
