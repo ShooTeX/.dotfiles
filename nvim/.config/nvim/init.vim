@@ -57,14 +57,23 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'gruvbox-community/gruvbox'
-Plug 'drewtempelmeyer/palenight.vim'
+Plug 'folke/tokyonight.nvim'
+
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'onsails/lspkind-nvim'
+
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-angular'
 
-Plug 'pantharshit00/vim-prisma'
+" Plug 'pantharshit00/vim-prisma'
 
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'folke/trouble.nvim'
 
 Plug 'nvim-lua/popup.nvim'
@@ -84,7 +93,7 @@ Plug 'folke/todo-comments.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
-Plug 'dbeniamine/cheat.sh-vim'
+" Plug 'dbeniamine/cheat.sh-vim'
 
 Plug 'vim-test/vim-test'
 Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
@@ -103,7 +112,7 @@ Plug 's1n7ax/nvim-comment-frame'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 call plug#end()
 
-colorscheme gruvbox
+colorscheme tokyonight
 set background=dark
 
 lua require("stx")
