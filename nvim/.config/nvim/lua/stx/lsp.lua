@@ -1,5 +1,12 @@
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
+---@diagnostic disable-next-line: unused-local
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
@@ -11,14 +18,12 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<C-s>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
@@ -27,6 +32,7 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- lua
 require'lspconfig'.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -51,4 +57,65 @@ require'lspconfig'.sumneko_lua.setup {
       },
     },
   },
+}
+
+-- vscode html/css/json/eslint
+require'lspconfig'.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require'lspconfig'.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+require'lspconfig'.jsonls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    json = {
+      schemas = require('schemastore').json.schemas(),
+    },
+  },
+}
+
+require'lspconfig'.eslint.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- typescript
+local function organize_imports()
+  local params = {
+    command = "_typescript.organizeImports",
+    arguments = {vim.api.nvim_buf_get_name(0)},
+    title = ""
+  }
+  vim.lsp.buf.execute_command(params)
+end
+
+require'lspconfig'.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  commands = {
+    OR = {
+      organize_imports,
+      description = "Organize Imports"
+    }
+  }
+}
+
+-- angular
+-- /home/stx/.nvm/versions/node/v17.2.0/lib/@angular/language-server
+local languageServerPath = vim.fn.stdpath("config").."/language-servers/node_modules"
+local cmd = {"ngserver", "--stdio", "--tsProbeLocations", languageServerPath , "--ngProbeLocations", languageServerPath}
+
+require'lspconfig'.angularls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = cmd,
+    on_new_config = function(new_config)
+        new_config.cmd = cmd
+    end,
 }

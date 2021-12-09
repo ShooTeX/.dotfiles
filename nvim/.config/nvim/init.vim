@@ -1,5 +1,3 @@
-syntax on
-
 set exrc
 set relativenumber
 set nu
@@ -23,6 +21,7 @@ set shortmess+=c
 set splitbelow
 set splitright
 set colorcolumn=120
+set cursorline
 
 
 set path+=**
@@ -66,13 +65,15 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'onsails/lspkind-nvim'
+Plug 'b0o/SchemaStore.nvim'
 
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'kosayoda/nvim-lightbulb'
 
-" Plug 'pantharshit00/vim-prisma'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter-angular'
 
 Plug 'folke/trouble.nvim'
 
@@ -93,8 +94,6 @@ Plug 'folke/todo-comments.nvim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 
-" Plug 'dbeniamine/cheat.sh-vim'
-
 Plug 'vim-test/vim-test'
 Plug 'rcarriga/vim-ultest', { 'do': ':UpdateRemotePlugins' }
 
@@ -110,12 +109,16 @@ Plug 'nvim-telescope/telescope-project.nvim'
 Plug 's1n7ax/nvim-comment-frame'
 
 Plug 'nvim-telescope/telescope-symbols.nvim'
+
+Plug 'luukvbaal/stabilize.nvim'
 call plug#end()
 
 colorscheme tokyonight
 set background=dark
 
 lua require("stx")
+
+autocmd BufWritePre *.ts EslintFixAll
 
 let g:netrw_liststyle=3
 
@@ -124,19 +127,19 @@ let test#strategy = "neovim"
 let g:maximizer_default_mapping_key = '<C-W>m'
 
 augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+  autocmd!
+  au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup END
 
 augroup UltestRunner
-    au!
-    au BufWritePost * UltestNearest
+  au!
+  au BufWritePost * UltestNearest
 augroup END
 
 let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
 if executable(s:clip)
-    augroup WSLYank
-        autocmd!
-        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
-    augroup END
+  augroup WSLYank
+    autocmd!
+    autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+  augroup END
 endif

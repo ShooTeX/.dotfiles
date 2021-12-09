@@ -24,13 +24,9 @@ require'lualine'.setup {
   },
   tabline = {
     lualine_a = {{ 'filename', separator = { left = '' }, right_padding = 2 }},
-    lualine_b = {'diff'},
-    lualine_c = {
-      {
-        'diagnostics',
-        sources = {'coc'}
-      }
-    }
+    lualine_b = {'filetype'},
+    lualine_c = {'diff'},
+    lualine_d = {'diagnostics'},
   },
   extensions = {}
 }
