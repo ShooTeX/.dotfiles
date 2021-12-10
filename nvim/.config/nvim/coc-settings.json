@@ -1,6 +1,15 @@
 {
   "eslint.autoFixOnSave": true,
   "eslint.trace.server": "verbose",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
   "diagnostic.errorSign": "",
   "diagnostic.warningSign": "",
   "diagnostic.infoSign": "",
@@ -11,13 +20,7 @@
   "diagnostic.virtualTextCurrentLineOnly": false,
   "diagnostic.virtualTextPrefix": " ",
   "diagnostic.virtualTextLineSeparator": " \\ ",
-
-  "prisma.prismaFmtBinPath": "",
-
-  "go.goplsOptions": {
-    "gofumpt": true,
-    "staticcheck": true
-  },
+  "angular.enable-strict-mode-prompt": false,
 
   "coc.preferences.formatOnSaveFiletypes": [
     "go"

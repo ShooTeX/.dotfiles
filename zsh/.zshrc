@@ -28,3 +28,9 @@ export PATH="$PATH:$HOME/go/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/Erik.Simon/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/Erik.Simon/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/Erik.Simon/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/Erik.Simon/google-cloud-sdk/completion.zsh.inc'; fi

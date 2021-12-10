@@ -80,6 +80,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'hoob3rt/lualine.nvim'
 
 Plug 'folke/todo-comments.nvim'
+Plug 's1n7ax/nvim-comment-frame'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
