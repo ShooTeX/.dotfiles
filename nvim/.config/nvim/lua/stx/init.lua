@@ -9,3 +9,5 @@ require("stx.telescope")
 require'todo-comments'.setup {}
 
 require'stabilize'.setup {}
+
+require'zen-mode'.setup {}

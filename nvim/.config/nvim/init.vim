@@ -90,6 +90,8 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'hoob3rt/lualine.nvim'
 
 Plug 'folke/todo-comments.nvim'
+Plug 'folke/twilight.nvim'
+Plug 'folke/zen-mode.nvim'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -111,6 +113,8 @@ Plug 's1n7ax/nvim-comment-frame'
 Plug 'nvim-telescope/telescope-symbols.nvim'
 
 Plug 'luukvbaal/stabilize.nvim'
+
+Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 
 colorscheme tokyonight
@@ -123,6 +127,11 @@ autocmd BufWritePre *.ts EslintFixAll
 let g:netrw_liststyle=3
 
 let test#strategy = "neovim"
+let g:test#typescript#runner = "jest"
+let g:test#javascript#runner = 'jest'
+let test#javascript#jest#options = "--color=always"
+
+let g:ultest_use_pty = 1
 
 let g:maximizer_default_mapping_key = '<C-W>m'
 
