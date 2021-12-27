@@ -12,6 +12,8 @@ require("stabilize").setup({})
 
 require("zen-mode").setup({})
 
+require("nvim-tree").setup()
+
 require("nvim-autopairs").setup({
 	fast_wrap = {},
 })

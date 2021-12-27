@@ -123,6 +123,8 @@ Plug 'sbdchd/neoformat'
 Plug 'windwp/nvim-autopairs'
 
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
+
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
 colorscheme tokyonight
