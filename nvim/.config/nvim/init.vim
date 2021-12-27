@@ -119,6 +119,8 @@ Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-neorg/neorg'
 
 Plug 'sbdchd/neoformat'
+
+Plug 'windwp/nvim-autopairs'
 call plug#end()
 
 colorscheme tokyonight
