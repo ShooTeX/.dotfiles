@@ -121,6 +121,8 @@ Plug 'nvim-neorg/neorg'
 Plug 'sbdchd/neoformat'
 
 Plug 'windwp/nvim-autopairs'
+
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 call plug#end()
 
 colorscheme tokyonight

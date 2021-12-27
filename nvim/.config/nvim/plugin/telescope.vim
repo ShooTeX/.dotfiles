@@ -6,3 +6,4 @@ nnoremap <leader>ca <cmd>Telescope lsp_code_actions<cr>
 vnoremap <leader>ca <cmd>Telescope lsp_range_code_actions<cr>
 nnoremap <leader>fp <cmd>:lua require'telescope'.extensions.project.project{}<cr>
 nnoremap <leader>fs <cmd>:lua require'telescope.builtin'.symbols{ sources = {'emoji'} }<cr>
+nnoremap <leader>fn <cmd>:lua require'telescope'.load_extension('gkeep').gkeep{}<cr>
