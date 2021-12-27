@@ -117,6 +117,8 @@ Plug 'luukvbaal/stabilize.nvim'
 
 Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-neorg/neorg'
+
+Plug 'sbdchd/neoformat'
 call plug#end()
 
 colorscheme tokyonight

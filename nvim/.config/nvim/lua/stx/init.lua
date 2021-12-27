@@ -6,8 +6,8 @@ require("stx.lsp")
 require("stx.cmp-init")
 require("stx.telescope")
 
-require'todo-comments'.setup {}
+require("todo-comments").setup({})
 
-require'stabilize'.setup {}
+require("stabilize").setup({})
 
-require'zen-mode'.setup {}
+require("zen-mode").setup({})
