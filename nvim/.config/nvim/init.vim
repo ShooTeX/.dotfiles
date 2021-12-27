@@ -60,6 +60,7 @@ Plug 'folke/tokyonight.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
@@ -115,6 +116,7 @@ Plug 'nvim-telescope/telescope-symbols.nvim'
 Plug 'luukvbaal/stabilize.nvim'
 
 Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'nvim-neorg/neorg'
 call plug#end()
 
 colorscheme tokyonight
