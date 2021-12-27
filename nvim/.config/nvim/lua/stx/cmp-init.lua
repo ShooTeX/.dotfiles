@@ -53,8 +53,8 @@ cmp.setup({
 		end, { "i", "s" }),
 	},
 	sources = cmp.config.sources({
-		{ name = "cmp_tabnine" },
 		{ name = "nvim_lsp" },
+		{ name = "cmp_tabnine" },
 		{ name = "vsnip" }, -- For vsnip users.
 		-- { name = 'luasnip' }, -- For luasnip users.
 		-- { name = 'ultisnips' }, -- For ultisnips users.
