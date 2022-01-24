@@ -13,8 +13,14 @@ require("stabilize").setup({})
 require("zen-mode").setup({})
 
 require("nvim-tree").setup({
+	auto_close = true,
 	diagnostics = {
 		enabled = true,
+	},
+	view = {
+		width = 60,
+		auto_resize = true,
+		relativenumber = true,
 	},
 })
 

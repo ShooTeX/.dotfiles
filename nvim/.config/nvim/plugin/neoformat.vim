@@ -13,7 +13,7 @@ let g:neoformat_enabled_json = ['prettier']
 let g:neoformat_enabled_jsonc = ['prettier']
 let g:neoformat_enabled_markdown = ['prettier']
 
-augroup fmt
-  autocmd!
-  autocmd BufWritePre * undojoin | Neoformat
-augroup END
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre * undojoin | Neoformat
+" augroup END
