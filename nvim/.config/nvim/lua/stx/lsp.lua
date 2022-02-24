@@ -129,3 +129,5 @@ require("lspconfig").angularls.setup({
 })
 
 require("lspconfig").rust_analyzer.setup({})
+
+require("lspconfig").prismals.setup({})
