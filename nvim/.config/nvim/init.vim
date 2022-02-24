@@ -42,7 +42,9 @@ set clipboard=unnamedplus
 let mapleader = " "
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
-tnoremap <Esc> <C-\><C-n>
+tnoremap ;a <C-\><C-n>
+inoremap ;a <Esc>
+
 
 
 " Install vim-plug if not found
