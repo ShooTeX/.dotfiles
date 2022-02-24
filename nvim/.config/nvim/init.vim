@@ -42,6 +42,8 @@ set clipboard=unnamedplus
 let mapleader = " "
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
+tnoremap <Esc> <C-\><C-n>
+
 
 " Install vim-plug if not found
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
