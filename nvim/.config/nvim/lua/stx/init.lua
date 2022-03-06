@@ -5,6 +5,7 @@ require("stx.trouble")
 require("stx.lsp")
 require("stx.cmp-init")
 require("stx.telescope")
+require("stx.update")
 
 require("todo-comments").setup({})
 
