@@ -13,7 +13,6 @@ require("stabilize").setup({})
 require("zen-mode").setup({})
 
 require("nvim-tree").setup({
-	auto_close = true,
 	diagnostics = {
 		enabled = true,
 	},
