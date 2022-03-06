@@ -9,8 +9,6 @@ require("stx.update")
 
 require("todo-comments").setup({})
 
-require("stabilize").setup({})
-
 require("zen-mode").setup({})
 
 require("nvim-tree").setup({

@@ -117,8 +117,6 @@ Plug 's1n7ax/nvim-comment-frame'
 
 Plug 'nvim-telescope/telescope-symbols.nvim'
 
-Plug 'luukvbaal/stabilize.nvim'
-
 Plug 'stevearc/gkeep.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'nvim-neorg/neorg'
 
