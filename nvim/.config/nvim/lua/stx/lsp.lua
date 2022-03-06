@@ -12,11 +12,11 @@ local on_attach = function(client, bufnr)
 		vim.api.nvim_buf_set_keymap(bufnr, ...)
 	end
 
-  if client.name == 'tsserver' then
-    if vim.fn.filereadable(client.config.root_dir .. '/angular.json') == 1 then
-      client.resolved_capabilities.rename = false
-    end
-  end
+	if client.name == "tsserver" then
+		if vim.fn.filereadable(client.config.root_dir .. "/angular.json") == 1 then
+			client.resolved_capabilities.rename = false
+		end
+	end
 
 	-- Mappings.
 	local opts = { noremap = true, silent = true }
@@ -139,9 +139,9 @@ require("lspconfig").rust_analyzer.setup({})
 require("lspconfig").prismals.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-  settings = {
-    prisma = {
-      prismaFmtBinPath = ""
-    }
-  }
+	settings = {
+		prisma = {
+			prismaFmtBinPath = "",
+		},
+	},
 })

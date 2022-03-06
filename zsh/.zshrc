@@ -26,6 +26,9 @@ export PATH=$PATH:~/.composer/vendor/bin
 export PATH="$HOME/Library/Python/3.9/bin:$PATH"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$PATH:$HOME/go/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
+
+alias luamake=/home/stx/language-servers/lua-language-server/3rd/luamake/luamake
