@@ -90,6 +90,17 @@ require("lspconfig").jsonls.setup({
 require("lspconfig").eslint.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"vue",
+    "graphql",
+    "json",
+	},
 })
 
 -- typescript
@@ -144,4 +155,9 @@ require("lspconfig").prismals.setup({
 			prismaFmtBinPath = "",
 		},
 	},
+})
+
+require("lspconfig").graphql.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
 })

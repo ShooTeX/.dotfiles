@@ -136,7 +136,7 @@ set background=dark
 
 lua require("stx")
 
-autocmd BufWritePre *.ts EslintFixAll
+autocmd BufWritePre *.ts,*.tsx,*.graphql,*.json EslintFixAll
 
 let g:netrw_liststyle=3
 
