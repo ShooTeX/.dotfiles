@@ -6,29 +6,17 @@ require("stx.lsp")
 require("stx.cmp-init")
 require("stx.telescope")
 require("stx.update")
+require("stx.nvim-tree")
 
 require("todo-comments").setup({})
-
-require("zen-mode").setup({})
-
-require("nvim-tree").setup({
-	diagnostics = {
-		enabled = true,
-	},
-	view = {
-		width = 60,
-		auto_resize = true,
-		relativenumber = true,
-	},
-})
 
 require("nvim-autopairs").setup({
 	fast_wrap = {},
 })
 
-require("cmp_tabnine.config"):setup({
+require("cmp_tabnine.config").setup({
 	max_lines = 1000,
-	max_num_results = 20,
+	max_num_results = 10,
 	sort = true,
 	run_on_every_keystroke = true,
 	snippet_placeholder = "..",

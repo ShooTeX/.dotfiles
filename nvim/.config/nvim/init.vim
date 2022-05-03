@@ -75,10 +75,7 @@ Plug 'b0o/SchemaStore.nvim'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug 'kosayoda/nvim-lightbulb'
-
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/nvim-treesitter-angular'
 
 Plug 'folke/trouble.nvim'
 
@@ -87,8 +84,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
-Plug 'pwntester/octo.nvim'
-
 Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -96,7 +91,6 @@ Plug 'hoob3rt/lualine.nvim'
 
 Plug 'folke/todo-comments.nvim'
 Plug 'folke/twilight.nvim'
-Plug 'folke/zen-mode.nvim'
 
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -109,8 +103,6 @@ Plug 'szw/vim-maximizer'
 
 Plug 'ThePrimeagen/harpoon'
 
-Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-obsession'
 Plug 'nvim-telescope/telescope-project.nvim'
 
 Plug 's1n7ax/nvim-comment-frame'
