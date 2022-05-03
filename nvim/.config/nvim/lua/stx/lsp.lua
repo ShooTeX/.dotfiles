@@ -98,8 +98,8 @@ require("lspconfig").eslint.setup({
 		"typescriptreact",
 		"typescript.tsx",
 		"vue",
-    "graphql",
-    "json",
+		"graphql",
+		"json",
 	},
 })
 
@@ -161,3 +161,5 @@ require("lspconfig").graphql.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 })
+
+require("lspconfig").dartls.setup({})
