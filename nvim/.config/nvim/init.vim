@@ -121,6 +121,7 @@ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'wakatime/vim-wakatime'
+Plug 'rgroli/other.nvim'
 call plug#end()
 
 colorscheme tokyonight

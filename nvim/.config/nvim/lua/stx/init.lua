@@ -7,6 +7,7 @@ require("stx.cmp-init")
 require("stx.telescope")
 require("stx.update")
 require("stx.nvim-tree")
+require("stx.other")
 
 require("todo-comments").setup({})
 
