@@ -29,6 +29,7 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/share/neovim/bin"
 export PATH="$PATH:$HOME/.local/share/flutter/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+export PATH="$PATH:/Users/Erik.Simon/Library/Application Support/neovim/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh

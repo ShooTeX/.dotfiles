@@ -3,8 +3,13 @@ require("nvim-tree").setup({
 		enable = true,
 	},
 	view = {
-		width = 60,
+		width = 50,
 		relativenumber = true,
+	},
+	actions = {
+		open_file = {
+			quit_on_open = true,
+		},
 	},
 	renderer = {
 		indent_markers = {
