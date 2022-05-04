@@ -77,6 +77,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'shootex/nvim-treesitter-angular'
 
 Plug 'folke/trouble.nvim'
 
