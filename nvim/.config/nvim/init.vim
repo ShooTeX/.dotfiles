@@ -61,6 +61,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin(stdpath('data') . '/plugged')
 Plug 'gruvbox-community/gruvbox'
 Plug 'folke/tokyonight.nvim'
+Plug 'EdenEast/nightfox.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -70,6 +71,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-git'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 Plug 'onsails/lspkind-nvim'
 Plug 'b0o/SchemaStore.nvim'
 
@@ -118,16 +120,13 @@ Plug 'sbdchd/neoformat'
 
 Plug 'windwp/nvim-autopairs'
 
-Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
-
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'wakatime/vim-wakatime'
 Plug 'rgroli/other.nvim'
 call plug#end()
 
-colorscheme tokyonight
-set background=dark
+colorscheme nightfox
 
 lua require("stx")
 
