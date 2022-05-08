@@ -86,6 +86,7 @@ Plug 'folke/trouble.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'tpope/vim-fugitive'

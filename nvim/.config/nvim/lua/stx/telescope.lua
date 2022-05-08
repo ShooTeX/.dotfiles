@@ -11,6 +11,9 @@ telescope.setup({
 		},
 	},
 	extensions = {
+		["ui-select"] = {
+			require("telescope.themes").get_cursor({}),
+		},
 		project = {
 			base_dirs = {
 				"~/.dotfiles/nvim/.config/nvim",
@@ -19,3 +22,5 @@ telescope.setup({
 		},
 	},
 })
+
+require("telescope").load_extension("ui-select")
