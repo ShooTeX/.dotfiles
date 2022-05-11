@@ -13,7 +13,10 @@ local on_attach = function(client, bufnr)
 	end
 
 	if client.name == "tsserver" then
-		if vim.fn.filereadable(client.config.root_dir .. "/angular.json") == 1 then
+		if
+			vim.fn.filereadable(require("lspconfig").util.find_git_ancestor(client.config.root_dir) .. "/angular.json")
+			== 1
+		then
 			client.resolved_capabilities.rename = false
 		end
 	end
