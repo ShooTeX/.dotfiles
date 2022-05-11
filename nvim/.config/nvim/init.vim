@@ -22,6 +22,7 @@ set splitbelow
 set splitright
 set colorcolumn=120
 set cursorline
+set background=dark
 
 
 set path+=**
@@ -59,9 +60,11 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
       \| endif
 
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'gruvbox-community/gruvbox'
-Plug 'folke/tokyonight.nvim'
-Plug 'EdenEast/nightfox.nvim'
+" Plug 'gruvbox-community/gruvbox'
+" Plug 'ellisonleao/gruvbox.nvim'
+" Plug 'folke/tokyonight.nvim'
+Plug 'rmehri01/onenord.nvim', { 'branch': 'main' }
+" Plug 'EdenEast/nightfox.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -127,7 +130,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'rgroli/other.nvim'
 call plug#end()
 
-colorscheme nightfox
+colorscheme onenord
 
 lua require("stx")
 
