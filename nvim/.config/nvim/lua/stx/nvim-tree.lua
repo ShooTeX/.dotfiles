@@ -23,6 +23,7 @@ require("nvim-tree").setup({
 	},
 	view = {
 		relativenumber = true,
+		width = 50,
 	},
 	actions = {
 		open_file = {
@@ -30,7 +31,6 @@ require("nvim-tree").setup({
 		},
 	},
 	renderer = {
-    width = 50,
 		indent_markers = {
 			enable = true,
 		},
