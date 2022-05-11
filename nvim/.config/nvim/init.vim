@@ -131,8 +131,6 @@ colorscheme nightfox
 
 lua require("stx")
 
-autocmd BufWritePre *.ts,*.tsx,*.graphql,*.json EslintFixAll
-
 let g:netrw_liststyle=3
 
 let test#strategy = "neovim"
