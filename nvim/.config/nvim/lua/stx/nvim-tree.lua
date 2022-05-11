@@ -1,4 +1,14 @@
 vim.g.nvim_tree_icons = {
+	default = "",
+	git = {
+		unstaged = "",
+		staged = "",
+		unmerged = "",
+		renamed = "➜",
+		untracked = "",
+		deleted = "",
+		ignored = "◌",
+	},
 	folder = {
 		empty = "",
 		empty_open = "",
@@ -20,6 +30,7 @@ require("nvim-tree").setup({
 		},
 	},
 	renderer = {
+    width = 50,
 		indent_markers = {
 			enable = true,
 		},
