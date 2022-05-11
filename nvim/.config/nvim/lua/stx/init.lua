@@ -8,7 +8,7 @@ require("stx.telescope")
 require("stx.update")
 require("stx.nvim-tree")
 require("stx.other")
-require("stx.theme").init()
+require("stx.notify")
 
 require("todo-comments").setup({})
 
@@ -28,4 +28,4 @@ require("cmp_tabnine.config"):setup({
 	},
 })
 
-vim.notify = require("notify")
+require("stx.theme").init()
