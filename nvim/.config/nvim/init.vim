@@ -129,7 +129,10 @@ Plug 'windwp/nvim-autopairs'
 Plug 'kyazdani42/nvim-tree.lua'
 
 Plug 'wakatime/vim-wakatime'
+
 Plug 'rgroli/other.nvim'
+
+Plug 'rcarriga/nvim-notify'
 call plug#end()
 
 colorscheme onenord

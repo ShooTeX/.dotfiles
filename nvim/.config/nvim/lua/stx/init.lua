@@ -27,3 +27,5 @@ require("cmp_tabnine.config"):setup({
 		-- lua = true
 	},
 })
+
+vim.notify = require("notify")
