@@ -8,6 +8,7 @@ require("stx.telescope")
 require("stx.update")
 require("stx.nvim-tree")
 require("stx.other")
+require("stx.theme").init()
 
 require("todo-comments").setup({})
 
