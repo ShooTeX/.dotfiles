@@ -10,7 +10,7 @@ require("lualine").setup({
 		lualine_a = { { "mode", separator = { left = "" }, right_padding = 2 } },
 		lualine_b = { "branch" },
 		lualine_c = { "" },
-		lualine_x = { "require'lsp-status'.status()", "fileformat", "filetype" },
+		lualine_x = { "fileformat" },
 		lualine_y = { "progress" },
 		lualine_z = { { "location", separator = { right = "" }, left_padding = 2 } },
 	},
