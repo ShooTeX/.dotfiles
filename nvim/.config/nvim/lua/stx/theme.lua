@@ -52,7 +52,7 @@ _M.init = function()
 				eob_lines = true,
 			},
 			custom_highlights = {
-				VertSplit = { fg = _M.colors.grey14 },
+				VertSplit = { fg = _M.colors.gray },
 				BufferLineIndicatorSelected = { fg = _M.colors.cyan, bg = _M.colors.bg },
 				BufferLineFill = { fg = _M.colors.fg, bg = _M.colors.grey14 },
 				NvimTreeNormal = { fg = _M.colors.grey5, bg = _M.colors.grey14 },
