@@ -1,9 +1,17 @@
+vim.g.nvim_tree_icons = {
+	folder = {
+		empty = "",
+		empty_open = "",
+		default = "",
+		open = "",
+	},
+}
+
 require("nvim-tree").setup({
 	diagnostics = {
 		enable = true,
 	},
 	view = {
-		width = 50,
 		relativenumber = true,
 	},
 	actions = {
