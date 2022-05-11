@@ -57,11 +57,16 @@ _M.init = function()
 				BufferLineFill = { fg = _M.colors.fg, bg = _M.colors.grey14 },
 				NvimTreeNormal = { fg = _M.colors.grey5, bg = _M.colors.grey14 },
 				WhichKeyFloat = { bg = _M.colors.grey14 },
+
 				GitSignsAdd = { fg = _M.colors.green },
 				GitSignsChange = { fg = _M.colors.orange },
 				GitSignsDelete = { fg = _M.colors.red },
+
 				NvimTreeFolderIcon = { fg = _M.colors.grey9 },
-				NvimTreeIndentMarker = { fg = _M.colors.grey12 },
+				NvimTreeIndentMarker = { fg = _M.colors.grey9 },
+				NvimTreeGitStaged = { fg = _M.colors.green },
+				NvimTreeGitDirty = { fg = _M.colors.orange },
+				NvimTreeGitDeleted = { fg = _M.colors.red },
 
 				NormalFloat = { bg = _M.colors.grey14 },
 				FloatBorder = { bg = _M.colors.grey14, fg = _M.colors.grey14 },
