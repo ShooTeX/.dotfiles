@@ -10,10 +10,6 @@ cmp.setup({
 			-- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
 		end,
 	},
-	window = {
-		-- completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
 	mapping = cmp.mapping.preset.insert({
 		["<C-b>"] = cmp.mapping.scroll_docs(-4),
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
@@ -32,8 +28,19 @@ cmp.setup({
 		{ name = "buffer" },
 	}),
 	formatting = {
+		fields = { "kind", "abbr", "menu" },
 		format = require("lspkind").cmp_format({
-			with_text = false,
+			mode = "symbol",
+			maxwidth = 50,
+			menu = {
+				buffer = "[Buffer]",
+				nvim_lsp = "[LSP]",
+				luasnip = "[LuaSnip]",
+				nvim_lua = "[Lua]",
+				cmp_tabnine = "[TN]",
+				path = "[Path]",
+				latex_symbols = "[Latex]",
+			},
 		}),
 	},
 })
