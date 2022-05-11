@@ -22,3 +22,9 @@ augroup fmt_js
   autocmd!
   autocmd BufWritePre *.ts,*.js,*.tsx,*.jsx undojoin | Neoformat
 augroup END
+
+
+augroup fmt_lua
+  autocmd!
+  autocmd BufWritePre *.lua undojoin | Neoformat
+augroup END
