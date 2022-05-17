@@ -133,6 +133,8 @@ Plug 'wakatime/vim-wakatime'
 Plug 'rgroli/other.nvim'
 
 Plug 'rcarriga/nvim-notify'
+
+Plug 'reisub0/hot-reload.vim' "flutter hot reload
 call plug#end()
 
 colorscheme onenord
