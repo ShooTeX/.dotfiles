@@ -98,6 +98,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'lewis6991/gitsigns.nvim'
 
 Plug 'hoob3rt/lualine.nvim'
+Plug 'arkav/lualine-lsp-progress'
 
 Plug 'folke/todo-comments.nvim'
 Plug 'folke/twilight.nvim'
