@@ -1,4 +1,6 @@
 export DOTFILES=$HOME/.dotfiles
+export ANDROID_SDK=$HOME/Android/Sdk
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export GPG_TTY=$(tty)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -28,7 +30,11 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.local/share/neovim/bin"
 export PATH="$PATH:$HOME/.local/share/flutter/bin"
-export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+export PATH="$PATH:$ANDROID_SDK/platform-tools"
+export PATH="$PATH:$ANDROID_SDK/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_SDK/emulator"
+export PATH="$PATH:$ANDROID_SDK/tools"
+export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:/Users/Erik.Simon/Library/Application Support/neovim/bin"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
