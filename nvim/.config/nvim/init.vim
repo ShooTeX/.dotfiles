@@ -136,6 +136,8 @@ Plug 'rgroli/other.nvim'
 Plug 'rcarriga/nvim-notify'
 
 Plug 'reisub0/hot-reload.vim' "flutter hot reload
+
+Plug 'pwntester/octo.nvim'
 call plug#end()
 
 colorscheme onenord
