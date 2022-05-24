@@ -7,7 +7,7 @@ for type, icon in pairs(signs) do
 end
 
 -- Debug
--- vim.lsp.set_log_level("debug")
+vim.lsp.set_log_level("debug")
 
 -- Mappings.
 local opts = { noremap = true, silent = true }
@@ -155,7 +155,10 @@ require("lspconfig").angularls.setup({
 	end,
 })
 
-require("lspconfig").rust_analyzer.setup({})
+require("lspconfig").rust_analyzer.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
 
 require("lspconfig").prismals.setup({
 	on_attach = on_attach,
@@ -175,4 +178,21 @@ require("lspconfig").graphql.setup({
 require("lspconfig").dartls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+})
+
+--golang
+require("lspconfig").golangci_lint_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig").gopls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+})
+
+require("lspconfig").csharp_ls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	root_dir = require("lspconfig").util.root_pattern("Assets"),
 })
