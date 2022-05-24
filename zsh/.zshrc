@@ -36,6 +36,7 @@ export PATH="$PATH:$ANDROID_SDK/emulator"
 export PATH="$PATH:$ANDROID_SDK/tools"
 export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:/Users/Erik.Simon/Library/Application Support/neovim/bin"
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
