@@ -1,6 +1,6 @@
 export DOTFILES=$HOME/.dotfiles
 export ANDROID_SDK=$HOME/Android/Sdk
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export GPG_TTY=$(tty)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -36,7 +36,11 @@ export PATH="$PATH:$ANDROID_SDK/emulator"
 export PATH="$PATH:$ANDROID_SDK/tools"
 export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:/Users/Erik.Simon/Library/Application Support/neovim/bin"
+<<<<<<< HEAD
 export PATH="$PATH:$HOME/.dotnet/tools"
+=======
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+>>>>>>> 707e9bc (update)
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
