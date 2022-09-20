@@ -1,3 +1,4 @@
+export ZSH="$HOME/.oh-my-zsh"
 export DOTFILES=$HOME/.dotfiles
 export ANDROID_SDK=$HOME/Android/Sdk
 # export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
@@ -36,17 +37,24 @@ export PATH="$PATH:$ANDROID_SDK/emulator"
 export PATH="$PATH:$ANDROID_SDK/tools"
 export PATH="$PATH:$JAVA_HOME/bin"
 export PATH="$PATH:/Users/Erik.Simon/Library/Application Support/neovim/bin"
-<<<<<<< HEAD
 export PATH="$PATH:$HOME/.dotnet/tools"
-=======
 export PATH="$PATH":"$HOME/.pub-cache/bin"
->>>>>>> 707e9bc (update)
+export PATH="$PATH":"$HOME/.local/share/nvim/lsp_servers/graphql"
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/zsh/.p10k.zsh.
 [[ ! -f ~/.dotfiles/zsh/.p10k.zsh ]] || source ~/.dotfiles/zsh/.p10k.zsh
 
 alias luamake=/home/stx/language-servers/lua-language-server/3rd/luamake/luamake
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
