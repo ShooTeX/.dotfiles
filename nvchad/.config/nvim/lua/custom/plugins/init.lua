@@ -2,7 +2,6 @@ local overrides = require("custom.plugins.overrides")
 
 return {
 
-	-- Override plugin definition options
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")
@@ -10,7 +9,18 @@ return {
 		end,
 	},
 
-	-- overrde plugin configs
+	["hrsh7th/nvim-cmp"] = {
+		override_options = {
+			sources = {
+				{ name = "nvim_lsp" },
+				{ name = "buffer" },
+				{ name = "nvim_lua" },
+				{ name = "path" },
+				{ name = "luasnip" },
+			},
+		},
+	},
+
 	["nvim-treesitter/nvim-treesitter"] = {
 		override_options = overrides.treesitter,
 	},
@@ -43,6 +53,21 @@ return {
 		end,
 	},
 
+	["kylechui/nvim-surround"] = {
+		tag = "*",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	},
+
+	["windwp/nvim-ts-autotag"] = {
+		config = function()
+			require("nvim-ts-autotag").setup({})
+		end,
+	},
+
+	["b0o/SchemaStore.nvim"] = {},
+
 	-- code formatting, linting etc
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
@@ -59,7 +84,6 @@ return {
 		},
 	},
 
-	-- testing
 	["nvim-neotest/neotest"] = {
 		requires = {
 			"nvim-lua/plenary.nvim",
@@ -83,7 +107,6 @@ return {
 		end,
 	},
 
-	-- git
 	["kdheepak/lazygit.nvim"] = {},
 
 	["sindrets/diffview.nvim"] = {
