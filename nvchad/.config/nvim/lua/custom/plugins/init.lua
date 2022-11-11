@@ -68,6 +68,8 @@ return {
 
 	["b0o/SchemaStore.nvim"] = {},
 
+	["will133/vim-dirdiff"] = {},
+
 	-- code formatting, linting etc
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
