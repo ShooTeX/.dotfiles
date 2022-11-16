@@ -76,17 +76,6 @@ return {
 		requires = { "nvim-lua/plenary.nvim" },
 	},
 
-	["pwntester/octo.nvim"] = {
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-			"kyazdani42/nvim-web-devicons",
-		},
-		config = function()
-			require("octo").setup()
-		end,
-	},
-
 	-- code formatting, linting etc
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
