@@ -11,6 +11,14 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	}
 
+  if lsp == "angularls" then
+    local tsserver = vim.lsp.get_active_clients({
+      name = "tsserver"
+    })
+
+    tsserver.server_capabilities.renameProvider = false
+  end
+
 	if lsp == "jsonls" then
 		setup["settings"] = {
 			json = {
