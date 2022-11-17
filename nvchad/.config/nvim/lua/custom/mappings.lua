@@ -17,6 +17,13 @@ M.trouble = {
 	},
 }
 
+M.iswap = {
+  n = {
+		["<leader>ss"] = { "<cmd>ISwapWith<cr>", "swap element" },
+		["<leader>sn"] = { "<cmd>ISwapNodeWith<cr>", "swap node" },
+  }
+}
+
 -- more keybinds!
 
 return M

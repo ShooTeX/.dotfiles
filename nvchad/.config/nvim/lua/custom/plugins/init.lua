@@ -33,7 +33,8 @@ return {
 		override_options = overrides.nvimtree,
 	},
 
-	-- Install a plugin
+  ["mizlan/iswap.nvim"] = {},
+
 	["max397574/better-escape.nvim"] = {
 		event = "InsertEnter",
 		config = function()
