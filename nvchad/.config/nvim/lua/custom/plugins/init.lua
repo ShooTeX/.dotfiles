@@ -35,6 +35,8 @@ return {
 
   ["mizlan/iswap.nvim"] = {},
 
+  ["folke/zen-mode.nvim"] = {},
+
 	["max397574/better-escape.nvim"] = {
 		event = "InsertEnter",
 		config = function()
@@ -77,7 +79,6 @@ return {
 		requires = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- code formatting, linting etc
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
 		config = function()

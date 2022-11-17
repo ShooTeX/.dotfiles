@@ -24,6 +24,12 @@ M.iswap = {
   }
 }
 
+M.zenmode = {
+  n = {
+		["<C-w>m"] = { "<cmd>ZenMode<cr>", "Zen mode" },
+  }
+}
+
 -- more keybinds!
 
 return M
