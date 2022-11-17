@@ -33,9 +33,9 @@ return {
 		override_options = overrides.nvimtree,
 	},
 
-  ["mizlan/iswap.nvim"] = {},
+	["mizlan/iswap.nvim"] = {},
 
-  ["folke/zen-mode.nvim"] = {},
+	["folke/zen-mode.nvim"] = {},
 
 	["max397574/better-escape.nvim"] = {
 		event = "InsertEnter",
@@ -51,23 +51,13 @@ return {
 
 	["folke/trouble.nvim"] = {
 		requires = "kyazdani42/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({})
-		end,
 	},
 
 	["kylechui/nvim-surround"] = {
 		tag = "*",
-		config = function()
-			require("nvim-surround").setup({})
-		end,
 	},
 
-	["windwp/nvim-ts-autotag"] = {
-		config = function()
-			require("nvim-ts-autotag").setup({})
-		end,
-	},
+	["windwp/nvim-ts-autotag"] = {},
 
 	["b0o/SchemaStore.nvim"] = {},
 
@@ -81,9 +71,6 @@ return {
 
 	["jose-elias-alvarez/null-ls.nvim"] = {
 		after = "nvim-lspconfig",
-		config = function()
-			require("custom.plugins.null-ls")
-		end,
 	},
 
 	["NvChad/ui"] = {
