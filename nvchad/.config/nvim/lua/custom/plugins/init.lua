@@ -53,8 +53,15 @@ return {
 		requires = "kyazdani42/nvim-web-devicons",
 	},
 
+	["folke/which-key.nvim"] = {
+		disable = false,
+	},
+
 	["kylechui/nvim-surround"] = {
 		tag = "*",
+		config = function()
+			require("nvim-surround").setup()
+		end,
 	},
 
 	["windwp/nvim-ts-autotag"] = {},
@@ -73,6 +80,24 @@ return {
 		after = "nvim-lspconfig",
 		config = function()
 			require("custom.plugins.null-ls")
+		end,
+	},
+
+	["mfussenegger/nvim-dap"] = {
+		requires = {
+			"theHamsta/nvim-dap-virtual-text",
+			"rcarriga/nvim-dap-ui",
+		},
+		config = function()
+			require("custom.plugins.dap").setup()
+		end,
+	},
+
+	["jayp0521/mason-nvim-dap.nvim"] = {
+		requires = "mxsdev/nvim-dap-vscode-js",
+		after = { "nvim-dap", "mason.nvim" },
+		config = function()
+			require("custom.plugins.mason-dap")
 		end,
 	},
 
