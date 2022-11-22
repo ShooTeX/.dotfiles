@@ -49,7 +49,14 @@
     };
   };
 
-  programs.kitty.enable = true;
+  programs.kitty = {
+    enable = true;
+    settings = {
+      macos_option_as_alt = true;
+      hide_window_decorations = "titlebar-only";
+      enable_audio_bell = false;
+    };
+  };
 
   programs.git = {
     enable = true;
