@@ -36,6 +36,7 @@
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
+    TERMINAL = "kitty";
   }; 
 
 # Let Home Manager install and manage itself.
@@ -51,10 +52,14 @@
 
   programs.kitty = {
     enable = true;
+    theme = "Catppuccin-Macchiato";
     settings = {
       macos_option_as_alt = true;
       hide_window_decorations = "titlebar-only";
-      enable_audio_bell = false;
+    };
+    font = {
+      name = "Iosevka Nerd Font";
+      size = 16;
     };
   };
 
@@ -82,7 +87,7 @@
   };
 
   programs.gh = {
-    enable = true;
+    enable = false;
 
     settings = {
       git_protocol = "ssh";
