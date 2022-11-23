@@ -1,11 +1,11 @@
-{ lib, stdenv, nvchad, ... }:
-stdenv.mkDerivation {
+{ lib, stdenv, nvchad, nvim-config, ... }:
+stdenv.mkDerivation rec {
 	name = "nvchad-config";
 
+  config = nvim-config;
 	src = nvchad;
-
 	patchPhase = ''
-		echo 'hello' > testingtesting
+		cp -r $config lua/custom/ 
 		'';
 
 	installPhase = ''

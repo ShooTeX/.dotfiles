@@ -165,6 +165,19 @@
         "type": "github"
       }
     },
+    "nvim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-yYTEjufyUBR3SMSvAeaODMSkzaIS+gq4Iy83uJaL9qw=",
+        "path": "nvchad/.config/nvim/lua/custom/",
+        "type": "path"
+      },
+      "original": {
+        "path": "nvchad/.config/nvim/lua/custom/",
+        "type": "path"
+      }
+    },
     "root": {
       "inputs": {
         "darwin": "darwin",
@@ -172,7 +185,8 @@
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
-        "nvchad": "nvchad"
+        "nvchad": "nvchad",
+        "nvim-config": "nvim-config"
       }
     },
     "utils": {

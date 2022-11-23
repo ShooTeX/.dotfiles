@@ -1,7 +1,7 @@
-{config, pkgs, lib, nixpkgs, ... }:
+{config, pkgs, lib, nixpkgs, inputs, ... }:
 
 let
-  nvchad-config = pkgs.callPackage ./modules/nvchad-config.nix;
+  nvchad-config = pkgs.callPackage ./modules/nvchad-config.nix { nvchad = inputs.nvchad; nvim-config = inputs.nvim-config; };
 in
 {
 # This value determines the Home Manager release that your

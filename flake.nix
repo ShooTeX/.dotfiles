@@ -20,6 +20,10 @@
       url = "github:nvchad/nvchad";
       flake = false;
     };
+    nvim-config = {
+      url = "path:nvchad/.config/nvim/lua/custom/";
+      flake = false;
+    };
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs: 
@@ -54,6 +58,7 @@
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
 	    home-manager.users.stx = import ./home.nix;
+	    home-manager.extraSpecialArgs = { inherit inputs; };
 	  }
 	];
       };
