@@ -51,6 +51,7 @@
       STX-MacBook-Pro = darwinSystem {
         system = "aarch64-darwin";
 	modules = [
+    ./darwin/homebrew.nix
 	  ./configuration.nix
 	  home-manager.darwinModules.home-manager
 	  {
