@@ -29,6 +29,8 @@ in
     nodejs
     rustup
     ngrok
+    skhd
+    sketchybar
 
 # upstream bug
 # nodePackages_latest.yarn
