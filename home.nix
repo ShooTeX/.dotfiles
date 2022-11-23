@@ -1,5 +1,8 @@
 {config, pkgs, lib, nixpkgs, ... }:
 
+let
+  nvchad-config = pkgs.callPackage ./modules/nvchad-config.nix;
+in
 {
 # This value determines the Home Manager release that your
 # configuration is compatible with. This helps avoid breakage
@@ -207,5 +210,10 @@
 
     viAlias = true;
     vimAlias = true;
+  };
+
+  xdg.configFile.nvim = {
+    source = nvchad-config;
+    recursive = true;
   };
 }
