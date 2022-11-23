@@ -2,9 +2,9 @@
 {
   services.skhd = {
     enable = true;
-    skhdConfig = "
+    skhdConfig = '' 
       # open terminal
-      alt - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
+      alt - return : ~/Applications/Home\ Manager\ Apps/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
        
       # close focused window
       shift + alt - q : yabai -m window --close
@@ -55,6 +55,6 @@
       # mission control
       cmd - 3 : yabai -m space --toggle mission-control
       f3 : yabai -m space --toggle mission-control
-    ";
+    '';
   };
 }

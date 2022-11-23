@@ -1,7 +1,6 @@
 { ... }: {
     services.yabai = {
       enable = true;
-      # broken atm
       # enableScriptingAddition = true;
       config = {
         focus_follows_mouse          = "autoraise";
