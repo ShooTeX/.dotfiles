@@ -31,9 +31,9 @@ in
     ngrok
     sketchybar
 
-# upstream bug
-# nodePackages_latest.yarn
-# nodePackages_latest.pnpm
+    # node
+    nodePackages_latest.yarn
+    nodePackages_latest.pnpm
   ];
 
   home.sessionPath = [ "$HOME/.npm-packages/bin"];
@@ -93,11 +93,7 @@ in
   };
 
   programs.gh = {
-    enable = false;
-
-    settings = {
-      git_protocol = "ssh";
-    };
+    enable = true;
   };
 
   programs.zsh = {
