@@ -58,7 +58,12 @@
 	    nixpkgs = nixpkgsConfig;
 	    home-manager.useGlobalPkgs = true;
 	    home-manager.useUserPackages = true;
-	    home-manager.users.stx = import ./home.nix;
+      home-manager.users.stx = { ... }: {
+        imports = [
+          ./home.nix
+          ./darwin
+        ];
+      };
 	    home-manager.extraSpecialArgs = { inherit inputs; };
 	  }
 	];
