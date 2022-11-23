@@ -3,7 +3,18 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 
 local lspconfig = require("lspconfig")
 
-local servers = { "html", "cssls", "tsserver", "angularls", "graphql", "sumneko_lua", "rnix", "jsonls", "tailwindcss", "prismals" }
+local servers = {
+	"html",
+	"cssls",
+	"tsserver",
+	"angularls",
+	"graphql",
+	"sumneko_lua",
+	"rnix",
+	"jsonls",
+	"tailwindcss",
+	"prismals",
+}
 
 for _, lsp in ipairs(servers) do
 	local setup = {
@@ -11,15 +22,15 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	}
 
-  if lsp == "angularls" then
-    local clients = vim.lsp.get_active_clients({
-      name = "tsserver"
-    })
+	if lsp == "angularls" then
+		local clients = vim.lsp.get_active_clients({
+			name = "tsserver",
+		})
 
-    if clients[0] then
-      clients[0].server_capabilities.renameProvider = false
-    end
-  end
+		if clients[0] then
+			clients[0].server_capabilities.renameProvider = false
+		end
+	end
 
 	if lsp == "jsonls" then
 		setup["settings"] = {
