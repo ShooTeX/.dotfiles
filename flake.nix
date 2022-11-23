@@ -53,6 +53,7 @@
 	modules = [
     ./darwin/homebrew.nix
 	  ./configuration.nix
+    ./darwin
 	  home-manager.darwinModules.home-manager
 	  {
 	    nixpkgs = nixpkgsConfig;
@@ -61,7 +62,6 @@
       home-manager.users.stx = { ... }: {
         imports = [
           ./home.nix
-          ./darwin
         ];
       };
 	    home-manager.extraSpecialArgs = { inherit inputs; };

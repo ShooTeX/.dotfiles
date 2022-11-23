@@ -12,11 +12,5 @@
       "bitwarden"
       "whatsapp"
 		];
-    taps = [
-      "koekeishiya/formulae"
-    ];
-    brews = [
-      "yabai"
-    ];
 	};
 }

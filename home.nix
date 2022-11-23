@@ -29,7 +29,6 @@ in
     nodejs
     rustup
     ngrok
-    skhd
     sketchybar
 
 # upstream bug

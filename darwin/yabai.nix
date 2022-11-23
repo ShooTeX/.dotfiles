@@ -1,54 +1,47 @@
 { ... }: {
-  home.file.yabai = {
-    executable = true;
-    target = ".config/yabai/yabairc";
-    text = ''
-      #!/usr/bin/env sh
-      # load scripting addition
-      sudo yabai --load-sa
-      yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+    services.yabai = {
+      enable = true;
+      # broken atm
+      # enableScriptingAddition = true;
+      config = {
+        focus_follows_mouse          = "autoraise";
+        window_border                = "off";
+        # window_border_width          = 2;
+        # window_border_radius         = 10;
+        # active_window_border_color   = "0xff5c7e81";
+        # normal_window_border_color   = "0xff505050";
+        # insert_window_border_color   = "0xffd75f5f";
+        window_shadow                = "off";
+        window_animation_duration    = 0;
+        active_window_opacity        = 0.8;
+        auto_balance                 = "on";
+        layout                       = "bsp";
+        mouse_modifier               = "shift";
+        top_padding                  = 10;
+        bottom_padding               = 10;
+        left_padding                 = 10;
+        right_padding                = 10;
+        window_gap                   = 10;
+      };
 
-      # bar configuration
-      # yabai -m config external_bar all:0:39
-      # yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
-
-      yabai -m config                           \
-        window_border on                        \
-        window_border_width 2                   \
-        active_window_border_color 0xFF40FF00   \
-        normal_window_border_color 0x00FFFFFF   \
-        insert_feedback_color 0xffd75f5f        \
-        window_shadow off                       \
-        layout bsp                              \
-        auto_balance off                        \
-        window_topmost on                       \
-
-        top_padding    0 \
-        bottom_padding 0 \
-        left_padding   0 \
-        right_padding  0 \
-        window_gap     0 \
-
-        -m rule --add app="^System Preferences$" manage=off \
-
-        -m space 1 --label code   \
-        -m space 2 --label www    \
-        -m space 3 --label chat   \
-        -m space 4 --label music  \
-        -m space 5 --label five   \
-        -m space 6 --label six    \
-        -m space 7 --label seven  \
-        -m space 8 --label eight  \
-
-        -m rule --add app="Kitty" space=code            \
-        -m rule --add app="Google Chrome" space=www     \
-        -m rule --add app="Microsoft Teams" space=chat  \
-        -m rule --add app="Slack" space=chat            \
-        -m rule --add app="Signal" space=chat           \
-        -m rule --add app="WhatsApp" space=chat         \
-        -m rule --add app="Tidal" space=music
-
-      echo "yabai configuration loaded.."
-      '';
-  };
-}
+      extraConfig = ''
+       yabai -m rule --add app='System Settings' manage=off
+       yabai -m space 1 --label code    
+       yabai -m space 2 --label www     
+       yabai -m space 3 --label chat    
+       yabai -m space 4 --label music   
+       yabai -m space 5 --label five    
+       yabai -m space 6 --label six     
+       yabai -m space 7 --label seven   
+       yabai -m space 8 --label eight   
+       yabai -m rule --add app="Kitty" space=code             
+       yabai -m rule --add app="Google Chrome" space=www      
+       yabai -m rule --add app="Microsoft Teams" space=chat   
+       yabai -m rule --add app="Slack" space=chat             
+       yabai -m rule --add app="Signal" space=chat            
+       yabai -m rule --add app="WhatsApp" space=chat          
+       yabai -m rule --add app="Tidal" space=music
+       '';
+    };
+# };
+ }
