@@ -50,6 +50,8 @@
     };
   };
 
+  programs.google-chrome.enable = false;
+
   programs.kitty = {
     enable = true;
     theme = "Catppuccin-Macchiato";

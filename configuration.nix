@@ -26,6 +26,7 @@
 		onActivation.autoUpdate = true;
 		casks = [
 			"alfred"
+			"google-chrome"
 		];
 	};
 

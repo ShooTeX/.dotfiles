@@ -149,13 +149,30 @@
         "type": "github"
       }
     },
+    "nvchad": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1668753016,
+        "narHash": "sha256-aEbGNk7mXRgfeDixMZNJvA/4ANO2hClNGw7um5bmFIg=",
+        "owner": "nvchad",
+        "repo": "nvchad",
+        "rev": "54b364932450706b7355818f01a929fd1a77861e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvchad",
+        "repo": "nvchad",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs",
-        "nur": "nur"
+        "nur": "nur",
+        "nvchad": "nvchad"
       }
     },
     "utils": {

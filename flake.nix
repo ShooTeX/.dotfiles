@@ -16,14 +16,25 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nvchad = {
+      url = "github:nvchad/nvchad";
+      flake = false;
+    };
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs: 
   let
     inherit (darwin.lib) darwinSystem;
+    inherit (inputs.nixpkgs.lib) attrValues makeOverridable optionalAttrs singleton;
 
-    overlays = [
+
+    overlays = attrValues self.overlays ++ [
 	inputs.neovim-overlay.overlay
+	(
+	  final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+	    inherit (final.pkgs-x86) google-chrome;
+	  })
+	)
     ];
 
     nixpkgsConfig = {
@@ -36,6 +47,7 @@
       STX-MacBook-Pro = darwinSystem {
         system = "aarch64-darwin";
 	modules = [
+	  ./modules/nvchad.nix
 	  ./configuration.nix
 	  home-manager.darwinModules.home-manager
 	  {
@@ -46,6 +58,14 @@
 	  }
 	];
       };
+    };
+    overlays = {
+	    apple-silicon = final: prev: optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+		    pkgs-x86 = import inputs.nixpkgs {
+			    system = "x86_64-darwin";
+			    inherit (nixpkgsConfig) config;
+		    };
+	    };
     };
   };
 }
