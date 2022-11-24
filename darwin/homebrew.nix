@@ -10,7 +10,7 @@
 			"google-chrome"
       "tidal"
       "bitwarden"
-      "whatsapp"
+      "discord"
 		];
 	};
 }

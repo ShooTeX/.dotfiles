@@ -37,6 +37,8 @@ return {
 
 	["folke/zen-mode.nvim"] = {},
 
+  ["folke/todo-comments.nvim"] = {},
+
 	["max397574/better-escape.nvim"] = {
 		event = "InsertEnter",
 		config = function()
