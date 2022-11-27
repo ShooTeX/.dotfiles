@@ -30,6 +30,7 @@ in
     rustup
     ngrok
     sketchybar
+    dart
 
     # node
     nodePackages_latest.yarn
