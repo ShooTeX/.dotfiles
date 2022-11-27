@@ -31,6 +31,7 @@ in
     ngrok
     sketchybar
     dart
+    flutter
 
     # node
     nodePackages_latest.yarn
