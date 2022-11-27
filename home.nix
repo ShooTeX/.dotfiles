@@ -31,6 +31,7 @@ in
     ngrok
     sketchybar
     dart
+    git-crypt
 
     # node
     nodePackages_latest.yarn
