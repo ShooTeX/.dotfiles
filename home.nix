@@ -32,6 +32,7 @@ in
     sketchybar
     dart
     git-crypt
+    gnupg
 
     # node
     nodePackages_latest.yarn
