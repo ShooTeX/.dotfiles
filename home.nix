@@ -33,6 +33,7 @@ in
     dart
     git-crypt
     gnupg
+    jq
 
     # node
     nodePackages_latest.yarn
