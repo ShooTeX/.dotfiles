@@ -20,17 +20,15 @@
       shift + alt - k : yabai -m window --swap north
       shift + alt - l : yabai -m window --swap east
        
-      # increase region size
-      shift + alt - a : yabai -m window --resize left:-100:0
-      shift + alt - w : yabai -m window --resize top:0:-100
-      shift + alt - d : yabai -m window --resize right:100:0
-      shift + alt - s : yabai -m window --resize bottom:0:100
-       
-      # decrease region size
-      shift + cmd - a : yabai -m window --resize left:100:0
-      shift + cmd - w : yabai -m window --resize top:0:100
-      shift + cmd - d : yabai -m window --resize right:-100:0
-      shift + cmd - s : yabai -m window --resize bottom:0:-100
+      # Resize windows
+      lctrl + alt - h : yabai -m window --resize left:-50:0; \
+                        yabai -m window --resize right:-50:0
+      lctrl + alt - j : yabai -m window --resize bottom:0:50; \
+                        yabai -m window --resize top:0:50
+      lctrl + alt - k : yabai -m window --resize top:0:-50; \
+                        yabai -m window --resize bottom:0:-50
+      lctrl + alt - l : yabai -m window --resize right:50:0; \
+                        yabai -m window --resize left:50:0
        
       # set insertion point for focused container
       ctrl + alt - h : yabai -m window --insert west
