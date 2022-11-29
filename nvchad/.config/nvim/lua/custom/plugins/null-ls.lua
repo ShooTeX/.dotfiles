@@ -10,7 +10,6 @@ local eslint_filetypes = { "graphql", "html" }
 
 local sources = {
 
-	-- web
 	b.formatting.prettierd.with({
 		filetypes = { "json", "jsonc" },
 	}),
@@ -30,10 +29,10 @@ local sources = {
 		extra_filetypes = eslint_filetypes,
 	}),
 
-	-- Lua
 	b.formatting.stylua,
 
-	-- spell
+  b.formatting.nixfmt,
+
 	b.formatting.codespell,
 	b.diagnostics.codespell,
 }
