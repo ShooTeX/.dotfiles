@@ -54,6 +54,9 @@
       # mission control
       cmd - 3 : yabai -m space --toggle mission-control
       f3 : yabai -m space --toggle mission-control
+
+      # restart
+      ctrl + alt + cmd - r : launchctl kickstart -k gui/$\{UID}/org.nixos.yabai && launchctl kickstart -k gui/$\{UID}/org.nixos.skhd
     '';
   };
 }

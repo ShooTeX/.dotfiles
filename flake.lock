@@ -72,6 +72,22 @@
         "type": "github"
       }
     },
+    "ivar-nixpkgs-yabai-5_0_1": {
+      "locked": {
+        "lastModified": 1669665241,
+        "narHash": "sha256-2CXHhPBObwNKbbpLdETxnquinOyZf3YBs+Qak4WFCJI=",
+        "owner": "IvarWithoutBones",
+        "repo": "nixpkgs",
+        "rev": "161530fa3434ea801419a8ca33dcd97ffb8e6fee",
+        "type": "github"
+      },
+      "original": {
+        "owner": "IvarWithoutBones",
+        "repo": "nixpkgs",
+        "rev": "161530fa3434ea801419a8ca33dcd97ffb8e6fee",
+        "type": "github"
+      }
+    },
     "neovim-flake": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -182,6 +198,7 @@
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
+        "ivar-nixpkgs-yabai-5_0_1": "ivar-nixpkgs-yabai-5_0_1",
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs",
         "nur": "nur",

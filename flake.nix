@@ -24,9 +24,13 @@
       url = "path:nvchad/.config/nvim/lua/custom/";
       flake = false;
     };
+    ivar-nixpkgs-yabai-5_0_1.url =
+      "github:IvarWithoutBones/nixpkgs?rev=161530fa3434ea801419a8ca33dcd97ffb8e6fee";
+
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, ivar-nixpkgs-yabai-5_0_1, ...
+    }@inputs:
     let
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs.lib)
@@ -34,6 +38,11 @@
 
       overlays = attrValues self.overlays ++ [
         inputs.neovim-overlay.overlay
+        (final: prev: {
+          yabai-5_0_1 = (import ivar-nixpkgs-yabai-5_0_1 {
+            inherit (final) system;
+          }).yabai;
+        })
         (final: prev:
           (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
             inherit (final.pkgs-x86) google-chrome;

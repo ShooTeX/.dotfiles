@@ -1,21 +1,23 @@
-{ ... }: {
+{ pkgs, ... }: {
   services.yabai = {
     enable = true;
-    # enableScriptingAddition = true;
+    enableScriptingAddition = true;
+    package = pkgs.yabai-5_0_1;
     config = {
       focus_follows_mouse = "autoraise";
-      window_border = "off";
-      # window_border_width          = 2;
-      # window_border_radius         = 10;
-      # active_window_border_color   = "0xff5c7e81";
-      # normal_window_border_color   = "0xff505050";
-      # insert_window_border_color   = "0xffd75f5f";
-      window_shadow = "off";
-      window_animation_duration = 0;
-      active_window_opacity = 0.8;
+
+      window_border = "on";
+      window_border_width = 2;
+      active_window_border_color = "0xff5c7e81";
+      normal_window_border_color = "0xff505050";
+      insert_window_border_color = "0xffd75f5f";
+
+      window_opacity = "off";
+      window_shadow = "float";
+
       auto_balance = "on";
       layout = "bsp";
-      mouse_modifier = "shift";
+
       top_padding = 10;
       bottom_padding = 10;
       left_padding = 10;
