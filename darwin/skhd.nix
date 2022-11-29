@@ -29,6 +29,9 @@
                         yabai -m window --resize bottom:0:-50
       lctrl + alt - l : yabai -m window --resize right:50:0; \
                         yabai -m window --resize left:50:0
+
+      # Equalize size of windows
+      shift + alt - e : yabai -m space --balance
        
       # set insertion point for focused container
       ctrl + alt - h : yabai -m window --insert west
@@ -54,7 +57,7 @@
       f3 : yabai -m space --toggle mission-control
 
       # restart
-      ctrl + alt + cmd - r : launchctl kickstart -k gui/$\{UID}/org.nixos.yabai && launchctl kickstart -k gui/$\{UID}/org.nixos.skhd
+      ctrl + alt + cmd - r : launchctl kickstart -k gui/''${UID}/org.nixos.yabai && launchctl kickstart -k gui/''${UID}/org.nixos.skhd
     '';
   };
 }

@@ -39,9 +39,8 @@
       overlays = attrValues self.overlays ++ [
         inputs.neovim-overlay.overlay
         (final: prev: {
-          yabai-5_0_1 = (import ivar-nixpkgs-yabai-5_0_1 {
-            inherit (final) system;
-          }).yabai;
+          yabai-5_0_1 =
+            (import ivar-nixpkgs-yabai-5_0_1 { inherit (final) system; }).yabai;
         })
         (final: prev:
           (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
