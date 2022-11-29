@@ -1,8 +1,7 @@
-{ ... }:
-{
+{ ... }: {
   services.skhd = {
     enable = true;
-    skhdConfig = '' 
+    skhdConfig = ''
       # open terminal
       alt - return : ~/Applications/Home\ Manager\ Apps/Kitty.app/Contents/MacOS/kitty --single-instance -d ~
        

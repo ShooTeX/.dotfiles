@@ -26,55 +26,50 @@
     };
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs: 
-  let
-    inherit (darwin.lib) darwinSystem;
-    inherit (inputs.nixpkgs.lib) attrValues makeOverridable optionalAttrs singleton;
+  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
+    let
+      inherit (darwin.lib) darwinSystem;
+      inherit (inputs.nixpkgs.lib)
+        attrValues makeOverridable optionalAttrs singleton;
 
+      overlays = attrValues self.overlays ++ [
+        inputs.neovim-overlay.overlay
+        (final: prev:
+          (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+            inherit (final.pkgs-x86) google-chrome;
+          }))
+      ];
 
-    overlays = attrValues self.overlays ++ [
-	inputs.neovim-overlay.overlay
-	(
-	  final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-	    inherit (final.pkgs-x86) google-chrome;
-	  })
-	)
-    ];
-
-    nixpkgsConfig = {
-      config = { allowUnfree = true; };
-      overlays = overlays;
-    };
-  in
-  {
-    darwinConfigurations = rec {
-      STX-MacBook-Pro = darwinSystem {
-        system = "aarch64-darwin";
-	modules = [
-	  ./configuration.nix
-    ./darwin
-	  home-manager.darwinModules.home-manager
-	  {
-	    nixpkgs = nixpkgsConfig;
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
-      home-manager.users.stx = { ... }: {
-        imports = [
-          ./home.nix
-        ];
+      nixpkgsConfig = {
+        config = { allowUnfree = true; };
+        overlays = overlays;
       };
-	    home-manager.extraSpecialArgs = { inherit inputs; };
-	  }
-	];
+    in {
+      darwinConfigurations = rec {
+        STX-MacBook-Pro = darwinSystem {
+          system = "aarch64-darwin";
+          modules = [
+            ./configuration.nix
+            ./darwin
+            home-manager.darwinModules.home-manager
+            {
+              nixpkgs = nixpkgsConfig;
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users.stx = { ... }: { imports = [ ./home.nix ]; };
+              home-manager.extraSpecialArgs = { inherit inputs; };
+            }
+          ];
+        };
+      };
+      overlays = {
+        apple-silicon = final: prev:
+          optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+            pkgs-x86 = import inputs.nixpkgs {
+              system = "x86_64-darwin";
+              inherit (nixpkgsConfig) config;
+            };
+          };
       };
     };
-    overlays = {
-	    apple-silicon = final: prev: optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-		    pkgs-x86 = import inputs.nixpkgs {
-			    system = "x86_64-darwin";
-			    inherit (nixpkgsConfig) config;
-		    };
-	    };
-    };
-  };
 }

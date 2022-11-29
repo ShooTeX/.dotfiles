@@ -1,17 +1,19 @@
-{config, pkgs, lib, nixpkgs, inputs, ... }:
+{ config, pkgs, lib, nixpkgs, inputs, ... }:
 
 let
-  nvchad-config = pkgs.callPackage ./modules/nvchad-config.nix { nvchad = inputs.nvchad; nvim-config = inputs.nvim-config; };
-in
-{
-# This value determines the Home Manager release that your
-# configuration is compatible with. This helps avoid breakage
-# when a new Home Manager release introduces backwards
-# incompatible changes.
-#
-# You can update Home Manager without changing this value. See
-# the Home Manager release notes for a list of state version
-# changes in each release.
+  nvchad-config = pkgs.callPackage ./modules/nvchad-config.nix {
+    nvchad = inputs.nvchad;
+    nvim-config = inputs.nvim-config;
+  };
+in {
+  # This value determines the Home Manager release that your
+  # configuration is compatible with. This helps avoid breakage
+  # when a new Home Manager release introduces backwards
+  # incompatible changes.
+  #
+  # You can update Home Manager without changing this value. See
+  # the Home Manager release notes for a list of state version
+  # changes in each release.
   home.stateVersion = "22.05";
 
   home.packages = with pkgs; [
@@ -43,22 +45,20 @@ in
     nodePackages_latest.pnpm
   ];
 
-  home.sessionPath = [ "$HOME/.npm-packages/bin"];
+  home.sessionPath = [ "$HOME/.npm-packages/bin" ];
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
     TERMINAL = "kitty";
-  }; 
+  };
 
-# Let Home Manager install and manage itself.
+  # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
   programs.direnv = {
     enable = true;
 
-    nix-direnv = {
-      enable = true;
-    };
+    nix-direnv = { enable = true; };
   };
 
   programs.google-chrome.enable = false;
@@ -84,24 +84,14 @@ in
         name = "Erik Simon";
         email = "10850738+ShooTeX@users.noreply.github.com";
       };
-      pull = {
-        ff = "only";
-      };
-      merge = {
-        ff = "only";
-      };
-      fetch = {
-        prune = true;
-      };
-      init = {
-        defaultBranch = "main";
-      };
+      pull = { ff = "only"; };
+      merge = { ff = "only"; };
+      fetch = { prune = true; };
+      init = { defaultBranch = "main"; };
     };
   };
 
-  programs.gh = {
-    enable = true;
-  };
+  programs.gh = { enable = true; };
 
   programs.zsh = {
     enable = true;
@@ -126,7 +116,7 @@ in
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
       export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
-      '';
+    '';
   };
 
   programs.fzf = {
@@ -138,7 +128,7 @@ in
     enable = true;
 
     settings = {
-      format = lib.concatStrings [ 
+      format = lib.concatStrings [
         "[](#9A348E)"
         "$username"
         "[](bg:#DA627D fg:#9A348E)"
@@ -162,7 +152,7 @@ in
         "[](fg:#06969A bg:#33658A)"
         "$time"
         "[ ](fg:#33658A)"
-        ];
+      ];
 
       username = {
         show_always = true;
