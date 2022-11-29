@@ -16,6 +16,7 @@ in
 
   home.packages = with pkgs; [
     gcc
+    libiconv
     exa
     bat
     fd
@@ -34,6 +35,7 @@ in
     git-crypt
     gnupg
     jq
+    rustup
 
     # node
     nodePackages_latest.yarn
@@ -122,6 +124,7 @@ in
       VISUAL=vim
       eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
+      export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
       '';
   };
 
