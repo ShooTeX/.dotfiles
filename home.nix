@@ -17,6 +17,7 @@ in
   home.packages = with pkgs; [
     gcc
     libiconv
+    nixfmt
     exa
     bat
     fd
