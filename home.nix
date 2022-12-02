@@ -39,6 +39,7 @@ in {
     gnupg
     jq
     rustup
+    pgcli
 
     # node
     nodePackages_latest.yarn
