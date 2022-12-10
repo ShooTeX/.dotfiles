@@ -55,6 +55,14 @@ return {
 		end,
 	},
 
+	["ldelossa/gh.nvim"] = {
+		requires = "ldelossa/litee.nvim",
+		config = function()
+			require("litee.lib").setup()
+			require("litee.gh").setup()
+		end,
+	},
+
 	["folke/trouble.nvim"] = {
 		requires = "kyazdani42/nvim-web-devicons",
 	},
