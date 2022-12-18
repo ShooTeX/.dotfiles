@@ -14,6 +14,7 @@ local servers = {
 	"jsonls",
 	"tailwindcss",
 	"prismals",
+	"rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do

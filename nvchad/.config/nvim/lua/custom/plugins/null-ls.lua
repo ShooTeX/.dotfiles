@@ -33,6 +33,8 @@ local sources = {
 
   b.formatting.nixfmt,
 
+  b.formatting.rustfmt,
+
 	b.formatting.codespell,
 	b.diagnostics.codespell,
 }
