@@ -190,11 +190,16 @@ in {
         disabled = false;
         time_format = "%R";
         style = "bg:#33658A";
-        format = "[ ♥ $time ]($style)";
+        format = "[  $time ]($style)";
       };
 
       nodejs = {
         symbol = "";
+        style = "bg:#86BBD8";
+        format = "[ $symbol ($version) ]($style)";
+      };
+      rust = {
+        symbol = "";
         style = "bg:#86BBD8";
         format = "[ $symbol ($version) ]($style)";
       };
