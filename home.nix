@@ -44,7 +44,7 @@ in {
     nodePackages_latest.pnpm
   ];
 
-  home.sessionPath = [ "$HOME/.npm-packages/bin" ];
+  home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" ];
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
