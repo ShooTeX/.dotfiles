@@ -38,7 +38,6 @@ in {
     git-crypt
     gnupg
     jq
-    rustup
     pgcli
 
     # node
