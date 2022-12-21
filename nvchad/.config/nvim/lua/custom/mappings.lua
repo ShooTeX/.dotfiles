@@ -4,6 +4,14 @@ M.general = {
 	n = {
 		[";"] = { ":", "command mode", opts = { nowait = true } },
 	},
+	v = {
+		["<leader>ca"] = {
+			function()
+				vim.lsp.buf.code_action()
+			end,
+			"lsp code_action",
+		},
+	},
 }
 
 M.trouble = {
