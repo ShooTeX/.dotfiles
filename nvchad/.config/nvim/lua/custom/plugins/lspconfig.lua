@@ -33,6 +33,24 @@ for _, lsp in ipairs(servers) do
 		end
 	end
 
+	if lsp == "rust_analyzer" then
+		setup["settings"] = {
+			["rust-analyzer"] = {
+				checkOnSave = {
+					allFeatures = true,
+					overrideCommand = {
+						"cargo",
+						"clippy",
+						"--workspace",
+						"--message-format=json",
+						"--all-targets",
+						"--all-features",
+					},
+				},
+			},
+		}
+	end
+
 	if lsp == "jsonls" then
 		setup["settings"] = {
 			json = {
