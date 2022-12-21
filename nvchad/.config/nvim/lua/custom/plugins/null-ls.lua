@@ -11,7 +11,7 @@ local eslint_filetypes = { "graphql", "html" }
 local sources = {
 
 	b.formatting.prettierd.with({
-		filetypes = { "json", "jsonc" },
+		filetypes = { "json", "jsonc", "markdown" },
 	}),
 
 	b.diagnostics.actionlint,
@@ -31,12 +31,14 @@ local sources = {
 
 	b.formatting.stylua,
 
-  b.formatting.nixfmt,
+	b.formatting.nixfmt,
 
-  b.formatting.rustfmt,
+	b.formatting.rustfmt,
 
 	b.formatting.codespell,
 	b.diagnostics.codespell,
+
+	b.diagnostics.markdownlint,
 }
 
 null_ls.setup({

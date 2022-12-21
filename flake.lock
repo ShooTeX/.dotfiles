@@ -185,7 +185,7 @@
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-PKdqqNe+5JZm1LY/fGgv56jgg2CHOaDW9uVz+Qn+8ZE=",
+        "narHash": "sha256-k8se6ciFwhtnyk0WviVJelgpCSammjq9Kw2ZDH66IZw=",
         "path": "nvchad/.config/nvim/lua/custom/",
         "type": "path"
       },
