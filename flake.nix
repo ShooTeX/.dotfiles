@@ -25,8 +25,7 @@
       flake = false;
     };
     ivar-nixpkgs-yabai-5_0_1.url =
-      "github:IvarWithoutBones/nixpkgs?rev=161530fa3434ea801419a8ca33dcd97ffb8e6fee";
-
+      "github:IvarWithoutBones/nixpkgs?rev=27d6a8b410d9e5280d6e76692156dce5d9d6ef86";
   };
 
   outputs = { self, darwin, nixpkgs, home-manager, ivar-nixpkgs-yabai-5_0_1, ...
