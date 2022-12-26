@@ -26,7 +26,6 @@ in {
     hyperfine
     tealdeer
     grex
-    zoxide
     unzip
     lazygit
     nodejs
@@ -123,6 +122,8 @@ in {
     enable = true;
     enableZshIntegration = true;
   };
+
+  programs.zoxide = { enable = true; };
 
   programs.starship = {
     enable = true;
