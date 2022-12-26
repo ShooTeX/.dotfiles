@@ -37,6 +37,7 @@ in {
     gnupg
     jq
     pgcli
+    gawk
 
     # node
     nodePackages_latest.yarn
