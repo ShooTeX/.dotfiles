@@ -35,8 +35,12 @@ local sources = {
 
 	b.formatting.rustfmt,
 
-	b.formatting.codespell,
-	b.diagnostics.codespell,
+	b.formatting.codespell.with({
+		extra_args = { "-L", "crate" },
+	}),
+	b.diagnostics.codespell.with({
+		extra_args = { "-L", "crate" },
+	}),
 
 	b.diagnostics.markdownlint,
 }
