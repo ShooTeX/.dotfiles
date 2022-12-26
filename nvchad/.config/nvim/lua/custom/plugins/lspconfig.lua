@@ -23,17 +23,23 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	}
 
-	if lsp == "angularls" then
-		local clients = vim.lsp.get_active_clients({
-			name = "tsserver",
-		})
-
-		if clients[0] then
-			clients[0].server_capabilities.renameProvider = false
-		end
-	end
+	-- if lsp == "angularls" then
+	-- 	local clients = vim.lsp.get_active_clients({
+	-- 		name = "tsserver",
+	-- 	})
+	--
+	-- 	if clients[0] then
+	-- 		clients[0].server_capabilities.renameProvider = false
+	-- 	end
+	-- end
 
 	if lsp == "rust_analyzer" then
+		setup["on_attach"] = function(client, bufnr)
+			on_attach(client, bufnr)
+
+			client.server_capabilities.semanticTokensProvider = nil
+		end
+
 		setup["settings"] = {
 			["rust-analyzer"] = {
 				checkOnSave = {

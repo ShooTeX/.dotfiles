@@ -1,7 +1,6 @@
 local overrides = require("custom.plugins.overrides")
 
 return {
-
 	["neovim/nvim-lspconfig"] = {
 		config = function()
 			require("plugins.configs.lspconfig")
