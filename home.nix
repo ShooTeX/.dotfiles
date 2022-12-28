@@ -19,7 +19,6 @@ in {
   home.packages = with pkgs; [
     libiconv
     nixfmt
-    exa
     bat
     fd
     ripgrep
@@ -104,6 +103,7 @@ in {
     shellAliases = {
       ls = "exa --icons --color=always --group-directories-first";
       sl = "ls";
+      lsa = "ls -a";
       l = "ls -l";
       la = "ls -la";
       ip = "ip --color=auto";
@@ -122,6 +122,10 @@ in {
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.exa = {
+    enable = true;
   };
 
   programs.zoxide = { enable = true; };
