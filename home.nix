@@ -114,12 +114,13 @@ in {
       find = "fd";
 
       cp = "xcp";
+
+      cd = "z";
     };
 
     initExtra = ''
       EDITOR=vim
       VISUAL=vim
-      eval "$(zoxide init zsh)"
       eval "$(direnv hook zsh)"
       export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
     '';
@@ -132,7 +133,10 @@ in {
 
   programs.exa = { enable = true; };
 
-  programs.zoxide = { enable = true; };
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.starship = {
     enable = true;
