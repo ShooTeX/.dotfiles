@@ -5,6 +5,7 @@
     package = pkgs.yabai-5_0_1;
     config = {
       focus_follows_mouse = "autoraise";
+      mouse_follows_focus = "on";
 
       window_border = "on";
       window_border_width = 4;
