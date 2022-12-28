@@ -21,6 +21,8 @@ in {
     nixfmt
     bat
     fd
+    xcp
+    rm-improved
     ripgrep
     hyperfine
     tealdeer
@@ -106,8 +108,12 @@ in {
       lsa = "ls -a";
       l = "ls -l";
       la = "ls -la";
+
       ip = "ip --color=auto";
+
       find = "fd";
+
+      cp = "xcp";
     };
 
     initExtra = ''
@@ -124,9 +130,7 @@ in {
     enableZshIntegration = true;
   };
 
-  programs.exa = {
-    enable = true;
-  };
+  programs.exa = { enable = true; };
 
   programs.zoxide = { enable = true; };
 
