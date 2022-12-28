@@ -102,10 +102,10 @@ in {
     enableCompletion = true;
 
     shellAliases = {
-      sl = "exa";
-      ls = "exa";
-      l = "exa -l";
-      la = "exa -la";
+      ls = "exa --icons --color=always --group-directories-first";
+      sl = "ls";
+      l = "ls -l";
+      la = "ls -la";
       ip = "ip --color=auto";
       find = "fd";
     };
