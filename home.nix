@@ -21,7 +21,12 @@ in {
     nixfmt
     bat
     fd
+    xh
     sd
+    du-dust
+    bottom
+    procs
+    dogdns
     xcp
     rm-improved
     ripgrep
@@ -79,6 +84,14 @@ in {
 
   programs.git = {
     enable = true;
+
+    delta = {
+      enable = true;
+      options = {
+        side-by-side = true;
+        line-numbers = true;
+      };
+    };
 
     extraConfig = {
       user = {
