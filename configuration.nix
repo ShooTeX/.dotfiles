@@ -8,10 +8,7 @@
   services.nix-daemon.enable = true;
 
   fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [
-    recursive
-    (nerdfonts.override { fonts = [ "Iosevka" ]; })
-  ];
+  fonts.fonts = with pkgs; [ iosevka ];
 
   system.keyboard = {
     enableKeyMapping = true;

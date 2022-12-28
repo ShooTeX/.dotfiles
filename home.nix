@@ -70,7 +70,7 @@ in {
       hide_window_decorations = "titlebar-only";
     };
     font = {
-      name = "Iosevka Nerd Font";
+      name = "Iosevka";
       size = 16;
     };
   };
