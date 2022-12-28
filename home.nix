@@ -64,14 +64,14 @@ in {
 
   programs.kitty = {
     enable = true;
-    theme = "Catppuccin-Macchiato";
+    theme = "Catppuccin-Mocha";
     settings = {
       macos_option_as_alt = true;
       hide_window_decorations = "titlebar-only";
     };
     font = {
       name = "Iosevka";
-      size = 16;
+      size = 18;
     };
   };
 
