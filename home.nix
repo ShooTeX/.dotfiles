@@ -21,6 +21,7 @@ in {
     nixfmt
     bat
     fd
+    sd
     xcp
     rm-improved
     ripgrep
