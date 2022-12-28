@@ -42,10 +42,12 @@ for _, lsp in ipairs(servers) do
 
 		setup["settings"] = {
 			["rust-analyzer"] = {
+				extraArgs = { "+nightly" },
 				checkOnSave = {
 					allFeatures = true,
 					overrideCommand = {
 						"cargo",
+						"+nightly",
 						"clippy",
 						"--workspace",
 						"--message-format=json",
