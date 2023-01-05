@@ -34,7 +34,6 @@ in {
     tealdeer
     grex
     unzip
-    lazygit
     nodejs
     rustup
     ngrok
@@ -105,6 +104,8 @@ in {
       init = { defaultBranch = "main"; };
     };
   };
+
+  programs.lazygit = { enable = true; };
 
   programs.gh = { enable = true; };
 
