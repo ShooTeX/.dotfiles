@@ -14,7 +14,9 @@
     };
     neovim-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # https://github.com/nix-community/neovim-nightly-overlay/issues/164
+      inputs.nixpkgs.url = "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     nvchad = {
       url = "github:nvchad/nvchad";
