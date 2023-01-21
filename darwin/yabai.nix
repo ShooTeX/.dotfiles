@@ -2,7 +2,6 @@
   services.yabai = {
     enable = true;
     enableScriptingAddition = true;
-    package = pkgs.yabai-5_0_1;
     config = {
       focus_follows_mouse = "autoraise";
       mouse_follows_focus = "on";

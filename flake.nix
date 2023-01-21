@@ -15,7 +15,8 @@
     neovim-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
       # https://github.com/nix-community/neovim-nightly-overlay/issues/164
-      inputs.nixpkgs.url = "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
+      inputs.nixpkgs.url =
+        "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
     nvchad = {
@@ -26,12 +27,9 @@
       url = "path:nvchad/.config/nvim/lua/custom/";
       flake = false;
     };
-    ivar-nixpkgs-yabai-5_0_1.url =
-      "github:IvarWithoutBones/nixpkgs?rev=27d6a8b410d9e5280d6e76692156dce5d9d6ef86";
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ivar-nixpkgs-yabai-5_0_1, ...
-    }@inputs:
+  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
     let
       inherit (darwin.lib) darwinSystem;
       inherit (inputs.nixpkgs.lib)
@@ -39,10 +37,6 @@
 
       overlays = attrValues self.overlays ++ [
         inputs.neovim-overlay.overlay
-        (final: prev: {
-          yabai-5_0_1 =
-            (import ivar-nixpkgs-yabai-5_0_1 { inherit (final) system; }).yabai;
-        })
         (final: prev:
           (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
             inherit (final.pkgs-x86) google-chrome;
