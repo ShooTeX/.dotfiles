@@ -18,13 +18,8 @@
       inputs.nixpkgs.url =
         "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
       # inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nvchad = {
-      url = "github:nvchad/nvchad";
-      flake = false;
-    };
     nvim-config = {
-      url = "path:nvchad/.config/nvim/lua/custom/";
+      url = "path:nvim/";
       flake = false;
     };
   };
