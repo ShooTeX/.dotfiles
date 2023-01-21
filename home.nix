@@ -1,11 +1,6 @@
 { config, pkgs, lib, nixpkgs, inputs, ... }:
 
-let
-  nvchad-config = pkgs.callPackage ./modules/nvchad-config.nix {
-    nvchad = inputs.nvchad;
-    nvim-config = inputs.nvim-config;
-  };
-in {
+{
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
@@ -242,7 +237,7 @@ in {
   };
 
   xdg.configFile.nvim = {
-    source = nvchad-config;
+    source = inputs.nvim-config;
     recursive = true;
   };
 }

@@ -163,32 +163,16 @@
         "type": "github"
       }
     },
-    "nvchad": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1673918383,
-        "narHash": "sha256-8k2gWEIUWV998j6Jsvb2ubEm8zw8nj+lAX7JXJM2bPQ=",
-        "owner": "nvchad",
-        "repo": "nvchad",
-        "rev": "b9ec202f79148f60be142f88b11a01d7292b4e74",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nvchad",
-        "repo": "nvchad",
-        "type": "github"
-      }
-    },
     "nvim-config": {
       "flake": false,
       "locked": {
         "lastModified": 1,
-        "narHash": "sha256-4bQnaqryZ+pD5ANbIIyItRCS2h+hVUY1aG3t0Dw6epM=",
-        "path": "nvchad/.config/nvim/lua/custom/",
+        "narHash": "sha256-Ym6LhTKheYzKE7hiijLMb6DbQTfVBKjtaJuXKwP2Tg4=",
+        "path": "nvim/",
         "type": "path"
       },
       "original": {
-        "path": "nvchad/.config/nvim/lua/custom/",
+        "path": "nvim/",
         "type": "path"
       }
     },
@@ -199,7 +183,6 @@
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
-        "nvchad": "nvchad",
         "nvim-config": "nvim-config"
       }
     },
