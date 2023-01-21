@@ -4,6 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
+	"eslint",
 	"html",
 	"cssls",
 	"tsserver",
@@ -15,6 +16,7 @@ local servers = {
 	"tailwindcss",
 	"prismals",
 	"rust_analyzer",
+	"astro",
 }
 
 for _, lsp in ipairs(servers) do
@@ -64,6 +66,77 @@ for _, lsp in ipairs(servers) do
 			json = {
 				schemas = require("schemastore").json.schemas(),
 				validate = { enable = true },
+			},
+		}
+	end
+
+	if lsp == "eslint" then
+		setup["settings"] = {
+			eslint = {
+				codeActionOnSave = {
+					enable = true,
+					mode = "all",
+				},
+				packageManager = "pnpm",
+			},
+		}
+	end
+
+	if lsp == "tailwindcss" then
+		setup = {
+			filetypes = {
+				"aspnetcorerazor",
+				"astro",
+				"astro-markdown",
+				"blade",
+				"django-html",
+				"htmldjango",
+				"edge",
+				"eelixir",
+				"elixir",
+				"ejs",
+				"erb",
+				"eruby",
+				"gohtml",
+				"haml",
+				"handlebars",
+				"hbs",
+				"html",
+				"html-eex",
+				"heex",
+				"jade",
+				"leaf",
+				"liquid",
+				"markdown",
+				"mdx",
+				"mustache",
+				"njk",
+				"nunjucks",
+				"php",
+				"razor",
+				"slim",
+				"twig",
+				"css",
+				"less",
+				"postcss",
+				"sass",
+				"scss",
+				"stylus",
+				"sugarss",
+				"javascript",
+				"javascriptreact",
+				"reason",
+				"rescript",
+				"rust",
+				"typescript",
+				"typescriptreact",
+				"vue",
+				"svelte",
+			},
+			init_options = {
+				userLanguages = {
+					rust = "html",
+				},
 			},
 		}
 	end

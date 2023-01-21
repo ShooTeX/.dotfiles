@@ -6,7 +6,7 @@ end
 
 local b = null_ls.builtins
 
-local eslint_filetypes = { "graphql", "html" }
+local eslint_filetypes = { "graphql", "html", "astro" }
 
 local sources = {
 
@@ -18,16 +18,6 @@ local sources = {
 
 	b.formatting.stylelint,
 	b.diagnostics.stylelint,
-
-	b.formatting.eslint_d.with({
-		extra_filetypes = eslint_filetypes,
-	}),
-	b.code_actions.eslint_d.with({
-		extra_filetypes = eslint_filetypes,
-	}),
-	b.diagnostics.eslint_d.with({
-		extra_filetypes = eslint_filetypes,
-	}),
 
 	b.formatting.stylua,
 
