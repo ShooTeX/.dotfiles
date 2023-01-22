@@ -7,6 +7,7 @@
       type = "git";
       submodules = true;
       ref = "feature/nvim-stx";
+      flake = false;
     };
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nur.url = "github:nix-community/NUR";
