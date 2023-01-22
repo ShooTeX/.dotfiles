@@ -150,17 +150,30 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1674337509,
-        "narHash": "sha256-nXBhEGsrHcHZblYZgJracLO560Cms8lssz1rC4RKTaA=",
+        "lastModified": 1674344653,
+        "narHash": "sha256-3KcyCP4Bc7UXv/FdSSZtckwFo3gBFfNVOIhVrl0hTMo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "75cccc4979ad10e02381d15a0f4f419ddaf5e2db",
+        "rev": "a04998a8cab427a3382d4407b3190108623aa169",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "NUR",
         "type": "github"
+      }
+    },
+    "nvim-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674341549,
+        "narHash": "sha256-i1Vzzq6ClPLTG5CK/WfMTD/9A4Z2d6RulJThxPMkim8=",
+        "type": "git",
+        "url": "file:nvim/"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:nvim/"
       }
     },
     "root": {
@@ -170,26 +183,7 @@
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
-        "self": "self"
-      }
-    },
-    "self": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1674342844,
-        "narHash": "sha256-h6l3c9B+LR+f1QXdDoRbIvZ6Ml5X0oqVn4kbORr9DzM=",
-        "ref": "feature/nvim-stx",
-        "rev": "8c61990fce096af5ead864e96b764753f02a9a05",
-        "revCount": 202,
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/ShooTeX/.dotfiles"
-      },
-      "original": {
-        "ref": "feature/nvim-stx",
-        "submodules": true,
-        "type": "git",
-        "url": "https://github.com/ShooTeX/.dotfiles"
+        "nvim-config": "nvim-config"
       }
     },
     "utils": {
