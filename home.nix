@@ -66,7 +66,7 @@
     enable = true;
     theme = "Catppuccin-Mocha";
     keybindings = {
-      "cmd+t" = "new_tap_with_cwd";
+      "cmd+t" = "new_tab_with_cwd";
     };
     settings = {
       macos_option_as_alt = true;
