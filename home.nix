@@ -43,6 +43,7 @@
     # node
     nodePackages_latest.yarn
     nodePackages_latest.pnpm
+    nodePackages_latest.vercel
   ];
 
   home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" ];
@@ -61,11 +62,12 @@
     nix-direnv = { enable = true; };
   };
 
-  programs.google-chrome.enable = false;
-
   programs.kitty = {
     enable = true;
     theme = "Catppuccin-Mocha";
+    keybindings = {
+      "cmd+t" = "new_tap_with_cwd";
+    };
     settings = {
       macos_option_as_alt = true;
       hide_window_decorations = "titlebar-only";
