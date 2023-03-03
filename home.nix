@@ -39,6 +39,7 @@
     jq
     pgcli
     gawk
+    obsidian
 
     # node
     nodePackages_latest.yarn
