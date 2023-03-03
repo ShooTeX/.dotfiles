@@ -7,6 +7,6 @@
       upgrade = true;
     };
     brews = [ "openssl@1.1" ];
-    casks = [ "alfred" "google-chrome" "tidal" "bitwarden" "discord" "parsec" ];
+    casks = [ "google-chrome" "tidal" "bitwarden" "discord" "parsec" "raycast" ];
   };
 }
