@@ -40,6 +40,7 @@
     pgcli
     gawk
     obsidian
+    git-filter-repo
 
     # node
     nodePackages_latest.yarn
