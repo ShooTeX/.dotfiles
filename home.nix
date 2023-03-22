@@ -41,6 +41,8 @@
     gawk
     obsidian
     git-filter-repo
+    pscale
+    mysql-client
 
     # node
     nodePackages_latest.yarn
