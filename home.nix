@@ -73,6 +73,7 @@
       "cmd+t" = "new_tab_with_cwd";
     };
     settings = {
+      shell_integration = true;
       macos_option_as_alt = true;
       hide_window_decorations = "titlebar-only";
     };
