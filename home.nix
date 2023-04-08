@@ -43,6 +43,7 @@
     git-filter-repo
     pscale
     mysql-client
+    bitwarden-cli
 
     # node
     nodePackages_latest.yarn
