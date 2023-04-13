@@ -29,10 +29,8 @@
     tealdeer
     grex
     unzip
-    nodejs
     rustup
     ngrok
-    sketchybar
     dart
     git-crypt
     gnupg
@@ -45,7 +43,11 @@
     mysql-client
     bitwarden-cli
 
+    #ocaml
+    opam
+
     # node
+    nodejs
     nodePackages_latest.yarn
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
