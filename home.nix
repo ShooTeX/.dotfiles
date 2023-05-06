@@ -142,6 +142,7 @@
       EDITOR=vim
       VISUAL=vim
       eval "$(direnv hook zsh)"
+      eval "$(opam env)"
       export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
     '';
   };
