@@ -14,14 +14,11 @@
     };
     neovim-overlay = {
       url = "github:nix-community/neovim-nightly-overlay";
-      # https://github.com/nix-community/neovim-nightly-overlay/issues/164
-      inputs.nixpkgs.url =
-        "github:nixos/nixpkgs?rev=fad51abd42ca17a60fc1d4cb9382e2d79ae31836";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      /* inputs.nixpkgs.follows = "nixpkgs"; */
     };
     nvim-config = {
-     url = "git+file:nvim/";
-     flake = false;
+      url = "git+file:nvim/";
+      flake = false;
     };
   };
 
@@ -43,7 +40,8 @@
         config = { allowUnfree = true; };
         overlays = overlays;
       };
-    in {
+    in
+    {
       darwinConfigurations = rec {
         STX-MacBook-Pro = darwinSystem {
           system = "aarch64-darwin";
