@@ -42,9 +42,13 @@
     pscale
     mysql-client
     bitwarden-cli
+    wget
 
     #ocaml
     opam
+
+    #latex
+    texlive.combined.scheme-full
 
     # node
     nodejs
