@@ -50,6 +50,9 @@
     #latex
     texlive.combined.scheme-full
 
+    #aws
+    awscli
+
     # node
     nodejs
     nodePackages_latest.yarn
