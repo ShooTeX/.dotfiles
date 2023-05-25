@@ -51,7 +51,7 @@
     texlive.combined.scheme-full
 
     #aws
-    awscli
+    awscli2
 
     # node
     nodejs
