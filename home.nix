@@ -43,6 +43,7 @@
     mysql-client
     bitwarden-cli
     wget
+    gnused
 
     #ocaml
     opam
