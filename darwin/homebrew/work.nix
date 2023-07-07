@@ -6,6 +6,6 @@
       cleanup = "zap";
       upgrade = true;
     };
-    casks = [ "whatsapp" "tidal" "bitwarden" "discord" "raycast" "gitify" "insomnia" ];
+    casks = [ "whatsapp" "tidal" "bitwarden" "discord" "raycast" "gitify" "insomnia" "logi-options-plus" ];
   };
 }
