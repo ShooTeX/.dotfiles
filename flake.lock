@@ -418,15 +418,15 @@
       "locked": {
         "lastModified": 1686412062,
         "narHash": "sha256-+rhHIvhGKrshcyJRckDoYLohXDekdkhkrPg2JCEc7B0=",
-        "ref": "refs/heads/main",
+        "ref": "09094f56ad59ea0ed3271c08b046021f4929d9fc",
         "rev": "09094f56ad59ea0ed3271c08b046021f4929d9fc",
         "revCount": 56,
         "type": "git",
-        "url": "file:nvim/"
+        "url": "file:./nvim/"
       },
       "original": {
         "type": "git",
-        "url": "file:nvim/"
+        "url": "file:./nvim/"
       }
     },
     "pre-commit-hooks-nix": {
