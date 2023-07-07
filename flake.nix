@@ -17,7 +17,7 @@
       /* inputs.nixpkgs.follows = "nixpkgs"; */
     };
     nvim-config = {
-      url = "git+file:nvim/";
+      url = "git+file:./nvim/";
       flake = false;
     };
   };
@@ -62,7 +62,7 @@
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
-            ./darwin
+            ./darwin/work.nix
             home-manager.darwinModules.home-manager
             {
               nixpkgs = nixpkgsConfig;
