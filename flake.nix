@@ -58,6 +58,21 @@
             }
           ];
         };
+        PYFRWN6V2V = darwinSystem {
+          system = "aarch64-darwin";
+          modules = [
+            ./configuration.nix
+            ./darwin
+            home-manager.darwinModules.home-manager
+            {
+              nixpkgs = nixpkgsConfig;
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users."Erik.Simon" = { ... }: { imports = [ ./home.nix ]; };
+              home-manager.extraSpecialArgs = { inherit inputs; };
+            }
+          ];
+        };
       };
       overlays = {
         apple-silicon = final: prev:
