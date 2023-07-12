@@ -59,6 +59,10 @@
     nodePackages_latest.yarn
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
+
+    # security
+    libfido2
+    openssh
   ];
 
   home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" ];
@@ -137,6 +141,8 @@
       lsa = "ls -a";
       l = "ls -l";
       la = "ls -la";
+
+      s = "kitty +kitten ssh";
 
       ip = "ip --color=auto";
 
