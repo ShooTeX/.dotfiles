@@ -65,7 +65,7 @@
     openssh
   ];
 
-  home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" ];
+  home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" ];
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
