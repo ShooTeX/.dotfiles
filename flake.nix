@@ -24,26 +24,23 @@
 
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
     let
-      inherit (darwin.lib) darwinSystem;
-      inherit (inputs.nixpkgs.lib)
-        attrValues makeOverridable optionalAttrs singleton;
-
-      overlays = attrValues self.overlays ++ [
+      overlays = [
         inputs.neovim-overlay.overlay
         (final: prev:
-          (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+          if prev.stdenv.system == "aarch64-darwin" then {
             inherit (final.pkgs-x86) google-chrome;
-          }))
+          } else null
+        )
       ];
 
       nixpkgsConfig = {
-        config = { allowUnfree = true; };
+        config.allowUnfree = true;
         overlays = overlays;
       };
     in
     {
-      darwinConfigurations = rec {
-        STX-MacBook-Pro = darwinSystem {
+      darwinConfigurations = {
+        STX-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
@@ -58,7 +55,7 @@
             }
           ];
         };
-        PYFRWN6V2V = darwinSystem {
+        PYFRWN6V2V = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
@@ -74,14 +71,15 @@
           ];
         };
       };
+
       overlays = {
         apple-silicon = final: prev:
-          optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+          if prev.stdenv.system == "aarch64-darwin" then {
             pkgs-x86 = import inputs.nixpkgs {
               system = "x86_64-darwin";
               inherit (nixpkgsConfig) config;
             };
-          };
+          } else null;
       };
     };
 }
