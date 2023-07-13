@@ -44,6 +44,7 @@
     bitwarden-cli
     wget
     gnused
+    distant
 
     #ocaml
     opam
