@@ -45,6 +45,11 @@
     wget
     gnused
 
+    #kotlin
+    kotlin
+    gradle
+    jdk
+
     #ocaml
     opam
 
