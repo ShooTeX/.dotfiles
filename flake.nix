@@ -12,10 +12,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim-overlay = {
-      url = "github:nix-community/neovim-nightly-overlay";
-      /* inputs.nixpkgs.follows = "nixpkgs"; */
-    };
+    # neovim-overlay = {
+    # url = "github:nix-community/neovim-nightly-overlay";
+    /* inputs.nixpkgs.follows = "nixpkgs"; */
+    # };
     nvim-config = {
       url = "git+file:./nvim/";
       flake = false;
@@ -25,7 +25,6 @@
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
     let
       overlays = [
-        inputs.neovim-overlay.overlay
         (final: prev:
           if prev.stdenv.system == "aarch64-darwin" then {
             inherit (final.pkgs-x86) google-chrome;
