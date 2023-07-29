@@ -5,7 +5,11 @@
       "	extra-platforms = x86_64-darwin aarch64-darwin\n";
 
   programs.zsh.enable = true;
-  services.nix-daemon.enable = true;
+
+  services = {
+    nix-daemon.enable = true;
+    sketchybar.enable = true;
+  };
 
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
@@ -22,7 +26,7 @@
         minimize-to-application = true;
         show-recents = false;
         static-only = true;
-        tilesize = 20;
+        tilesize = 50;
       };
       finder = {
         CreateDesktop = false;
