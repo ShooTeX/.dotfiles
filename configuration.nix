@@ -8,7 +8,7 @@
 
   services = {
     nix-daemon.enable = true;
-    sketchybar.enable = true;
+    # sketchybar.enable = true;
   };
 
   fonts.fontDir.enable = true;
