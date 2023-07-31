@@ -18,7 +18,7 @@
       auto_balance = "on";
       layout = "bsp";
 
-      top_padding = 10;
+      top_padding = 42;
       bottom_padding = 10;
       left_padding = 10;
       right_padding = 10;
