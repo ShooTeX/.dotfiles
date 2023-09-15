@@ -60,6 +60,7 @@
     awscli2
 
     # node
+    bun
     nodejs
     nodePackages_latest.yarn
     nodePackages_latest.pnpm

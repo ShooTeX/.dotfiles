@@ -17,7 +17,7 @@
     /* inputs.nixpkgs.follows = "nixpkgs"; */
     # };
     nvim-config = {
-      url = "git+file:./nvim/";
+      url = "git+file:./nvim";
       flake = false;
     };
   };
