@@ -19,6 +19,9 @@
     })
   ];
 
+  users.users.stx.home = "/Users/stx";
+  users.users."Erik.Simon".home = "/Users/Erik.Simon";
+
   system = {
     defaults = {
       dock = {
