@@ -49,6 +49,7 @@
     kotlin
     gradle
     jdk
+    http4k
 
     #ocaml
     opam

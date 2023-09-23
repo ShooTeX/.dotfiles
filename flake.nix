@@ -26,9 +26,10 @@
     let
       overlays = [
         (final: prev:
-          if prev.stdenv.system == "aarch64-darwin" then {
-            inherit (final.pkgs-x86) google-chrome;
-          } else null
+          {
+            http4k = final.callPackage ./pkgs/http4k.nix { };
+            inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
+          }
         )
       ];
 
