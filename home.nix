@@ -259,6 +259,11 @@
         style = "bg:#86BBD8";
         format = "[ $symbol ($version) ]($style)";
       };
+      java = {
+        symbol = " ";
+        style = "bg:#86BBD8";
+        format = "[ $symbol ($version) ]($style)";
+      };
     };
   };
 
