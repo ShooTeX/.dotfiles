@@ -187,7 +187,7 @@
     settings = {
       format = lib.concatStrings [
         "[](#9A348E)"
-        "$username"
+        "$os"
         "[](bg:#DA627D fg:#9A348E)"
         "$directory"
         "[](fg:#DA627D bg:#FCA17D)"
@@ -211,11 +211,13 @@
         "[ ](fg:#33658A)"
       ];
 
-      username = {
-        show_always = true;
-        style_user = "bg:#9A348E";
-        style_root = "bg:#9A348E";
-        format = "[$user ]($style)";
+      os = {
+        disabled = false;
+        style = "bg:#9A348E";
+        format = "[  $symbol  ]($style)";
+        symbols = {
+          Macos = "";
+        };
       };
 
       directory = {
