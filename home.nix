@@ -45,6 +45,9 @@
     wget
     gnused
 
+    # IaC
+    terraform
+
     #kotlin
     kotlin
     gradle
