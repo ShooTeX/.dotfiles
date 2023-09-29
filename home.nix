@@ -216,7 +216,7 @@
         style = "bg:#9A348E";
         format = "[  $symbol  ]($style)";
         symbols = {
-          Macos = "";
+          Macos = "";
         };
       };
 
