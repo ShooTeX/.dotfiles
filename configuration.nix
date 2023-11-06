@@ -20,7 +20,7 @@
   ];
 
   users.users.stx.home = "/Users/stx";
-  users.users."Erik.Simon".home = "/Users/Erik.Simon";
+  users.users."eriksimon".home = "/Users/eriksimon";
 
   system = {
     defaults = {

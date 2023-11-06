@@ -17,7 +17,7 @@
     /* inputs.nixpkgs.follows = "nixpkgs"; */
     # };
     nvim-config = {
-      url = "git+file:./nvim/";
+      url = "git+file:./nvim";
       flake = false;
     };
   };
@@ -55,7 +55,7 @@
             }
           ];
         };
-        PYFRWN6V2V = darwin.lib.darwinSystem {
+        Eriks-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
@@ -65,7 +65,7 @@
               nixpkgs = nixpkgsConfig;
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users."Erik.Simon" = { ... }: { imports = [ ./home.nix ]; };
+              home-manager.users."eriksimon" = { ... }: { imports = [ ./home.nix ]; };
               home-manager.extraSpecialArgs = { inherit inputs; };
             }
           ];
