@@ -73,6 +73,9 @@
     # security
     libfido2
     openssh
+
+    # markdown
+    glow
   ];
 
   home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" ];
