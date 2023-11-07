@@ -44,6 +44,7 @@
     bitwarden-cli
     wget
     gnused
+    husky
 
     # IaC
     terraform
