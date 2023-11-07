@@ -45,6 +45,8 @@
     wget
     gnused
     husky
+    gitleaks
+    plantuml
 
     # IaC
     terraform
