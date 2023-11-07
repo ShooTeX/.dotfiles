@@ -73,6 +73,7 @@
     # security
     libfido2
     openssh
+    _1password
 
     # markdown
     glow
