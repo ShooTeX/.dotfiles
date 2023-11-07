@@ -72,6 +72,7 @@
     nodePackages_latest.yarn
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
+    nodePackages_latest.ts-node
 
     # security
     libfido2
