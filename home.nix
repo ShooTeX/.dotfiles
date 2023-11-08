@@ -217,6 +217,7 @@ symbol_map U+F102,U+F116-U+F118,U+F12F,U+F13E,U+F1AF,U+F1BF,U+F1CF,U+F1FF,U+F20F
       la = "ls -la";
 
       s = "kitty +kitten ssh";
+      icat = "kitten icat";
 
       ip = "ip --color=auto";
 
