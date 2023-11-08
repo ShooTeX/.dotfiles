@@ -73,6 +73,7 @@
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
     nodePackages_latest.ts-node
+    extraNodePackages.git-mob
 
     # security
     libfido2
