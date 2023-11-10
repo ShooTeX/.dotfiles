@@ -41,7 +41,6 @@
     git-filter-repo
     pscale
     mysql-client
-    bitwarden-cli
     wget
     gnused
     husky
