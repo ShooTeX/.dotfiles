@@ -48,14 +48,21 @@
     gitleaks
     plantuml
 
+    #
+    qemu
+    podman
+
     # IaC
     terraform
 
     #kotlin
     kotlin
-    gradle
-    jdk
     http4k
+    graalvm-ce
+    (
+      (gradle.override
+        { java = graalvm-ce; })
+    )
 
     #ocaml
     opam
@@ -83,11 +90,13 @@
     glow
   ];
 
-  home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" ];
+  home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" "${pkgs.graalvm-ce}/bin" ];
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
     PNPM_HOME = "$HOME/.pnpm";
+    GRAALVM_HOME = "${pkgs.graalvm-ce}";
+    JAVA_HOME = "${pkgs.graalvm-ce}";
     TERMINAL = "kitty";
   };
 

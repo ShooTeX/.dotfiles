@@ -43,4 +43,6 @@
   };
 
   security.pam.enableSudoTouchIdAuth = true;
+
+  environment.pathsToLink = [ "/share/qemu" ];
 }
