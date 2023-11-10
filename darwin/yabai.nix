@@ -6,12 +6,6 @@
       focus_follows_mouse = "autoraise";
       mouse_follows_focus = "on";
 
-      window_border = "on";
-      window_border_width = 4;
-      active_window_border_color = "0xff5c7e81";
-      normal_window_border_color = "0xff505050";
-      insert_window_border_color = "0xffd75f5f";
-
       window_opacity = "off";
       window_shadow = "float";
 
