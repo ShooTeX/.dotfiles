@@ -120,7 +120,7 @@
       hide_window_decorations = "titlebar-only";
     };
     font = {
-      name = "Iosevka";
+      name = "Ubuntu Mono";
       size = 18;
     };
     shellIntegration = {

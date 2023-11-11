@@ -13,7 +13,7 @@
 
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
-    iosevka
+    ubuntu_font_family
     (nerdfonts.override {
       fonts = [ "NerdFontsSymbolsOnly" ];
     })
