@@ -118,10 +118,11 @@
       shell_integration = true;
       macos_option_as_alt = true;
       hide_window_decorations = "titlebar-only";
+      disable_ligatures = "cursor";
     };
     font = {
-      name = "Ubuntu Mono";
-      size = 18;
+      name = "Iosevka";
+      size = 16;
     };
     shellIntegration = {
       enableZshIntegration = true;
