@@ -1,4 +1,6 @@
 { pkgs, lib, ... }:
+let monaspace = pkgs.callPackage ./pkgs/fonts/monaspace.nix { };
+in
 {
   nix.extraOptions =
     "	auto-optimise-store = true\n	experimental-features = nix-command flakes\n"
@@ -14,7 +16,7 @@
 
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
-    iosevka
+    ubuntu_font_family
     (nerdfonts.override {
       fonts = [ "NerdFontsSymbolsOnly" ];
     })
