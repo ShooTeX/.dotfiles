@@ -29,13 +29,13 @@
       yabai -m space 6 --label six     
       yabai -m space 7 --label seven   
       yabai -m space 8 --label eight   
-      yabai -m rule --add app="Kitty" space=code             
-      yabai -m rule --add app="Google Chrome" space=www      
-      yabai -m rule --add app="Microsoft Teams" space=chat   
-      yabai -m rule --add app="Slack" space=chat             
-      yabai -m rule --add app="Signal" space=chat            
-      yabai -m rule --add app="WhatsApp" space=chat          
-      yabai -m rule --add app="Tidal" space=music
+      # yabai -m rule --add app="Kitty" space=code             
+      # yabai -m rule --add app="Google Chrome" space=www      
+      # yabai -m rule --add app="Microsoft Teams" space=chat   
+      # yabai -m rule --add app="Slack" space=chat             
+      # yabai -m rule --add app="Signal" space=chat            
+      # yabai -m rule --add app="WhatsApp" space=chat          
+      # yabai -m rule --add app="Tidal" space=music
     '';
   };
   # };
