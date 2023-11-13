@@ -30,6 +30,10 @@
         show-recents = false;
         static-only = true;
         tilesize = 50;
+        # desktop
+        wvous-tr-corner = 4;
+        # mission control
+        wvous-br-corner = 2;
       };
       finder = {
         CreateDesktop = false;
