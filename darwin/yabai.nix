@@ -9,7 +9,6 @@
       window_opacity = "off";
       window_shadow = "float";
 
-      auto_balance = "on";
       layout = "bsp";
 
       top_padding = 10;
