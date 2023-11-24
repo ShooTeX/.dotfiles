@@ -7,6 +7,6 @@
       upgrade = true;
     };
     brews = [ "openssl@1.1" ];
-    casks = [ "whatsapp" "google-chrome" "tidal" "discord" "parsec" "raycast" "insomnia" "teamspeak-client" ];
+    casks = [ "1password" "whatsapp" "google-chrome" "tidal" "discord" "parsec" "raycast" "insomnia" "teamspeak-client" ];
   };
 }

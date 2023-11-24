@@ -84,7 +84,6 @@
     libfido2
     openssh
     _1password
-    _1password-gui
 
     # markdown
     glow
