@@ -74,7 +74,7 @@
 
     # node
     bun
-    nodejs
+    nodejs_20
     nodePackages_latest.yarn
     nodePackages_latest.pnpm
     nodePackages_latest.vercel
@@ -84,6 +84,7 @@
     libfido2
     openssh
     _1password
+    _1password-gui
 
     # markdown
     glow
