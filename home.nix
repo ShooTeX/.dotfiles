@@ -87,6 +87,8 @@
 
     # markdown
     glow
+
+    mob
   ];
 
   home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" "${pkgs.graalvm-ce}/bin" ];
@@ -192,6 +194,9 @@
       eval "$(direnv hook zsh)"
       eval "$(opam env)"
       export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
+      if [[ $(uname -m) == 'arm64' ]]; then
+          eval "$(/opt/homebrew/bin/brew shellenv)"
+      fi
     '';
   };
 
