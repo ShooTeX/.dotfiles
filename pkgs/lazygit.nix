@@ -9,7 +9,7 @@ let
       owner = "jesseduffield";
       repo = "lazygit";
       rev = "93fd429";
-      sha256 = "sha256-sFPw8z0S7t70afExA7dAWyIkagNFOmHTTfCgrCfAO94="; # Replace with the actual sha256
+      sha256 = "sha256-hcJJ2H4MvcszOjEyV834K0Uze9V9hwN9DOuetwaMS1A="; # Replace with the actual sha256
     };
     buildInputs = [
       go
