@@ -8,7 +8,7 @@ let
     src = fetchFromGitHub {
       owner = "jesseduffield";
       repo = "lazygit";
-      rev = "c25f9b2";
+      rev = "93fd429";
       sha256 = "sha256-sFPw8z0S7t70afExA7dAWyIkagNFOmHTTfCgrCfAO94="; # Replace with the actual sha256
     };
     buildInputs = [
