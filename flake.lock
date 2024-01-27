@@ -229,8 +229,8 @@
         "url": "file:./nvim"
       },
       "original": {
-        "type": "git",
-        "url": "file:./nvim"
+        "id": "nvim-config",
+        "type": "indirect"
       }
     },
     "root": {
