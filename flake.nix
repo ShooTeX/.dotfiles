@@ -76,15 +76,5 @@
           ];
         };
       };
-
-      overlays = {
-        apple-silicon = final: prev:
-          if prev.stdenv.system == "aarch64-darwin" then {
-            pkgs-x86 = import inputs.nixpkgs {
-              system = "x86_64-darwin";
-              inherit (nixpkgsConfig) config;
-            };
-          } else null;
-      };
     };
 }
