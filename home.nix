@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixpkgs, inputs, ... }:
+{ config, pkgs, lib, nixpkgs, nvim-config, ... }:
 
 {
   # This value determines the Home Manager release that your
@@ -355,7 +355,7 @@
   };
 
   xdg.configFile.nvim = {
-    source = inputs.nvim-config;
+    source = nvim-config;
     recursive = true;
   };
 }

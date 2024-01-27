@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    nur.url = "github:nix-community/NUR";
     darwin = {
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,10 +21,10 @@
     };
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, darwin, home-manager, neovim-overlay, nvim-config }:
     let
       overlays = [
-        inputs.neovim-overlay.overlay
+        neovim-overlay.overlay
         (final: prev:
           {
             http4k = final.callPackage ./pkgs/http4k.nix { };
@@ -56,7 +55,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.stx = { ... }: { imports = [ ./home.nix ]; };
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.extraSpecialArgs = { inherit nvim-config; };
             }
           ];
         };
@@ -71,7 +70,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users."eriksimon" = { ... }: { imports = [ ./home.nix ]; };
-              home-manager.extraSpecialArgs = { inherit inputs; };
+              home-manager.extraSpecialArgs = { inherit nvim-config; };
             }
           ];
         };
