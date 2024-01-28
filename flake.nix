@@ -19,9 +19,13 @@
       url = "flake:nvim-config";
       flake = false;
     };
+    wezterm-config = {
+      url = "./wezterm.lua";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, neovim-overlay, nvim-config }:
+  outputs = { self, nixpkgs, darwin, home-manager, neovim-overlay, nvim-config, wezterm-config }:
     let
       overlays = [
         neovim-overlay.overlay
@@ -46,7 +50,7 @@
         nixpkgs = nixpkgsConfig;
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit nvim-config; };
+        home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
       };
     in
     {

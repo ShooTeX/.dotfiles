@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixpkgs, nvim-config, ... }:
+{ config, pkgs, lib, nixpkgs, nvim-config, wezterm-config, ... }:
 
 {
   # This value determines the Home Manager release that your
@@ -110,13 +110,19 @@
     nix-direnv = { enable = true; };
   };
 
+  programs.wezterm = {
+    enable = true;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+
   programs.kitty = {
     enable = true;
     keybindings = {
       "cmd+t" = "new_tab_with_cwd";
     };
     font = {
-      name = "Ubuntu Mono";
+      name = "Iosevka";
       size = 16;
     };
     settings = {
@@ -357,5 +363,9 @@
   xdg.configFile.nvim = {
     source = nvim-config;
     recursive = true;
+  };
+
+  xdg.configFile."wezterm/wezterm.lua" = {
+    source = wezterm-config;
   };
 }

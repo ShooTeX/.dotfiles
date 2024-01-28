@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1705915768,
-        "narHash": "sha256-+Jlz8OAqkOwJlioac9wtpsCnjgGYUhvLpgJR/5tP9po=",
+        "lastModified": 1706405065,
+        "narHash": "sha256-femlVBNWgr9a6HfBUzhBF/9S8VBlaHDKcEm8B89O+zc=",
         "owner": "LnL7",
         "repo": "nix-darwin",
-        "rev": "1e706ef323de76236eb183d7784f3bd57255ec0b",
+        "rev": "0108864c15bb68ad57d17fb2e7d3a3e025751d79",
         "type": "github"
       },
       "original": {
@@ -224,7 +224,8 @@
         "home-manager": "home-manager",
         "neovim-overlay": "neovim-overlay",
         "nixpkgs": "nixpkgs",
-        "nvim-config": "nvim-config"
+        "nvim-config": "nvim-config",
+        "wezterm-config": "wezterm-config"
       }
     },
     "systems": {
@@ -240,6 +241,19 @@
         "owner": "nix-systems",
         "repo": "default",
         "type": "github"
+      }
+    },
+    "wezterm-config": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1,
+        "narHash": "sha256-eV+JKdVb2RD7+9EYXnCKrhC3oLQJOELPMIAe/FP338M=",
+        "path": "/nix/store/qas7khhy6nnmfgkb8afaggrz1fyhbch9-source/wezterm.lua",
+        "type": "path"
+      },
+      "original": {
+        "path": "/nix/store/qas7khhy6nnmfgkb8afaggrz1fyhbch9-source/wezterm.lua",
+        "type": "path"
       }
     }
   },
