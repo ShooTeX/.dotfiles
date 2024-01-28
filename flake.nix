@@ -41,6 +41,13 @@
         config.allowUnfree = true;
         overlays = overlays;
       };
+
+      homeManagerConfig = {
+        nixpkgs = nixpkgsConfig;
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = { inherit nvim-config; };
+      };
     in
     {
       darwinConfigurations = {
@@ -50,13 +57,8 @@
             ./configuration.nix
             ./darwin
             home-manager.darwinModules.home-manager
-            {
-              nixpkgs = nixpkgsConfig;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.stx = { ... }: { imports = [ ./home.nix ]; };
-              home-manager.extraSpecialArgs = { inherit nvim-config; };
-            }
+            homeManagerConfig
+            { home-manager.users."stx" = { ... }: { imports = [ ./home.nix ]; }; }
           ];
         };
         Eriks-MacBook-Pro = darwin.lib.darwinSystem {
@@ -65,13 +67,8 @@
             ./configuration.nix
             ./darwin/work.nix
             home-manager.darwinModules.home-manager
-            {
-              nixpkgs = nixpkgsConfig;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users."eriksimon" = { ... }: { imports = [ ./home.nix ]; };
-              home-manager.extraSpecialArgs = { inherit nvim-config; };
-            }
+            homeManagerConfig
+            { home-manager.users."eriksimon" = { ... }: { imports = [ ./home.nix ]; }; }
           ];
         };
       };
