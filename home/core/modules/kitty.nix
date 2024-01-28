@@ -1,5 +1,5 @@
 {
-  kitty = {
+  programs.kitty = {
     enable = true;
     keybindings = {
       "cmd+t" = "new_tab_with_cwd";
@@ -67,5 +67,9 @@
       color16 #FFA066
       color17 #FF5D62
     '';
+  };
+
+  home.sessionVariables = {
+    TERMINAL = "kitty";
   };
 }

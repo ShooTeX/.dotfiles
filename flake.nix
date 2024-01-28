@@ -59,7 +59,7 @@
             ./darwin
             home-manager.darwinModules.home-manager
             homeManagerConfig
-            { home-manager.users."stx" = { ... }: { imports = [ ./home.nix ]; }; }
+            { home-manager.users."stx" = { ... }: { imports = [ ./home.nix ./home/common/programs/starship.nix ]; }; }
           ];
         };
 
