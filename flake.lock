@@ -246,11 +246,11 @@
     "wezterm-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1706413334,
-        "narHash": "sha256-rvksFNZQrG32NtvNXryjoVDdWsnN4vdGqXa9lN6l8XY=",
+        "lastModified": 1706413775,
+        "narHash": "sha256-VhCgA4F6nxbvSVi88Cz54KtaS44Xe47FXkl2Yg9gIPE=",
         "owner": "shootex",
         "repo": "wezterm.lua",
-        "rev": "1004728117d38c235e0231f1ed408e1723b3ffb2",
+        "rev": "bc4bbe41b1646bedef38b9a3f253917ad51f444e",
         "type": "github"
       },
       "original": {
