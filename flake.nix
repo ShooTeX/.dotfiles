@@ -20,7 +20,7 @@
       flake = false;
     };
     wezterm-config = {
-      url = "./wezterm.lua";
+      url = "github:shootex/wezterm.lua";
       flake = false;
     };
   };

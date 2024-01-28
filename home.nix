@@ -366,6 +366,12 @@
   };
 
   xdg.configFile."wezterm/wezterm.lua" = {
+    enable = false;
     source = wezterm-config;
+  };
+
+  xdg.configFile."wezterm" = {
+    source = wezterm-config;
+    recursive = true;
   };
 }

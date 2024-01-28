@@ -246,14 +246,17 @@
     "wezterm-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1,
-        "narHash": "sha256-eV+JKdVb2RD7+9EYXnCKrhC3oLQJOELPMIAe/FP338M=",
-        "path": "/nix/store/qas7khhy6nnmfgkb8afaggrz1fyhbch9-source/wezterm.lua",
-        "type": "path"
+        "lastModified": 1706411878,
+        "narHash": "sha256-rvksFNZQrG32NtvNXryjoVDdWsnN4vdGqXa9lN6l8XY=",
+        "owner": "shootex",
+        "repo": "wezterm.lua",
+        "rev": "df1f361e7a325bb65626a9c15aee081b023c90f6",
+        "type": "github"
       },
       "original": {
-        "path": "/nix/store/qas7khhy6nnmfgkb8afaggrz1fyhbch9-source/wezterm.lua",
-        "type": "path"
+        "owner": "shootex",
+        "repo": "wezterm.lua",
+        "type": "github"
       }
     }
   },
