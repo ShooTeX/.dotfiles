@@ -98,7 +98,7 @@
     PNPM_HOME = "$HOME/.pnpm";
     GRAALVM_HOME = "${pkgs.graalvm-ce}";
     JAVA_HOME = "${pkgs.graalvm-ce}";
-    TERMINAL = "kitty";
+    TERMINAL = "wezterm";
   };
 
   # Let Home Manager install and manage itself.
@@ -117,7 +117,7 @@
   };
 
   programs.kitty = {
-    enable = true;
+    enable = false;
     keybindings = {
       "cmd+t" = "new_tab_with_cwd";
     };
