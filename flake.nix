@@ -51,6 +51,7 @@
     in
     {
       darwinConfigurations = {
+        # DEUS
         STX-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
@@ -61,6 +62,8 @@
             { home-manager.users."stx" = { ... }: { imports = [ ./home.nix ]; }; }
           ];
         };
+
+        # GLADIS
         Eriks-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
