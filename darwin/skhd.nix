@@ -21,10 +21,10 @@
       alt + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
       
       # warp window
-      alt + ctrl + shift - h : yabai -m window --swap west || $(yabai -m window --display west; yabai -m display --focus west)
-      alt + ctrl + shift - j : yabai -m window --swap south || $(yabai -m window --display south; yabai -m display --focus south)
-      alt + ctrl + shift - k : yabai -m window --swap north || $(yabai -m window --display north; yabai -m display --focus north)
-      alt + ctrl + shift - l : yabai -m window --swap east || $(yabai -m window --display east; yabai -m display --focus east)
+      alt + ctrl + shift - h : yabai -m window --warp west || $(yabai -m window --display west; yabai -m display --focus west)
+      alt + ctrl + shift - j : yabai -m window --warp south || $(yabai -m window --display south; yabai -m display --focus south)
+      alt + ctrl + shift - k : yabai -m window --warp north || $(yabai -m window --display north; yabai -m display --focus north)
+      alt + ctrl + shift - l : yabai -m window --warp east || $(yabai -m window --display east; yabai -m display --focus east)
              
       # Resize windows
       lctrl + alt - h : yabai -m window --resize left:-50:0; \
