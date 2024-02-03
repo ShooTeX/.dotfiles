@@ -205,11 +205,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1706230424,
-        "narHash": "sha256-e8OSuh0uX/hPduSLhGsV0jTJ6nfiwQWoJFeDKB+EmaU=",
+        "lastModified": 1706924241,
+        "narHash": "sha256-0wX6/Vd9ceUNfvafqoNHqupZbB5tkmBMdBE7s0XdT98=",
         "ref": "refs/heads/main",
-        "rev": "fe44b97ce39ad6558ca842f61866bbfd32971e66",
-        "revCount": 123,
+        "rev": "d5b69c901deb915c00b8700070b1474d19307ce2",
+        "revCount": 124,
         "type": "git",
         "url": "file:./nvim"
       },
