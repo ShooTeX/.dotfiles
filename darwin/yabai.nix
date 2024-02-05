@@ -3,7 +3,6 @@
     enable = true;
     enableScriptingAddition = true;
     config = {
-      focus_follows_mouse = "autoraise";
       mouse_follows_focus = "on";
 
       window_opacity = "off";
