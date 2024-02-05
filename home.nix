@@ -66,9 +66,6 @@
     #ocaml
     opam
 
-    #latex
-    texlive.combined.scheme-full
-
     #aws
     awscli2
 
