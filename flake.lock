@@ -211,7 +211,7 @@
         "rev": "e10c5e47a41fb26f01fdbf013d81578d768d8da7",
         "revCount": 133,
         "type": "git",
-        "url": "file:./nvim"
+        "url": "file:./nvim/"
       },
       "original": {
         "id": "nvim-config",
