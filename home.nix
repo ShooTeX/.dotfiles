@@ -13,7 +13,6 @@
 
   home.packages = with pkgs; [
     libiconv
-    nixfmt
     bat
     fd
     xh
@@ -92,8 +91,10 @@
 
     #ansible
     ansible
-    ansible-lint
-    jmespath
+
+    #nix
+    nixfmt
+    nixd
   ];
 
   home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" "${pkgs.graalvm-ce}/bin" "$HOME/go/bin" ];
