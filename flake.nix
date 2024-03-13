@@ -25,20 +25,19 @@
     };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, neovim-overlay, nvim-config, wezterm-config }:
+  outputs = { self, nixpkgs, darwin, home-manager, neovim-overlay, nvim-config
+    , wezterm-config }:
     let
       overlays = [
         neovim-overlay.overlay
-        (final: prev:
-          {
-            http4k = final.callPackage ./pkgs/http4k.nix { };
-            # use until co-authors is officially released
-            lazygit = final.callPackage ./pkgs/lazygit.nix { };
+        (final: prev: {
+          http4k = final.callPackage ./pkgs/http4k.nix { };
+          # use until co-authors is officially released
+          lazygit = final.callPackage ./pkgs/lazygit.nix { };
 
-            extraNodePackages = final.callPackage ./pkgs/node/default.nix { };
-            inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
-          }
-        )
+          extraNodePackages = final.callPackage ./pkgs/node/default.nix { };
+          inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
+        })
       ];
 
       nixpkgsConfig = {
@@ -52,8 +51,7 @@
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
       };
-    in
-    {
+    in {
       darwinConfigurations = {
         STX-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
@@ -62,7 +60,9 @@
             ./darwin
             home-manager.darwinModules.home-manager
             homeManagerConfig
-            { home-manager.users."stx" = { ... }: { imports = [ ./home.nix ]; }; }
+            {
+              home-manager.users."stx" = { ... }: { imports = [ ./home.nix ]; };
+            }
           ];
         };
         Eriks-MacBook-Pro = darwin.lib.darwinSystem {
@@ -72,7 +72,11 @@
             ./darwin/work.nix
             home-manager.darwinModules.home-manager
             homeManagerConfig
-            { home-manager.users."eriksimon" = { ... }: { imports = [ ./home.nix ]; }; }
+            {
+              home-manager.users."eriksimon" = { ... }: {
+                imports = [ ./home.nix ];
+              };
+            }
           ];
         };
       };

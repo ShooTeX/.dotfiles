@@ -1,11 +1,10 @@
 { pkgs, lib, ... }:
 let monaspace = pkgs.callPackage ./pkgs/fonts/monaspace.nix { };
-in
-{
+in {
   nix.extraOptions =
     "	auto-optimise-store = true\n	experimental-features = nix-command flakes\n"
     + lib.optionalString (pkgs.system == "aarch64-darwin")
-      "	extra-platforms = x86_64-darwin aarch64-darwin\n";
+    "	extra-platforms = x86_64-darwin aarch64-darwin\n";
 
   programs.zsh.enable = true;
 
@@ -17,9 +16,7 @@ in
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
     iosevka
-    (nerdfonts.override {
-      fonts = [ "NerdFontsSymbolsOnly" ];
-    })
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
 
   users.users.stx.home = "/Users/stx";

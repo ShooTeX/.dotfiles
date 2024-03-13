@@ -1,14 +1,12 @@
-{ lib
-, stdenvNoCC
-, fetchzip
-}:
+{ lib, stdenvNoCC, fetchzip }:
 
 stdenvNoCC.mkDerivation (finalAttrs: {
   pname = "monaspace";
   version = "1.000";
 
   src = fetchzip {
-    url = "https://github.com/githubnext/monaspace/releases/download/v${finalAttrs.version}/monaspace-v${finalAttrs.version}.zip";
+    url =
+      "https://github.com/githubnext/monaspace/releases/download/v${finalAttrs.version}/monaspace-v${finalAttrs.version}.zip";
     stripRoot = false;
     hash = "sha256-H8NOS+pVkrY9DofuJhPR2OlzkF4fMdmP2zfDBfrk83A=";
   };

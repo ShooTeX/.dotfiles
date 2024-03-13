@@ -57,10 +57,7 @@
     kotlin
     http4k
     graalvm-ce
-    (
-      (gradle.override
-        { java = graalvm-ce; })
-    )
+    ((gradle.override { java = graalvm-ce; }))
 
     #ocaml
     opam
@@ -97,7 +94,14 @@
     nixd
   ];
 
-  home.sessionPath = [ "$HOME/.npm-packages/bin" "$HOME/.cargo/bin" "$HOME/.pnpm" "$HOME/.local/bin" "${pkgs.graalvm-ce}/bin" "$HOME/go/bin" ];
+  home.sessionPath = [
+    "$HOME/.npm-packages/bin"
+    "$HOME/.cargo/bin"
+    "$HOME/.pnpm"
+    "$HOME/.local/bin"
+    "${pkgs.graalvm-ce}/bin"
+    "$HOME/go/bin"
+  ];
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
@@ -124,9 +128,7 @@
 
   programs.kitty = {
     enable = false;
-    keybindings = {
-      "cmd+t" = "new_tab_with_cwd";
-    };
+    keybindings = { "cmd+t" = "new_tab_with_cwd"; };
     font = {
       name = "Iosevka";
       size = 16;
@@ -137,11 +139,10 @@
       macos_quit_when_last_window_closed = true;
       hide_window_decorations = "titlebar-only";
       disable_ligatures = "cursor";
-      symbol_map = "U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E6AA,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F0001-U+F1AF0 Symbols Nerd Font Mono";
+      symbol_map =
+        "U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E6AA,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F0001-U+F1AF0 Symbols Nerd Font Mono";
     };
-    shellIntegration = {
-      enableZshIntegration = true;
-    };
+    shellIntegration = { enableZshIntegration = true; };
     extraConfig = ''
       # vim:ft=kitty
 
@@ -305,9 +306,7 @@
         disabled = false;
         style = "bg:#9A348E";
         format = "[  $symbol  ]($style)";
-        symbols = {
-          Macos = "";
-        };
+        symbols = { Macos = ""; };
       };
 
       directory = {

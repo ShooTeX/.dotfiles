@@ -9,11 +9,10 @@ let
       owner = "jesseduffield";
       repo = "lazygit";
       rev = "93fd429";
-      sha256 = "sha256-hcJJ2H4MvcszOjEyV834K0Uze9V9hwN9DOuetwaMS1A="; # Replace with the actual sha256
+      sha256 =
+        "sha256-hcJJ2H4MvcszOjEyV834K0Uze9V9hwN9DOuetwaMS1A="; # Replace with the actual sha256
     };
-    buildInputs = [
-      go
-    ];
+    buildInputs = [ go ];
     buildPhase = ''
       export HOME=$(pwd)
       export GOCACHE=$TMPDIR/gocache
@@ -24,5 +23,4 @@ let
       cp go/bin/lazygit $out/bin/
     '';
   };
-in
-lazygit
+in lazygit

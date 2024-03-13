@@ -6,7 +6,15 @@
       cleanup = "zap";
       upgrade = true;
     };
-    casks = [ "1password" "whatsapp" "raycast" "insomnia" "logi-options-plus" "slack" "tuple" ];
+    casks = [
+      "1password"
+      "whatsapp"
+      "raycast"
+      "insomnia"
+      "logi-options-plus"
+      "slack"
+      "tuple"
+    ];
     brews = [ "netlify-cli" ];
   };
 }
