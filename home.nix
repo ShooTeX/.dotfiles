@@ -95,6 +95,7 @@
     #nix
     nixfmt
     nixd
+    colmena
   ];
 
   home.sessionPath = [
