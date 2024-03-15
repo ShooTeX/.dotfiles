@@ -56,16 +56,16 @@
     # IaC
     terraform
 
-    #kotlin
+    # kotlin
     kotlin
     http4k
     graalvm-ce
     ((gradle.override { java = graalvm-ce; }))
 
-    #ocaml
+    # ocaml
     opam
 
-    #aws
+    # aws
     awscli2
 
     # node
@@ -92,9 +92,9 @@
     #ansible
     ansible
 
-    #nix
+    # nix
     nixfmt
-    nixd
+    # nixd # https://github.com/nix-community/nixd/issues/357
     colmena
   ];
 
