@@ -41,10 +41,13 @@
     pscale
     mysql-client
     wget
-    gnused
     husky
     gitleaks
     plantuml
+
+    gnused
+    # workaround for nvim-spectre... >:(
+    (writeShellScriptBin "gsed" ''exec ${pkgs.gnused}/bin/sed "$@"'')
 
     #
     qemu
