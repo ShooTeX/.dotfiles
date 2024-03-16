@@ -39,6 +39,7 @@ in {
         CreateDesktop = false;
         QuitMenuItem = true;
       };
+      NSGlobalDomain.AppleKeyboardUIMode = 3;
     };
     keyboard = {
       enableKeyMapping = true;
