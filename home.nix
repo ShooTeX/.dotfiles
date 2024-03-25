@@ -91,9 +91,11 @@
 
     #ansible
     ansible
+    ansible-lint
 
     # nix
     nixfmt
+    nixos-rebuild
     # nixd # https://github.com/nix-community/nixd/issues/357
     colmena
   ];
