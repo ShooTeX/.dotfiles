@@ -32,8 +32,6 @@
         neovim-overlay.overlay
         (final: prev: {
           http4k = final.callPackage ./pkgs/http4k.nix { };
-          # use until co-authors is officially released
-          lazygit = final.callPackage ./pkgs/lazygit.nix { };
 
           extraNodePackages = final.callPackage ./pkgs/node/default.nix { };
           inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
