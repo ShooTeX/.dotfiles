@@ -96,10 +96,10 @@
     # nix
     nixfmt
     nixos-rebuild
-    # nixd # https://github.com/nix-community/nixd/issues/357
+    nixd
     colmena
 
-    sqlite3
+    sqlite
   ];
 
   home.sessionPath = [
