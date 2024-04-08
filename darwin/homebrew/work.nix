@@ -16,6 +16,9 @@
       "tuple"
       "meetingbar"
     ];
-    brews = [ "netlify-cli" ];
+    brews = [
+      "netlify-cli"
+      "luajit" # for neorg
+    ];
   };
 }

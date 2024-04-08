@@ -6,7 +6,10 @@
       cleanup = "zap";
       upgrade = true;
     };
-    brews = [ "openssl@1.1" ];
+    brews = [
+      "openssl@1.1"
+      "luajit" # for neorg
+    ];
     casks = [
       "1password"
       "whatsapp"
