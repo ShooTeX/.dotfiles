@@ -14,6 +14,7 @@
       "logi-options-plus"
       "slack"
       "tuple"
+      "meetingbar"
     ];
     brews = [ "netlify-cli" ];
   };
