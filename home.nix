@@ -36,10 +36,7 @@
     jq
     pgcli
     gawk
-    obsidian
     git-filter-repo
-    pscale
-    mysql-client
     wget
     husky
     gitleaks
@@ -100,6 +97,8 @@
     colmena
 
     sqlite
+
+    httpie
   ];
 
   home.sessionPath = [
