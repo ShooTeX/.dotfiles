@@ -25,11 +25,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager, neovim-overlay, nvim-config
-    , wezterm-config }:
+  outputs =
+    { darwin, home-manager, neovim-overlay, nvim-config, wezterm-config, ... }:
     let
       overlays = [
-        neovim-overlay.overlay
+        neovim-overlay.overlays.default
         (final: prev: {
           http4k = final.callPackage ./pkgs/http4k.nix { };
 
