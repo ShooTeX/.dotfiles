@@ -15,6 +15,7 @@
       "slack"
       "tuple"
       "meetingbar"
+      "nordlayer"
     ];
     brews = [
       "netlify-cli"
