@@ -13,8 +13,7 @@ in {
     # sketchybar.enable = true;
   };
 
-  fonts.fontDir.enable = true;
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     iosevka
     (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
   ];
