@@ -41,7 +41,7 @@
     husky
     gitleaks
     plantuml
-    ffmpg
+    ffmpeg
 
     gnused
     # workaround for nvim-spectre... >:(
