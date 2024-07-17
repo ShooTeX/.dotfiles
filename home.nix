@@ -41,6 +41,7 @@
     husky
     gitleaks
     plantuml
+    ffmpg
 
     gnused
     # workaround for nvim-spectre... >:(
@@ -57,7 +58,7 @@
     kotlin
     http4k
     graalvm-ce
-    ((gradle.override { java = graalvm-ce; }))
+    (gradle.override { java = graalvm-ce; })
 
     # ocaml
     opam
