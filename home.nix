@@ -100,6 +100,8 @@
     sqlite
 
     httpie
+
+    _1password
   ];
 
   home.sessionPath = [
