@@ -21,6 +21,7 @@
       "teamspeak-client"
       "orbstack"
       "yubico-authenticator"
+      "figma"
     ];
   };
 }

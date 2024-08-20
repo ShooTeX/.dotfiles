@@ -101,6 +101,8 @@
 
     httpie
 
+    flyctl
+
     _1password
   ];
 
