@@ -1,6 +1,6 @@
 { ... }: {
   services.skhd = {
-    enable = true;
+    enable = false;
     skhdConfig = ''
       # open terminal
       alt - return : wezterm cli spawn --new-window

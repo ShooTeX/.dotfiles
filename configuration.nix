@@ -10,7 +10,10 @@ in {
 
   services = {
     nix-daemon.enable = true;
-    # sketchybar.enable = true;
+    jankyborders = {
+      enable = true;
+      active_color = "gradient(top_right=0x9992B3F5,bottom_left=0x9992B3F5)";
+    };
   };
 
   fonts.packages = with pkgs; [
@@ -38,7 +41,11 @@ in {
         CreateDesktop = false;
         QuitMenuItem = true;
       };
-      NSGlobalDomain.AppleKeyboardUIMode = 3;
+      NSGlobalDomain = {
+        AppleKeyboardUIMode = 3;
+        NSAutomaticWindowAnimationsEnabled = false;
+        NSWindowShouldDragOnGesture = true;
+      };
     };
     keyboard = {
       enableKeyMapping = true;
