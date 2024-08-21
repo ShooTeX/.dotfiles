@@ -18,7 +18,6 @@
       "nordlayer"
     ];
     brews = [
-      "netlify-cli"
       "luajit" # for neorg
     ];
   };
