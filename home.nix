@@ -395,7 +395,7 @@
   };
 
   xdg.configFile."aerospace/aerospace.toml".source =
-    (pkgs.formats.toml { }).generate "config" {
+    (pkgs.formats.toml { }).generate "aerospace-config.toml" {
       # Reference: https://github.com/i3/i3/blob/next/etc/config
       start-at-login = true;
 

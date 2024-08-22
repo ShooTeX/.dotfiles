@@ -15,10 +15,6 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    wezterm-overlay = {
-      url = "github:wez/wezterm/main?dir=nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     nvim-config = {
       url = "flake:nvim-config";
       flake = false;
@@ -29,16 +25,14 @@
     };
   };
 
-  outputs = { darwin, home-manager, neovim-overlay, wezterm-overlay, nvim-config
-    , wezterm-config, ... }:
+  outputs =
+    { darwin, home-manager, neovim-overlay, nvim-config, wezterm-config, ... }:
     let
       overlays = [
         neovim-overlay.overlays.default
         (final: prev: {
           http4k = final.callPackage ./pkgs/http4k.nix { };
           aerospace = final.callPackage ./pkgs/aerospace.nix { };
-          wezterm = wezterm-overlay.packages."${prev.stdenv.system}".default;
-
           extraNodePackages = final.callPackage ./pkgs/node/default.nix { };
           inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
         })
