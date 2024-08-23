@@ -245,11 +245,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1722641179,
-        "narHash": "sha256-S9f++bi0agkeTUeOOtUSIBSvvUXtkR+3S3t9G7tCNlg=",
+        "lastModified": 1724422478,
+        "narHash": "sha256-mVO00KyqswN06B+exZqn5gKFGeO1kpdNBLpZisV/0to=",
         "ref": "refs/heads/main",
-        "rev": "247f27e34863f8fcaf5619a3d18ea53c5145439f",
-        "revCount": 205,
+        "rev": "3852b314c965640a826256fa9fbf4c0a29f77052",
+        "revCount": 207,
         "type": "git",
         "url": "file:./nvim"
       },
@@ -271,11 +271,11 @@
     "wezterm-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1724354598,
-        "narHash": "sha256-GfkfjD4bIovIbMRyP4ir6R6BrCsXK7dT1KOd7/YjnaA=",
+        "lastModified": 1724356003,
+        "narHash": "sha256-55R3IvynigOt1+KxygbLnqDrbGgPNTEWyt1mbZYFY/w=",
         "owner": "shootex",
         "repo": "wezterm.lua",
-        "rev": "df3842808fad211b616c4a783990febb2dc0835a",
+        "rev": "27675e9f0a0909d0c855274542dcf1d22a58719c",
         "type": "github"
       },
       "original": {
