@@ -1,6 +1,7 @@
 { pkgs, lib, ... }:
 let monaspace = pkgs.callPackage ./pkgs/fonts/monaspace.nix { };
 in {
+  nix.optimise.automatic = true;
   nix.extraOptions =
     "	auto-optimise-store = true\n	experimental-features = nix-command flakes\n"
     + lib.optionalString (pkgs.system == "aarch64-darwin")
