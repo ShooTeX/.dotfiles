@@ -468,6 +468,19 @@
         };
       };
 
+      workspace-to-monitor-force-assignment = {
+        "1" = [ "main" ];
+        "2" = [ "main" ];
+        "3" = [ "main" ];
+        "4" = [ "main" ];
+        "5" = [ "main" ];
+        "6" = [ "secondary" "main" ];
+        "7" = [ "secondary" "main" ];
+        "8" = [ "secondary" "main" ];
+        "9" = [ "secondary" "main" ];
+        "10" = [ "secondary" "main" ];
+      };
+
       gaps = {
         inner = {
           horizontal = 10;

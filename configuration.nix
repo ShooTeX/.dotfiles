@@ -49,6 +49,9 @@ in {
         NSAutomaticWindowAnimationsEnabled = false;
         NSWindowShouldDragOnGesture = true;
       };
+      spaces = {
+        spans-displays = true;
+      };
     };
     keyboard = {
       enableKeyMapping = true;
