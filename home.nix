@@ -109,6 +109,8 @@
 
     cmake
     ninja
+
+    just
   ];
 
   home.sessionPath = [
