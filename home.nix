@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixpkgs, nvim-config, wezterm-config, ... }:
+{ pkgs, lib, nvim-config, wezterm-config, ... }:
 
 {
   # This value determines the Home Manager release that your
@@ -94,10 +94,8 @@
     ansible-lint
 
     # nix
-    nixfmt
     nixos-rebuild
-    nixd
-    colmena
+    nixfmt
 
     sqlite
 
