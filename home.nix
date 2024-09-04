@@ -96,6 +96,7 @@
     # nix
     nixos-rebuild
     nixfmt
+    nixd
 
     sqlite
 
