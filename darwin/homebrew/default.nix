@@ -11,6 +11,7 @@
       "luajit" # for neorg
     ];
     casks = [
+      "stremio"
       "1password"
       "whatsapp"
       "google-chrome"

@@ -106,6 +106,9 @@
     flyctl
 
     _1password
+
+    cmake
+    ninja
   ];
 
   home.sessionPath = [
