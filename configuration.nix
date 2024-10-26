@@ -28,6 +28,7 @@ in {
   users.users."eriksimon".home = "/Users/eriksimon";
 
   system = {
+    stateVersion = 5;
     defaults = {
       dock = {
         autohide = true;
