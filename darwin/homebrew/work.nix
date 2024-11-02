@@ -11,7 +11,6 @@
       "whatsapp"
       "raycast"
       "insomnia"
-      "logi-options-plus"
       "slack"
       "tuple"
       "meetingbar"
