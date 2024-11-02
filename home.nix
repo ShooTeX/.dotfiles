@@ -294,84 +294,41 @@
     enable = true;
 
     settings = {
-      format = lib.concatStrings [
-        "[](#9A348E)"
-        "$os"
-        "[](bg:#DA627D fg:#9A348E)"
-        "$directory"
-        "[](fg:#DA627D bg:#FCA17D)"
-        "$git_branch"
-        "$git_status"
-        "[](fg:#FCA17D bg:#86BBD8)"
-        "$c"
-        "$elixir"
-        "$elm"
-        "$golang"
-        "$haskell"
-        "$java"
-        "$julia"
-        "$nodejs"
-        "$nim"
-        "$rust"
-        "[](fg:#86BBD8 bg:#06969A)"
-        "$docker_context"
-        "[](fg:#06969A bg:#33658A)"
-        "$time"
-        "[ ](fg:#33658A)"
-      ];
-
-      os = {
-        disabled = false;
-        style = "bg:#9A348E";
-        format = "[  $symbol  ]($style)";
-        symbols = { Macos = ""; };
+      character = {
+        error_symbol = "[❯](red)";
+        success_symbol = "[❯](purple)";
+        vimcmd_symbol = "[❮](green)";
       };
-
-      directory = {
-        style = "bg:#DA627D";
-        format = "[ $path ]($style)";
-        truncation_length = 3;
-        truncation_symbol = "…/";
-        substitutions = {
-          "Documents" = " ";
-          "Downloads" = " ";
-          "Music" = " ";
-          "Pictures" = " ";
-        };
+      cmd_duration = {
+        format = "[$duration]($style) ";
+        style = "yellow";
       };
-
-      git_status = {
-        style = "bg:#FCA17D";
-        format = "[$all_status$ahead_behind ]($style)";
-      };
-
+      directory = { style = "blue"; };
+      format =
+        "$username$hostname$directory$git_branch$git_state$git_status$cmd_duration$line_break$python$character";
       git_branch = {
-        symbol = "";
-        style = "bg:#FCA17D";
-        format = "[ $symbol $branch ]($style)";
+        format = "[$branch]($style)";
+        style = "bright-black";
       };
-
-      time = {
-        disabled = false;
-        time_format = "%R";
-        style = "bg:#33658A";
-        format = "[ 󰥔 $time ]($style)";
+      git_state = {
+        format = "\\([$state( $progress_current/$progress_total)]($style)\\) ";
+        style = "bright-black";
       };
-
-      nodejs = {
-        symbol = "";
-        style = "bg:#86BBD8";
-        format = "[ $symbol ($version) ]($style)";
+      git_status = {
+        conflicted = "​";
+        deleted = "​";
+        format =
+          "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        modified = "​";
+        renamed = "​";
+        staged = "​";
+        stashed = "≡";
+        style = "cyan";
+        untracked = "​";
       };
-      rust = {
-        symbol = "";
-        style = "bg:#86BBD8";
-        format = "[ $symbol ($version) ]($style)";
-      };
-      java = {
-        symbol = " ";
-        style = "bg:#86BBD8";
-        format = "[ $symbol ($version) ]($style)";
+      python = {
+        format = "[$virtualenv]($style) ";
+        style = "bright-black";
       };
     };
   };
