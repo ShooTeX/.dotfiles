@@ -12,104 +12,62 @@
   home.stateVersion = "22.05";
 
   home.packages = with pkgs; [
-    libiconv
-    bat
-    fd
-    xh
-    sd
-    du-dust
-    bottom
-    procs
-    dogdns
-    xcp
-    rm-improved
-    ripgrep
-    hyperfine
-    tealdeer
-    grex
-    unzip
-    rustup
-    ngrok
-    dart
-    git-crypt
-    gnupg
-    jq
-    pgcli
-    gawk
-    git-filter-repo
-    wget
-    husky
-    gitleaks
-    plantuml
-    ffmpeg
-
-    aerospace
-
-    gnused
-    # workaround for nvim-spectre... >:(
-    (writeShellScriptBin "gsed" ''exec ${pkgs.gnused}/bin/sed "$@"'')
-
-    #
-    qemu
-    podman
-
-    # IaC
-    terraform
-
-    # kotlin
-    kotlin
-    http4k
-    graalvm-ce
     (gradle.override { java = graalvm-ce; })
-
-    # ocaml
-    opam
-
-    # aws
-    awscli2
-
-    # node
-    bun
-    nodejs_20
-    nodePackages_latest.yarn
-    nodePackages_latest.pnpm
-    nodePackages_latest.vercel
-    nodePackages_latest.ts-node
-
-    # security
-    libfido2
-    openssh
     _1password
-
-    # markdown
-    glow
-
-    mob
-
-    # go
-    go
-
-    #ansible
+    aerospace
     ansible
     ansible-lint
-
-    # nix
-    nixos-rebuild
-    nixfmt
-    nixd
-
-    sqlite
-
-    httpie
-
-    flyctl
-
-    _1password
-
+    awscli2
+    bat
+    bottom
+    bun
     cmake
-    ninja
-
+    dogdns
+    du-dust
+    fd
+    ffmpeg
+    gawk
+    git-crypt
+    gitleaks
+    glow
+    gnupg
+    go
+    graalvm-ce
+    grex
+    http4k
+    httpie
+    husky
+    hyperfine
+    jq
     just
+    kotlin
+    libfido2
+    libiconv
+    mob
+    ngrok
+    ninja
+    nixd
+    nixfmt
+    nodePackages_latest.pnpm
+    nodePackages_latest.ts-node
+    nodePackages_latest.vercel
+    nodePackages_latest.yarn
+    nodejs_20
+    openssh
+    pgcli
+    plantuml
+    procs
+    ripgrep
+    rm-improved
+    rustup
+    sd
+    sqlite
+    tealdeer
+    terraform
+    unzip
+    wget
+    xcp
+    xh
   ];
 
   home.sessionPath = [
