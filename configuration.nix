@@ -121,10 +121,7 @@ in {
     };
   };
 
-  fonts.packages = with pkgs; [
-    iosevka
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-  ];
+  fonts.packages = with pkgs; [ iosevka nerd-fonts.symbols-only ];
 
   users.users.stx.home = "/Users/stx";
   users.users."eriksimon".home = "/Users/eriksimon";
