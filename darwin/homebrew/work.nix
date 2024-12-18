@@ -15,6 +15,7 @@
       "tuple"
       "meetingbar"
       "nordlayer"
+      "kap"
     ];
     brews = [
       "luajit" # for neorg

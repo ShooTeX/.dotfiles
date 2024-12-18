@@ -52,7 +52,7 @@
     nodePackages_latest.ts-node
     nodePackages_latest.vercel
     nodePackages_latest.yarn
-    nodejs_20
+    nodejs_22
     openssh
     pgcli
     plantuml
