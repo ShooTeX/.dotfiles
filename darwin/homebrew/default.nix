@@ -23,6 +23,7 @@
       "orbstack"
       "yubico-authenticator"
       "figma"
+      "tailscale"
     ];
   };
 }
