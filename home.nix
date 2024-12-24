@@ -15,9 +15,6 @@
     (gradle.override { java = graalvm-ce; })
     _1password
     aerospace
-    ansible
-    ansible-lint
-    awscli2
     bat
     bottom
     bun
