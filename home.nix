@@ -45,11 +45,7 @@
     ninja
     nixd
     nixfmt
-    nodePackages_latest.pnpm
-    nodePackages_latest.ts-node
-    nodePackages_latest.vercel
-    nodePackages_latest.yarn
-    nodejs_22
+    nodejs_latest
     openssh
     pgcli
     plantuml
