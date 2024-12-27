@@ -49,6 +49,7 @@
     openssh
     pgcli
     plantuml
+    pnpm
     procs
     ripgrep
     rm-improved
@@ -59,6 +60,7 @@
     terraform
     unzip
     wget
+    wrangler
     xcp
     xh
   ];

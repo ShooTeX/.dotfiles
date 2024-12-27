@@ -16,7 +16,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nvim-config = {
-      url = "flake:nvim-config";
+      url = "github:shootex/init.lua";
       flake = false;
     };
     wezterm-config = {
