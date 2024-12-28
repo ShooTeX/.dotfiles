@@ -246,11 +246,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1735264681,
-        "narHash": "sha256-2nnwahw3/BsUZUXjEWFhIsL+6NrdDcJ7h+n5WirMPLY=",
+        "lastModified": 1735393630,
+        "narHash": "sha256-rgS4JHBuVkIDW/3n5Pril+AJHoMW5y/TcCfxp5SP9W4=",
         "owner": "shootex",
         "repo": "init.lua",
-        "rev": "7d0aa533f43943febaa12186aaadd1a0d9479052",
+        "rev": "d255a6d44d72a49d7fbc0d9e60fe77f89b468261",
         "type": "github"
       },
       "original": {
