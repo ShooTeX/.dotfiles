@@ -11,19 +11,20 @@
       "luajit" # for neorg
     ];
     casks = [
-      "stremio"
       "1password"
-      "whatsapp"
-      "google-chrome"
       "discord"
+      "elmedia-player"
+      "figma"
+      "google-chrome"
+      "insomnia"
+      "orbstack"
       "parsec"
       "raycast"
-      "insomnia"
-      "teamspeak-client"
-      "orbstack"
-      "yubico-authenticator"
-      "figma"
+      "stremio"
       "tailscale"
+      "teamspeak-client"
+      "whatsapp"
+      "yubico-authenticator"
     ];
   };
 }

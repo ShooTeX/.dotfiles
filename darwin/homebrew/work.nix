@@ -8,14 +8,14 @@
     };
     casks = [
       "1password"
-      "whatsapp"
-      "raycast"
       "insomnia"
-      "slack"
-      "tuple"
+      "kap"
       "meetingbar"
       "nordlayer"
-      "kap"
+      "raycast"
+      "slack"
+      "tuple"
+      "whatsapp"
     ];
     brews = [
       "luajit" # for neorg

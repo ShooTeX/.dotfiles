@@ -91,6 +91,12 @@
     nix-direnv = { enable = true; };
   };
 
+  programs.ghostty = {
+    enable = false;
+    enableBashIntegration = true;
+    enableZshIntegration = true;
+  };
+
   programs.wezterm = {
     enable = true;
     enableBashIntegration = true;
