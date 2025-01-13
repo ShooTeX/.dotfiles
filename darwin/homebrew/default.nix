@@ -19,6 +19,7 @@
       "insomnia"
       "orbstack"
       "parsec"
+      "raindropio"
       "raycast"
       "stremio"
       "tailscale"

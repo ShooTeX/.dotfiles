@@ -12,6 +12,7 @@
       "kap"
       "meetingbar"
       "nordlayer"
+      "raindropio"
       "raycast"
       "slack"
       "tuple"

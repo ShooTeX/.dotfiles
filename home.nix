@@ -46,6 +46,7 @@
     nixd
     nixfmt
     nodejs_latest
+    obsidian
     openssh
     pgcli
     plantuml
