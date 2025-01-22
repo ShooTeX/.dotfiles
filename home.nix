@@ -193,6 +193,7 @@
       merge = { ff = "only"; };
       fetch = { prune = true; };
       init = { defaultBranch = "main"; };
+      help = { autocorrect = "prompt"; };
     };
   };
 
