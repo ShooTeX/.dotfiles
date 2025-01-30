@@ -1,4 +1,4 @@
-{ pkgs, lib, nvim-config, wezterm-config, ... }:
+{ pkgs, config, nvim-config, wezterm-config, ... }:
 
 {
   # This value determines the Home Manager release that your
@@ -15,6 +15,7 @@
     (gradle.override { java = graalvm-ce; })
     _1password
     aerospace
+    agenix-cli
     awscli2
     bat
     bottom
@@ -76,12 +77,17 @@
     "$HOME/go/bin"
   ];
 
+  age.identityPaths = [ "/Users/eriksimon/.ssh/id_ed25519" ];
+  age.secrets.default.file = ./secrets/default.age;
+
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
     PNPM_HOME = "$HOME/.pnpm";
     GRAALVM_HOME = "${pkgs.graalvm-ce}";
     JAVA_HOME = "${pkgs.graalvm-ce}";
     TERMINAL = "wezterm";
+    SECRET_VALUE =
+      "${pkgs.coreutils}/bin/cat ${config.age.secrets.default.path}";
   };
 
   # Let Home Manager install and manage itself.

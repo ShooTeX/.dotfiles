@@ -15,6 +15,7 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix.url = "github:ryantm/agenix";
     nvim-config = {
       url = "github:shootex/init.lua";
       flake = false;
@@ -25,8 +26,8 @@
     };
   };
 
-  outputs =
-    { darwin, home-manager, neovim-overlay, nvim-config, wezterm-config, ... }:
+  outputs = { darwin, home-manager, neovim-overlay, nvim-config, wezterm-config
+    , agenix, ... }:
     let
       overlays = [
         neovim-overlay.overlays.default
@@ -47,6 +48,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
+
       };
     in {
       darwinConfigurations = {
@@ -57,9 +59,7 @@
             ./darwin
             home-manager.darwinModules.home-manager
             homeManagerConfig
-            {
-              home-manager.users."stx" = { ... }: { imports = [ ./home.nix ]; };
-            }
+            { home-manager.users.stx = { ... }: { imports = [ ./home.nix ]; }; }
           ];
         };
         work = darwin.lib.darwinSystem {
@@ -70,8 +70,8 @@
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {
-              home-manager.users."eriksimon" = { ... }: {
-                imports = [ ./home.nix ];
+              home-manager.users.eriksimon = { ... }: {
+                imports = [ agenix.homeManagerModules.default ./home.nix ];
               };
             }
           ];
