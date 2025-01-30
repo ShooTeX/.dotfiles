@@ -87,7 +87,7 @@
     JAVA_HOME = "${pkgs.graalvm-ce}";
     TERMINAL = "wezterm";
     SECRET_VALUE =
-      "${pkgs.coreutils}/bin/cat ${config.age.secrets.default.path}";
+      "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.default.path})";
   };
 
   # Let Home Manager install and manage itself.
