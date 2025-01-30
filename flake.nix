@@ -15,7 +15,6 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    agenix.url = "github:ryantm/agenix";
     nvim-config = {
       url = "github:shootex/init.lua";
       flake = false;
@@ -48,7 +47,6 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
-
       };
     in {
       darwinConfigurations = {
@@ -71,7 +69,7 @@
             homeManagerConfig
             {
               home-manager.users.eriksimon = { ... }: {
-                imports = [ agenix.homeManagerModules.default ./home.nix ];
+                imports = [ ./home.nix ];
               };
             }
           ];
