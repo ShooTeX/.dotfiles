@@ -12,6 +12,7 @@
       "kap"
       "meetingbar"
       "nordlayer"
+      "orbstack"
       "raindropio"
       "raycast"
       "slack"
