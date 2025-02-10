@@ -13,7 +13,6 @@
       "meetingbar"
       "nordlayer"
       "orbstack"
-      "raindropio"
       "raycast"
       "slack"
       "tuple"
