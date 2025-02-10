@@ -33,7 +33,6 @@
         neovim-overlay.overlays.default
         (final: prev: {
           http4k = final.callPackage ./pkgs/http4k.nix { };
-          hoarder = final.callPackage ./pkgs/hoarder.nix { };
           inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
         })
       ];

@@ -5,5 +5,5 @@ work = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZh3CENBr3FeTjlstt822lkCu/XWICB+0jZ
 all = ["work"]
 
 [[paths]]
-glob = "secrets/default.age"
+glob = "secrets/default/*"
 identities = ["work"]

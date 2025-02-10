@@ -78,7 +78,7 @@
   ];
 
   age.identityPaths = [ "/Users/eriksimon/.ssh/id_ed25519" ];
-  age.secrets.default.file = ./secrets/default.age;
+  age.secrets.hoarder.file = ./secrets/default/hoarder.age;
 
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
@@ -86,8 +86,9 @@
     GRAALVM_HOME = "${pkgs.graalvm-ce}";
     JAVA_HOME = "${pkgs.graalvm-ce}";
     TERMINAL = "wezterm";
-    SECRET_VALUE =
-      "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.default.path})";
+    HOARDER_SERVER_ADDR = "https://hoarder.stx.wtf";
+    HOARDER_API_KEY =
+      "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.hoarder.path})";
   };
 
   # Let Home Manager install and manage itself.
