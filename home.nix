@@ -19,7 +19,6 @@
     awscli2
     bat
     bottom
-    bun
     cmake
     dogdns
     du-dust
@@ -37,6 +36,7 @@
     httpie
     husky
     hyperfine
+    icu
     jq
     just
     kotlin
@@ -99,6 +99,8 @@
 
     nix-direnv = { enable = true; };
   };
+
+  programs.bun = { enable = true; };
 
   programs.ghostty = {
     enable = false;
