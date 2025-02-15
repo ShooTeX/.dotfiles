@@ -36,7 +36,6 @@
     httpie
     husky
     hyperfine
-    icu
     jq
     just
     kotlin
