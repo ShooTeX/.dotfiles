@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   services.skhd = {
     enable = false;
     skhdConfig = ''

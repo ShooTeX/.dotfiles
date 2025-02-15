@@ -5,12 +5,14 @@ pkgs.stdenvNoCC.mkDerivation rec {
   version = "0.14.2-Beta";
 
   src = pkgs.fetchurl {
-    url =
-      "https://github.com/nikitabobko/AeroSpace/releases/download/v${version}/AeroSpace-v${version}.zip";
+    url = "https://github.com/nikitabobko/AeroSpace/releases/download/v${version}/AeroSpace-v${version}.zip";
     hash = "sha256-xOIP51kFQTy9RbCGQo5gJGMzl/WhZlJ+lCtMOaMCnB8=";
   };
 
-  nativeBuildInputs = with pkgs; [ installShellFiles unzip ];
+  nativeBuildInputs = with pkgs; [
+    installShellFiles
+    unzip
+  ];
 
   unpackPhase = ''
     unzip $src
@@ -39,7 +41,9 @@ pkgs.stdenvNoCC.mkDerivation rec {
     description = "AeroSpace is an i3-like tiling window manager for macOS";
     homepage = "https://github.com/nikitabobko/AeroSpace";
     license = licenses.mit;
-    platforms = [ "x86_64-darwin" "aarch64-darwin" ];
+    platforms = [
+      "x86_64-darwin"
+      "aarch64-darwin"
+    ];
   };
 }
-

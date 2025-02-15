@@ -1,11 +1,14 @@
 { pkgs, lib, ... }:
-let monaspace = pkgs.callPackage ./pkgs/fonts/monaspace.nix { };
-in {
+let
+  monaspace = pkgs.callPackage ./pkgs/fonts/monaspace.nix { };
+in
+{
   nix.optimise.automatic = true;
   nix.extraOptions =
     "	auto-optimise-store = false\n	experimental-features = nix-command flakes\n"
-    + lib.optionalString (pkgs.system == "aarch64-darwin")
-    "	extra-platforms = x86_64-darwin aarch64-darwin\n";
+    + lib.optionalString (
+      pkgs.system == "aarch64-darwin"
+    ) "	extra-platforms = x86_64-darwin aarch64-darwin\n";
 
   programs.zsh.enable = true;
 
@@ -49,11 +52,9 @@ in {
 
             alt-s = "layout v_accordion"; # "layout stacking" in i3
             alt-w = "layout h_accordion"; # "layout tabbed" in i3
-            alt-e =
-              "layout tiles horizontal vertical"; # "layout toggle split" in i3
+            alt-e = "layout tiles horizontal vertical"; # "layout toggle split" in i3
 
-            alt-shift-space =
-              "layout floating tiling"; # 'floating toggle' in i3
+            alt-shift-space = "layout floating tiling"; # 'floating toggle' in i3
 
             alt-1 = "workspace 1";
             alt-2 = "workspace 2";
@@ -68,16 +69,46 @@ in {
 
             alt-tab = "workspace-back-and-forth";
 
-            alt-shift-1 = [ "move-node-to-workspace 1" "workspace 1" ];
-            alt-shift-2 = [ "move-node-to-workspace 2" "workspace 2" ];
-            alt-shift-3 = [ "move-node-to-workspace 3" "workspace 3" ];
-            alt-shift-4 = [ "move-node-to-workspace 4" "workspace 4" ];
-            alt-shift-5 = [ "move-node-to-workspace 5" "workspace 5" ];
-            alt-shift-6 = [ "move-node-to-workspace 6" "workspace 6" ];
-            alt-shift-7 = [ "move-node-to-workspace 7" "workspace 7" ];
-            alt-shift-8 = [ "move-node-to-workspace 8" "workspace 8" ];
-            alt-shift-9 = [ "move-node-to-workspace 9" "workspace 9" ];
-            alt-shift-0 = [ "move-node-to-workspace 10" "workspace 10" ];
+            alt-shift-1 = [
+              "move-node-to-workspace 1"
+              "workspace 1"
+            ];
+            alt-shift-2 = [
+              "move-node-to-workspace 2"
+              "workspace 2"
+            ];
+            alt-shift-3 = [
+              "move-node-to-workspace 3"
+              "workspace 3"
+            ];
+            alt-shift-4 = [
+              "move-node-to-workspace 4"
+              "workspace 4"
+            ];
+            alt-shift-5 = [
+              "move-node-to-workspace 5"
+              "workspace 5"
+            ];
+            alt-shift-6 = [
+              "move-node-to-workspace 6"
+              "workspace 6"
+            ];
+            alt-shift-7 = [
+              "move-node-to-workspace 7"
+              "workspace 7"
+            ];
+            alt-shift-8 = [
+              "move-node-to-workspace 8"
+              "workspace 8"
+            ];
+            alt-shift-9 = [
+              "move-node-to-workspace 9"
+              "workspace 9"
+            ];
+            alt-shift-0 = [
+              "move-node-to-workspace 10"
+              "workspace 10"
+            ];
 
             alt-shift-i = "resize smart -50";
             alt-shift-o = "resize smart +50";
@@ -85,10 +116,22 @@ in {
             alt-shift-semicolon = "mode service";
           };
           service.binding = {
-            esc = [ "reload-config" "mode main" ];
-            r = [ "flatten-workspace-tree" "mode main" ];
-            f = [ "layout floating tiling" "mode main" ];
-            backspace = [ "close-all-windows-but-current" "mode main" ];
+            esc = [
+              "reload-config"
+              "mode main"
+            ];
+            r = [
+              "flatten-workspace-tree"
+              "mode main"
+            ];
+            f = [
+              "layout floating tiling"
+              "mode main"
+            ];
+            backspace = [
+              "close-all-windows-but-current"
+              "mode main"
+            ];
           };
         };
 
@@ -98,11 +141,26 @@ in {
           "3" = [ "main" ];
           "4" = [ "main" ];
           "5" = [ "main" ];
-          "6" = [ "secondary" "main" ];
-          "7" = [ "secondary" "main" ];
-          "8" = [ "secondary" "main" ];
-          "9" = [ "secondary" "main" ];
-          "10" = [ "secondary" "main" ];
+          "6" = [
+            "secondary"
+            "main"
+          ];
+          "7" = [
+            "secondary"
+            "main"
+          ];
+          "8" = [
+            "secondary"
+            "main"
+          ];
+          "9" = [
+            "secondary"
+            "main"
+          ];
+          "10" = [
+            "secondary"
+            "main"
+          ];
         };
 
         gaps = {
@@ -121,7 +179,10 @@ in {
     };
   };
 
-  fonts.packages = with pkgs; [ iosevka nerd-fonts.symbols-only ];
+  fonts.packages = with pkgs; [
+    iosevka
+    nerd-fonts.symbols-only
+  ];
 
   users.users.stx.home = "/Users/stx";
   users.users."eriksimon".home = "/Users/eriksimon";
@@ -149,7 +210,9 @@ in {
         NSAutomaticWindowAnimationsEnabled = false;
         NSWindowShouldDragOnGesture = true;
       };
-      spaces = { spans-displays = true; };
+      spaces = {
+        spans-displays = true;
+      };
     };
     keyboard = {
       enableKeyMapping = true;

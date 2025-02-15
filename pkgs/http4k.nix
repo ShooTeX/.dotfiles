@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> { } }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 
 with pkgs;
 
@@ -6,10 +8,8 @@ let
   http4k = pkgs.stdenv.mkDerivation {
     name = "http4k";
     src = fetchurl {
-      url =
-        "https://github.com/http4k/toolbox-cli/releases/download/v5.0.0.0/http4k-toolbox-5.0.0.0.zip"; # Replace with the URL to the ZIP file in the release assets.
-      sha256 =
-        "VdK+NfwmIEw+aOtjGq5g3ZmA3x035FixqzT2SilS7xs="; # Replace with the actual SHA256 hash of the ZIP file.
+      url = "https://github.com/http4k/toolbox-cli/releases/download/v5.0.0.0/http4k-toolbox-5.0.0.0.zip"; # Replace with the URL to the ZIP file in the release assets.
+      sha256 = "VdK+NfwmIEw+aOtjGq5g3ZmA3x035FixqzT2SilS7xs="; # Replace with the actual SHA256 hash of the ZIP file.
     };
 
     nativeBuildInputs = [ pkgs.unzip ];
@@ -35,4 +35,5 @@ let
       cp -r $TMP/http4k/* $out
     '';
   };
-in http4k
+in
+http4k
