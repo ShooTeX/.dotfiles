@@ -26,8 +26,16 @@
     };
   };
 
-  outputs = { darwin, home-manager, neovim-overlay, nvim-config, wezterm-config
-    , agenix, ... }:
+  outputs =
+    {
+      darwin,
+      home-manager,
+      neovim-overlay,
+      nvim-config,
+      wezterm-config,
+      agenix,
+      ...
+    }:
     let
       overlays = [
         neovim-overlay.overlays.default
@@ -49,7 +57,8 @@
         home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
 
       };
-    in {
+    in
+    {
       darwinConfigurations = {
         STX-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
@@ -59,9 +68,14 @@
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {
-              home-manager.users.stx = { ... }: {
-                imports = [ agenix.homeManagerModules.default ./home.nix ];
-              };
+              home-manager.users.stx =
+                { ... }:
+                {
+                  imports = [
+                    agenix.homeManagerModules.default
+                    ./home.nix
+                  ];
+                };
             }
           ];
         };
@@ -73,9 +87,14 @@
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {
-              home-manager.users.eriksimon = { ... }: {
-                imports = [ agenix.homeManagerModules.default ./home.nix ];
-              };
+              home-manager.users.eriksimon =
+                { ... }:
+                {
+                  imports = [
+                    agenix.homeManagerModules.default
+                    ./home.nix
+                  ];
+                };
             }
           ];
         };

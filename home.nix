@@ -1,4 +1,10 @@
-{ pkgs, config, nvim-config, wezterm-config, ... }:
+{
+  pkgs,
+  config,
+  nvim-config,
+  wezterm-config,
+  ...
+}:
 
 {
   # This value determines the Home Manager release that your
@@ -86,8 +92,7 @@
     JAVA_HOME = "${pkgs.graalvm-ce}";
     TERMINAL = "wezterm";
     HOARDER_SERVER_ADDR = "https://hoarder.stx.wtf";
-    HOARDER_API_KEY =
-      "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.hoarder.path})";
+    HOARDER_API_KEY = "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.hoarder.path})";
   };
 
   # Let Home Manager install and manage itself.
@@ -96,10 +101,14 @@
   programs.direnv = {
     enable = true;
 
-    nix-direnv = { enable = true; };
+    nix-direnv = {
+      enable = true;
+    };
   };
 
-  programs.bun = { enable = true; };
+  programs.bun = {
+    enable = true;
+  };
 
   programs.ghostty = {
     enable = false;
@@ -115,7 +124,9 @@
 
   programs.kitty = {
     enable = false;
-    keybindings = { "cmd+t" = "new_tab_with_cwd"; };
+    keybindings = {
+      "cmd+t" = "new_tab_with_cwd";
+    };
     font = {
       name = "Iosevka";
       size = 16;
@@ -126,10 +137,11 @@
       macos_quit_when_last_window_closed = true;
       hide_window_decorations = "titlebar-only";
       disable_ligatures = "cursor";
-      symbol_map =
-        "U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E6AA,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F0001-U+F1AF0 Symbols Nerd Font Mono";
+      symbol_map = "U+23FB-U+23FE,U+2665,U+26A1,U+2B58,U+E000-U+E00A,U+E0A0-U+E0A3,U+E0B0-U+E0D4,U+E200-U+E2A9,U+E300-U+E3E3,U+E5FA-U+E6AA,U+E700-U+E7C5,U+EA60-U+EBEB,U+F000-U+F2E0,U+F300-U+F32F,U+F400-U+F4A9,U+F500-U+F8FF,U+F0001-U+F1AF0 Symbols Nerd Font Mono";
     };
-    shellIntegration = { enableZshIntegration = true; };
+    shellIntegration = {
+      enableZshIntegration = true;
+    };
     extraConfig = ''
       # vim:ft=kitty
 
@@ -196,18 +208,34 @@
         name = "Erik Simon";
         email = "10850738+ShooTeX@users.noreply.github.com";
       };
-      push = { autoSetupRemote = true; };
-      pull = { ff = "only"; };
-      merge = { ff = "only"; };
-      fetch = { prune = true; };
-      init = { defaultBranch = "main"; };
-      help = { autocorrect = "prompt"; };
+      push = {
+        autoSetupRemote = true;
+      };
+      pull = {
+        ff = "only";
+      };
+      merge = {
+        ff = "only";
+      };
+      fetch = {
+        prune = true;
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      help = {
+        autocorrect = "prompt";
+      };
     };
   };
 
-  programs.lazygit = { enable = true; };
+  programs.lazygit = {
+    enable = true;
+  };
 
-  programs.gh = { enable = true; };
+  programs.gh = {
+    enable = true;
+  };
 
   programs.zsh = {
     enable = true;
@@ -252,7 +280,9 @@
     enableZshIntegration = true;
   };
 
-  programs.eza = { enable = true; };
+  programs.eza = {
+    enable = true;
+  };
 
   programs.zoxide = {
     enable = true;
@@ -272,9 +302,10 @@
         format = "[$duration]($style) ";
         style = "yellow";
       };
-      directory = { style = "blue"; };
-      format =
-        "$username$hostname$directory$git_branch$git_state$git_status$cmd_duration$line_break$python$character";
+      directory = {
+        style = "blue";
+      };
+      format = "$username$hostname$directory$git_branch$git_state$git_status$cmd_duration$line_break$python$character";
       git_branch = {
         format = "[$branch]($style)";
         style = "bright-black";
@@ -286,8 +317,7 @@
       git_status = {
         conflicted = "​";
         deleted = "​";
-        format =
-          "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
+        format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)";
         modified = "​";
         renamed = "​";
         staged = "​";
