@@ -13,7 +13,7 @@
 
   home.packages = with pkgs; [
     (gradle.override { java = graalvm-ce; })
-    _1password
+    _1password-cli
     aerospace
     agenix-cli
     awscli2
@@ -45,7 +45,7 @@
     ngrok
     ninja
     nixd
-    nixfmt
+    nixfmt-rfc-style
     nodejs_latest
     obsidian
     openssh
