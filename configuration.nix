@@ -3,6 +3,7 @@ let
   monaspace = pkgs.callPackage ./pkgs/fonts/monaspace.nix { };
 in
 {
+  ids.gids.nixbld = 30000;
   nix.optimise.automatic = true;
   nix.extraOptions =
     "	auto-optimise-store = false\n	experimental-features = nix-command flakes\n"
@@ -13,7 +14,6 @@ in
   programs.zsh.enable = true;
 
   services = {
-    nix-daemon.enable = true;
     jankyborders = {
       enable = true;
       active_color = "gradient(top_right=0xfffc5c7d,bottom_left=0xff6a82fb)";
@@ -220,7 +220,7 @@ in
     };
   };
 
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   environment.pathsToLink = [ "/share/qemu" ];
 }

@@ -52,7 +52,7 @@
     ninja
     nixd
     nixfmt-rfc-style
-    nodejs_latest
+    nodejs_22
     obsidian
     openssh
     pgcli
@@ -68,7 +68,6 @@
     terraform
     unzip
     wget
-    wrangler
     xcp
     xh
   ];
@@ -225,6 +224,9 @@
       };
       help = {
         autocorrect = "prompt";
+      };
+      rerere = {
+        enabled = true;
       };
     };
   };
