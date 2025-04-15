@@ -11,7 +11,6 @@
       "1password"
       "insomnia"
       "kap"
-      "meetingbar"
       "nordlayer"
       "orbstack"
       "raycast"
