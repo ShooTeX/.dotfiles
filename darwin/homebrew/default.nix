@@ -13,6 +13,7 @@
     ];
     casks = [
       "1password"
+      "autodesk-fusion"
       "discord"
       "elmedia-player"
       "figma"
