@@ -322,11 +322,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1736759499,
-        "narHash": "sha256-1XW/L6mnq+L4eLqIb4KFaZNjzB9XBGN9npgpXo64Tt4=",
+        "lastModified": 1747821204,
+        "narHash": "sha256-SoFy9paxIbqLnR+Ec7abq9nikJEo4Sul5H0g4Uz/hf8=",
         "owner": "shootex",
         "repo": "init.lua",
-        "rev": "c4f3263f79a678172acda5724dcf4359811f4f1a",
+        "rev": "591139e1ab2a270515213c5b5e73fb47f44b6885",
         "type": "github"
       },
       "original": {

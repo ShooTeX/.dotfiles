@@ -79,6 +79,7 @@
     "$HOME/.local/bin"
     "${pkgs.graalvm-ce}/bin"
     "$HOME/go/bin"
+    "$HOME/.bun/bin"
   ];
 
   age.identityPaths = [ "/Users/eriksimon/.ssh/id_ed25519" ];
