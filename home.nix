@@ -56,6 +56,7 @@
     obsidian
     openssh
     pgcli
+    pipx
     plantuml
     pnpm
     procs
