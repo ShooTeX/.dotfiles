@@ -12,6 +12,7 @@ in
     ) "	extra-platforms = x86_64-darwin aarch64-darwin\n";
 
   programs.zsh.enable = true;
+  system.primaryUser = "eriksimon";
 
   services = {
     jankyborders = {

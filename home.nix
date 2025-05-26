@@ -32,6 +32,7 @@
     ffmpeg
     gawk
     git-crypt
+    github-mcp-server
     gitleaks
     glow
     gnupg
