@@ -64,6 +64,9 @@
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
+            {
+              system.primaryUser = "stx";
+            }
             ./darwin
             home-manager.darwinModules.home-manager
             homeManagerConfig
@@ -83,6 +86,9 @@
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
+            {
+              system.primaryUser = "eriksimon";
+            }
             ./darwin/work.nix
             home-manager.darwinModules.home-manager
             homeManagerConfig

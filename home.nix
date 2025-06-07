@@ -49,6 +49,7 @@
     libfido2
     libiconv
     mob
+    moonlight-qt
     ngrok
     ninja
     nixd
