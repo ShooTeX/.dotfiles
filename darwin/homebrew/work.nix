@@ -15,6 +15,7 @@
       "orbstack"
       "raycast"
       "slack"
+      "tailscale"
       "tuple"
       "whatsapp"
     ];
