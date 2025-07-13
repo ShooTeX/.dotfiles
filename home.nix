@@ -271,7 +271,7 @@
       cd = "z";
     };
 
-    initExtra = ''
+    initContent = ''
       EDITOR=vim
       VISUAL=vim
       eval "$(direnv hook zsh)"
