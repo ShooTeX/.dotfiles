@@ -70,6 +70,7 @@
     tealdeer
     terraform
     unzip
+    vectorcode
     wget
     xcp
     xh
