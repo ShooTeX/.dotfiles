@@ -72,7 +72,7 @@
     unzip
     vectorcode
     wget
-    xcp
+    # xcp
     xh
   ];
 
@@ -266,7 +266,7 @@
 
       find = "fd";
 
-      cp = "xcp";
+      # cp = "xcp";
 
       cd = "z";
     };
