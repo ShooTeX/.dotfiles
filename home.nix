@@ -74,6 +74,8 @@
     wget
     # xcp
     xh
+
+    opencode
   ];
 
   home.sessionPath = [

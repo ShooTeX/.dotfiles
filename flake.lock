@@ -232,11 +232,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1753180535,
-        "narHash": "sha256-KEtlzMs2O7FDvciFtjk9W4hyau013Pj9qZNK9a0PxEc=",
+        "lastModified": 1753181343,
+        "narHash": "sha256-CLQfNtUqirNVSYoW/kYbvL4PeeNasmZonaPnjO3+1YQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "847711c7ffa9944b0c5c39a8342ac8eb6a9f9abc",
+        "rev": "0cdfcdbb525b77b951c889b6131047bc374f48fe",
         "type": "github"
       },
       "original": {
@@ -322,11 +322,11 @@
     "nvim-config": {
       "flake": false,
       "locked": {
-        "lastModified": 1753131207,
-        "narHash": "sha256-VqVb5B/eDASSg7zzDjqNtd0XstSUcU6PiKUe2ezOwxU=",
+        "lastModified": 1753215661,
+        "narHash": "sha256-JZum3bv/P3HOV7QggUHyXd7ABfMdhAPi/2sI1VIuAHM=",
         "owner": "shootex",
         "repo": "init.lua",
-        "rev": "b45b9029cfd6bb59c6a0f313e089e20dc5366d34",
+        "rev": "8429bedde1710ffd993ed3a1db6b153a7ee5cfdb",
         "type": "github"
       },
       "original": {
