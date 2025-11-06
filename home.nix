@@ -18,7 +18,7 @@
   home.stateVersion = "22.05";
 
   home.packages = with pkgs; [
-    (gradle.override { java = graalvm-ce; })
+    (gradle.override { java = graalvmPackages.graalvm-ce; })
     _1password-cli
     aerospace
     agenix-cli
@@ -27,7 +27,7 @@
     bottom
     cmake
     dogdns
-    du-dust
+    dust
     fd
     ffmpeg
     gawk
@@ -37,7 +37,7 @@
     glow
     gnupg
     go
-    graalvm-ce
+    graalvmPackages.graalvm-ce
     grex
     http4k
     httpie
@@ -82,7 +82,7 @@
     "$HOME/.cargo/bin"
     "$HOME/.pnpm"
     "$HOME/.local/bin"
-    "${pkgs.graalvm-ce}/bin"
+    "${pkgs.graalvmPackages.graalvm-ce}/bin"
     "$HOME/go/bin"
     "$HOME/.bun/bin"
   ];
@@ -93,8 +93,8 @@
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
     PNPM_HOME = "$HOME/.pnpm";
-    GRAALVM_HOME = "${pkgs.graalvm-ce}";
-    JAVA_HOME = "${pkgs.graalvm-ce}";
+    GRAALVM_HOME = "${pkgs.graalvmPackages.graalvm-ce}";
+    JAVA_HOME = "${pkgs.graalvmPackages.graalvm-ce}";
     TERMINAL = "wezterm";
     HOARDER_SERVER_ADDR = "https://hoarder.stx.wtf";
     HOARDER_API_KEY = "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.hoarder.path})";
