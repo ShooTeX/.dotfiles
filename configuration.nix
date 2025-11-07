@@ -25,18 +25,49 @@ in
       settings = {
         enable-normalization-flatten-containers = true;
         enable-normalization-opposite-orientation-for-nested-containers = true;
+        automatically-unhide-macos-hidden-apps = true;
 
         on-focus-changed = [ "move-mouse window-lazy-center" ];
 
+        on-window-detected = [
+          {
+            "if" = {
+              app-id = "com.tinyspeck.slackmacgap";
+            };
+            run = [
+              "move-node-to-workspace 2"
+            ];
+          }
+          {
+            "if" = {
+              app-id = "com.electron.asana";
+            };
+            run = [
+              "move-node-to-workspace 2"
+            ];
+          }
+          {
+            "if" = {
+              app-id = "com.apple.Music";
+            };
+            run = [
+              "move-node-to-workspace 4"
+            ];
+          }
+          {
+            "if" = {
+              app-id = "md.obsidian";
+            };
+            run = [
+              "move-node-to-workspace 5"
+            ];
+          }
+        ];
+
         mode = {
           main.binding = {
-            alt-enter = ''
-              exec-and-forget osascript -e '
-                    tell application "WezTerm"
-                        do script
-                        activate
-                    end tell'
-            '';
+            cmd-h = "macos-native-minimize";
+            cmd-alt-h = [ ];
 
             alt-h = "focus left";
             alt-j = "focus down";
@@ -47,6 +78,11 @@ in
             alt-shift-j = "move down";
             alt-shift-k = "move up";
             alt-shift-l = "move right";
+
+            alt-ctrl-shift-h = "join-with left";
+            alt-ctrl-shift-j = "join-with down";
+            alt-ctrl-shift-k = "join-with up";
+            alt-ctrl-shift-l = "join-with right";
 
             alt-f = "fullscreen";
 
@@ -112,7 +148,6 @@ in
 
             alt-shift-i = "resize smart -50";
             alt-shift-o = "resize smart +50";
-
             alt-shift-semicolon = "mode service";
           };
           service.binding = {
@@ -133,7 +168,10 @@ in
               "mode main"
             ];
           };
+
         };
+
+        default-root-container-layout = "tiles";
 
         workspace-to-monitor-force-assignment = {
           "1" = [ "main" ];

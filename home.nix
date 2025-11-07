@@ -20,7 +20,6 @@
   home.packages = with pkgs; [
     (gradle.override { java = graalvmPackages.graalvm-ce; })
     _1password-cli
-    aerospace
     agenix-cli
     awscli2
     bat
