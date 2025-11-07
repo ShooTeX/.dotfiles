@@ -131,7 +131,6 @@
       theme = "Carbonfox";
       font-family = "Iosevka";
       font-size = 18;
-      font-thicken = true;
 
       macos-titlebar-style = "hidden";
 
