@@ -18,9 +18,7 @@
       "tailscale"
       "tuple"
       "whatsapp"
-    ];
-    brews = [
-      "luajit" # for neorg
+      "ghostty"
     ];
   };
 }
