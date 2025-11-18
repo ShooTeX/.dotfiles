@@ -20,7 +20,6 @@
   imports = [
     ./core
     ./dev
-    ./secrets
   ];
 
   home.packages = with pkgs; [
@@ -34,7 +33,6 @@
     dust
     ffmpeg
     gawk
-    github-mcp-server
     glow
     gnupg
     grex
@@ -58,11 +56,8 @@
     sqlite
     terraform
     unzip
-    vectorcode
     wget
     xh
-
-    opencode
   ];
 
   home.sessionPath = [
