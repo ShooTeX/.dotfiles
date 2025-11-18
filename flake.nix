@@ -15,7 +15,6 @@
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    agenix.url = "github:ryantm/agenix";
     nvim-config = {
       url = "github:shootex/init.lua";
       flake = false;
@@ -33,7 +32,6 @@
       neovim-overlay,
       nvim-config,
       wezterm-config,
-      agenix,
       ...
     }:
     let
@@ -41,7 +39,6 @@
         neovim-overlay.overlays.default
         (final: prev: {
           http4k = final.callPackage ./pkgs/http4k.nix { };
-          inherit (prev.stdenv.system == "aarch64-darwin") google-chrome;
         })
       ];
 
@@ -75,7 +72,6 @@
                 { ... }:
                 {
                   imports = [
-                    agenix.homeManagerModules.default
                     ./home
                   ];
                 };
@@ -97,7 +93,6 @@
                 { ... }:
                 {
                   imports = [
-                    agenix.homeManagerModules.default
                     ./home
                   ];
                 };
