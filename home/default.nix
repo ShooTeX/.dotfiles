@@ -26,7 +26,6 @@
   home.packages = with pkgs; [
     (gradle.override { java = graalvmPackages.graalvm-ce; })
     _1password-cli
-    agenix-cli
     awscli2
     bat
     bottom
@@ -44,7 +43,6 @@
     grex
     http4k
     httpie
-    husky
     hyperfine
     jq
     just
@@ -56,13 +54,11 @@
     ninja
     nixd
     nixfmt-rfc-style
-    nodejs_22
     obsidian
     openssh
     pgcli
     pipx
     plantuml
-    pnpm
     procs
     ripgrep
     rm-improved
@@ -79,21 +75,15 @@
   ];
 
   home.sessionPath = [
-    "$HOME/.npm-packages/bin"
     "$HOME/.cargo/bin"
-    "$HOME/.pnpm"
     "$HOME/.local/bin"
     "${pkgs.graalvmPackages.graalvm-ce}/bin"
     "$HOME/go/bin"
-    "$HOME/.bun/bin"
   ];
 
   home.sessionVariables = {
-    NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
-    PNPM_HOME = "$HOME/.pnpm";
     GRAALVM_HOME = "${pkgs.graalvmPackages.graalvm-ce}";
     JAVA_HOME = "${pkgs.graalvmPackages.graalvm-ce}";
-    TERMINAL = "wezterm";
     HOARDER_SERVER_ADDR = "https://hoarder.stx.wtf";
     HOARDER_API_KEY = "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.hoarder.path})";
   };
@@ -101,12 +91,4 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.bun = {
-    enable = true;
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 }
