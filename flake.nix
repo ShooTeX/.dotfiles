@@ -68,17 +68,11 @@
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {
-              home-manager.users.stx =
-                { ... }:
-                {
-                  imports = [
-                    ./home
-                  ];
-                };
+              home-manager.users.stx.imports = [ ./home ];
             }
           ];
         };
-        work = darwin.lib.darwinSystem {
+        Erik-RWG6T57T93 = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
             ./configuration.nix
@@ -89,13 +83,7 @@
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {
-              home-manager.users.eriksimon =
-                { ... }:
-                {
-                  imports = [
-                    ./home
-                  ];
-                };
+              home-manager.users.eriksimon.imports = [ ./home ];
             }
           ];
         };
