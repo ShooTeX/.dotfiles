@@ -64,11 +64,6 @@
     "$HOME/.local/bin"
   ];
 
-  home.sessionVariables = {
-    HOARDER_SERVER_ADDR = "https://hoarder.stx.wtf";
-    HOARDER_API_KEY = "$(${pkgs.coreutils}/bin/cat ${config.age.secrets.hoarder.path})";
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
