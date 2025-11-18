@@ -1,8 +1,5 @@
 {
   pkgs,
-  config,
-  nvim-config,
-  wezterm-config,
   ...
 }:
 
