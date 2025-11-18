@@ -76,7 +76,7 @@
                 {
                   imports = [
                     agenix.homeManagerModules.default
-                    ./home.nix
+                    ./home
                   ];
                 };
             }
@@ -98,7 +98,7 @@
                 {
                   imports = [
                     agenix.homeManagerModules.default
-                    ./home.nix
+                    ./home
                   ];
                 };
             }
