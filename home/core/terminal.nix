@@ -9,7 +9,7 @@
     #   enable = true;
     # };
 
-    package = null;
+    package = null; # managed by homebrew
 
     settings = {
       theme = "Carbonfox";
