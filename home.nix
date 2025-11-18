@@ -25,6 +25,7 @@
     bat
     bottom
     cmake
+    d2
     dogdns
     dust
     fd
