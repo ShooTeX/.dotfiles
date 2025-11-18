@@ -19,6 +19,8 @@
 
   imports = [
     ./core
+    ./dev
+    ./secrets
   ];
 
   home.packages = with pkgs; [
@@ -86,9 +88,6 @@
     "$HOME/.bun/bin"
   ];
 
-  age.identityPaths = [ "/Users/eriksimon/.ssh/id_ed25519" ];
-  age.secrets.hoarder.file = ./secrets/default/hoarder.age;
-
   home.sessionVariables = {
     NODE_PATH = "$HOME/.npm-packages/lib/node_modules";
     PNPM_HOME = "$HOME/.pnpm";
@@ -109,27 +108,5 @@
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
-  };
-
-  programs.neovim = {
-    enable = true;
-
-    viAlias = true;
-    vimAlias = true;
-  };
-
-  xdg.configFile = {
-    nvim = {
-      source = nvim-config;
-      recursive = true;
-    };
-    "wezterm/wezterm.lua" = {
-      enable = false;
-      source = wezterm-config;
-    };
-    "wezterm" = {
-      source = wezterm-config;
-      recursive = true;
-    };
   };
 }

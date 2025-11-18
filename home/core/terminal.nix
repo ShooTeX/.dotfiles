@@ -1,3 +1,5 @@
+{ wezterm-config, ... }:
+
 {
   programs.ghostty = {
     enable = true;
@@ -28,6 +30,17 @@
     enable = true;
     enableBashIntegration = true;
     enableZshIntegration = true;
+  };
+
+  xdg.configFile = {
+    "wezterm/wezterm.lua" = {
+      enable = false;
+      source = wezterm-config;
+    };
+    "wezterm" = {
+      source = wezterm-config;
+      recursive = true;
+    };
   };
 
   programs.kitty = {
