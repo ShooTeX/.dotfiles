@@ -60,11 +60,7 @@
         STX-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
-            ./configuration.nix
-            {
-              system.primaryUser = "stx";
-            }
-            ./darwin
+            ./hosts/STX-MacBook-Pro
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {
@@ -75,11 +71,7 @@
         Erik-RWG6T57T93 = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
-            ./configuration.nix
-            {
-              system.primaryUser = "eriksimon";
-            }
-            ./darwin/work.nix
+            ./hosts/Erik-RWG6T57T93
             home-manager.darwinModules.home-manager
             homeManagerConfig
             {

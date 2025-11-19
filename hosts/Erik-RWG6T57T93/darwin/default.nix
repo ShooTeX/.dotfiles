@@ -1,3 +1,6 @@
 {
-  imports = [ ./homebrew.nix ];
+  imports = [
+    ./homebrew.nix
+    ./system.nix
+  ];
 }

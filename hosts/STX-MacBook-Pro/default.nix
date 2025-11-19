@@ -1,3 +1,7 @@
 {
-  imports = [../common/ ./darwin];
+  imports = [
+    ../common/core
+    ../common/darwin
+    ./darwin
+  ];
 }
