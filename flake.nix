@@ -41,38 +41,30 @@
           http4k = final.callPackage ./pkgs/http4k.nix { };
         })
       ];
-
-      nixpkgsConfig = {
-        config.allowUnfree = true;
-        overlays = overlays;
-      };
-
-      homeManagerConfig = {
-        nixpkgs = nixpkgsConfig;
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
-        home-manager.backupFileExtension = "nixbak";
-      };
+      mkDarwinSystem =
+        hostname:
+        darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          modules = [
+            {
+              nixpkgs.config.allowUnfree = true;
+              nixpkgs.overlays = overlays;
+            }
+            home-manager.darwinModules.home-manager
+            {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
+              home-manager.backupFileExtension = "nixbak";
+            }
+            ./hosts/${hostname}
+          ];
+        };
     in
     {
       darwinConfigurations = {
-        STX-MacBook-Pro = darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          modules = [
-            home-manager.darwinModules.home-manager
-            homeManagerConfig
-            ./hosts/STX-MacBook-Pro
-          ];
-        };
-        Erik-RWG6T57T93 = darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          modules = [
-            home-manager.darwinModules.home-manager
-            homeManagerConfig
-            ./hosts/Erik-RWG6T57T93
-          ];
-        };
+        STX-MacBook-Pro = mkDarwinSystem "STX-MacBook-Pro";
+        Erik-RWG6T57T93 = mkDarwinSystem "Erik-RWG6T57T93";
       };
     };
 }
