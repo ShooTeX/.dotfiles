@@ -60,23 +60,17 @@
         STX-MacBook-Pro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
-            ./hosts/STX-MacBook-Pro
             home-manager.darwinModules.home-manager
             homeManagerConfig
-            {
-              home-manager.users.stx.imports = [ ./home ];
-            }
+            ./hosts/STX-MacBook-Pro
           ];
         };
         Erik-RWG6T57T93 = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
-            ./hosts/Erik-RWG6T57T93
             home-manager.darwinModules.home-manager
             homeManagerConfig
-            {
-              home-manager.users.eriksimon.imports = [ ./home ];
-            }
+            ./hosts/Erik-RWG6T57T93
           ];
         };
       };
