@@ -52,7 +52,7 @@
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
-
+        home-manager.backupFileExtension = "nixbak";
       };
     in
     {

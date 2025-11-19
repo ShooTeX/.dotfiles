@@ -25,6 +25,7 @@
       macos-titlebar-style = "hidden";
 
       quit-after-last-window-closed = true;
+      macos-option-as-alt = true;
 
       cursor-style = "block";
     };
