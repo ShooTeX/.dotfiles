@@ -42,9 +42,11 @@
     zellij = {
       enable = true;
       enableZshIntegration = true;
+      exitShellOnExit = true;
 
       settings = {
         theme = "kanagawa";
+        show_startup_tips = false;
         keybinds = {
           shared_among = {
             _args = [
