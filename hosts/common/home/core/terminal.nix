@@ -19,8 +19,11 @@
 
     settings = {
       theme = "Kanagawa Dragon";
-      font-family = "Iosevka";
+
+      font-family = "Terminus (TTF)";
       font-size = 18;
+      # font-thicken = true;
+      # font-thicken-strength = 0;
 
       macos-titlebar-style = "hidden";
 
@@ -28,6 +31,7 @@
       macos-option-as-alt = true;
 
       cursor-style = "block";
+      shell-integration-features = "no-cursor";
     };
   };
 

@@ -47,6 +47,13 @@
       settings = {
         theme = "kanagawa";
         show_startup_tips = false;
+
+        ui = {
+          pane_frames = {
+            rounded_corners = true;
+          };
+        };
+
         keybinds = {
           shared_among = {
             _args = [
