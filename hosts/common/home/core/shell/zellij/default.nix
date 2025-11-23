@@ -1,5 +1,8 @@
 {
-  imports = [ ./keybinds.nix ];
+  imports = [
+    ./keybinds.nix
+    ./layouts
+  ];
 
   programs.zellij = {
     enable = true;
