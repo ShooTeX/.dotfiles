@@ -20,9 +20,17 @@
     servers = {
       shopifyDev = {
         command = "npx";
-        "args" = [
+        args = [
           "-y"
           "@shopify/dev-mcp@latest"
+        ];
+      };
+      asana = {
+        command = "npx";
+        args = [
+          "-y"
+          "mcp-remote"
+          "https://mcp.asana.com/sse"
         ];
       };
     };
