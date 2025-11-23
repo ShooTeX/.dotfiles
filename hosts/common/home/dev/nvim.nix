@@ -6,6 +6,7 @@
 
     viAlias = true;
     vimAlias = true;
+    defaultEditor = true;
   };
 
   xdg.configFile = {

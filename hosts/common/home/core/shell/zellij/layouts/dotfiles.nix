@@ -28,9 +28,7 @@
                               _props = {
                                 name = "System Config";
                               };
-                              command = "nvim";
-                              args = [ "." ];
-                              cwd = "~/.dotfiles";
+                              edit = "~/.dotfiles";
                             };
                           }
                           {

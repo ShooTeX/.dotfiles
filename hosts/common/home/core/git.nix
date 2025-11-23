@@ -4,6 +4,7 @@
     fd
     gitleaks
     mob
+    git-crypt
   ];
 
   programs = {

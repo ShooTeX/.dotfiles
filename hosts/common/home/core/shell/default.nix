@@ -3,10 +3,6 @@
 {
   imports = [ ./zellij ];
 
-  home.packages = with pkgs; [
-    git-crypt
-  ];
-
   programs = {
     zsh = {
       enable = true;
@@ -31,9 +27,6 @@
       };
 
       initContent = ''
-        EDITOR=vim
-        VISUAL=vim
-        eval "$(direnv hook zsh)"
         export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
         if [[ $(uname -m) == 'arm64' ]]; then
             eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -43,6 +36,7 @@
 
     direnv = {
       enable = true;
+      enableZshIntegration = true;
 
       nix-direnv = {
         enable = true;
