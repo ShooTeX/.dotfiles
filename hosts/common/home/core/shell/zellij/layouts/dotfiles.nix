@@ -1,4 +1,7 @@
 {
+  programs.zsh.shellAliases = {
+    dots = "zellij --layout dotfiles";
+  };
   programs.zellij.layouts.dotfiles = {
     layout = {
       _children = [
