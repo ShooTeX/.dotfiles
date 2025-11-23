@@ -52,10 +52,12 @@
             }
             home-manager.darwinModules.home-manager
             {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit nvim-config wezterm-config; };
-              home-manager.backupFileExtension = "nixbak";
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit nvim-config wezterm-config; };
+                backupFileExtension = "nixbak";
+              };
             }
             ./hosts/${hostname}
           ];
