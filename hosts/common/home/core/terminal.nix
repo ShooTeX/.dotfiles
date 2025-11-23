@@ -18,7 +18,7 @@
     package = null; # managed by homebrew
 
     settings = {
-      theme = "Carbonfox";
+      theme = "Kanagawa Dragon";
       font-family = "Iosevka";
       font-size = 18;
 
