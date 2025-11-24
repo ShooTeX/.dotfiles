@@ -23,6 +23,10 @@
       url = "github:shootex/wezterm.lua";
       flake = false;
     };
+    opencode = {
+      url = "github:sst/opencode";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -32,12 +36,14 @@
       neovim-overlay,
       nvim-config,
       wezterm-config,
+      opencode,
       ...
     }:
     let
       overlays = [
         neovim-overlay.overlays.default
         (final: prev: {
+          opencode = opencode.packages.${prev.system}.default;
           http4k = final.callPackage ./pkgs/http4k.nix { };
         })
       ];

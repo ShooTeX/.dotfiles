@@ -1,7 +1,6 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    vectorcode
     github-mcp-server
   ];
 
@@ -19,6 +18,7 @@
 
     servers = {
       shopifyDev = {
+        enable = false;
         command = "npx";
         args = [
           "-y"
@@ -26,6 +26,7 @@
         ];
       };
       asana = {
+        enable = false;
         command = "npx";
         args = [
           "-y"
