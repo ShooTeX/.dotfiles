@@ -5,7 +5,7 @@
     ./darwin
   ];
 
-  users.users.stx.home = "/Users/eriksimon";
+  users.users.stx.home = "/Users/stx";
 
   home-manager.users.stx.imports = [ ../common/home ];
 }
