@@ -1,4 +1,4 @@
-{ nvim-config, ... }:
+{ inputs, ... }:
 
 {
   programs.neovim = {
@@ -11,7 +11,7 @@
 
   xdg.configFile = {
     nvim = {
-      source = nvim-config;
+      source = inputs.nvim-config;
       recursive = true;
     };
   };

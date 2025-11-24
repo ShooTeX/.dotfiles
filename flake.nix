@@ -30,38 +30,30 @@
   };
 
   outputs =
-    {
-      darwin,
-      home-manager,
-      neovim-overlay,
-      nvim-config,
-      wezterm-config,
-      opencode,
-      ...
-    }:
+    inputs:
     let
       overlays = [
-        neovim-overlay.overlays.default
+        inputs.neovim-overlay.overlays.default
         (final: prev: {
-          opencode = opencode.packages.${prev.system}.default;
+          opencode = inputs.opencode.packages.${prev.system}.default;
           http4k = final.callPackage ./pkgs/http4k.nix { };
         })
       ];
       mkDarwinSystem =
         hostname:
-        darwin.lib.darwinSystem {
+        inputs.darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
             {
               nixpkgs.config.allowUnfree = true;
               nixpkgs.overlays = overlays;
             }
-            home-manager.darwinModules.home-manager
+            inputs.home-manager.darwinModules.home-manager
             {
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                extraSpecialArgs = { inherit nvim-config wezterm-config; };
+                extraSpecialArgs = { inherit inputs; };
                 backupFileExtension = "nixbak";
               };
             }

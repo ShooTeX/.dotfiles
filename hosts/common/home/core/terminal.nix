@@ -1,4 +1,4 @@
-{ wezterm-config, ... }:
+{ inputs, ... }:
 
 {
   home.sessionVariables = {
@@ -44,10 +44,10 @@
   xdg.configFile = {
     "wezterm/wezterm.lua" = {
       enable = false;
-      source = wezterm-config;
+      source = inputs.wezterm-config;
     };
     "wezterm" = {
-      source = wezterm-config;
+      source = inputs.wezterm-config;
       recursive = true;
     };
   };
