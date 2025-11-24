@@ -23,7 +23,7 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
-          "neovim-overlay",
+          "neovim",
           "nixpkgs"
         ]
       },
@@ -61,7 +61,7 @@
         "type": "github"
       }
     },
-    "neovim-overlay": {
+    "neovim": {
       "inputs": {
         "flake-parts": "flake-parts",
         "neovim-src": "neovim-src",
@@ -155,7 +155,7 @@
       "inputs": {
         "darwin": "darwin",
         "home-manager": "home-manager",
-        "neovim-overlay": "neovim-overlay",
+        "neovim": "neovim",
         "nixpkgs": "nixpkgs",
         "nvim-config": "nvim-config",
         "opencode": "opencode",

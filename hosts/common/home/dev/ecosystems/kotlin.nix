@@ -1,10 +1,10 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   home = {
     packages = with pkgs; [
       (gradle.override { java = graalvmPackages.graalvm-ce; })
       graalvmPackages.graalvm-ce
-      http4k
+      (callPackage "${inputs.self}/pkgs/http4k.nix" { })
       kotlin
     ];
 

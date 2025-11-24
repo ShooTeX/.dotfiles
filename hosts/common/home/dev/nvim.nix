@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs.neovim = {
@@ -7,6 +7,8 @@
     viAlias = true;
     vimAlias = true;
     defaultEditor = true;
+
+    package = inputs.neovim.packages.${pkgs.system}.default;
   };
 
   xdg.configFile = {

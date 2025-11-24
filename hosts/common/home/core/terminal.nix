@@ -21,9 +21,9 @@
       theme = "Kanagawa Dragon";
 
       font-family = "Terminus (TTF)";
-      font-size = 18;
-      # font-thicken = true;
-      # font-thicken-strength = 0;
+      font-size = 20;
+      font-thicken = true;
+      font-thicken-strength = 255;
 
       macos-titlebar-style = "hidden";
 

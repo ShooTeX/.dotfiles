@@ -11,7 +11,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    neovim-overlay = {
+    neovim = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -32,13 +32,6 @@
   outputs =
     inputs:
     let
-      overlays = [
-        inputs.neovim-overlay.overlays.default
-        (final: prev: {
-          opencode = inputs.opencode.packages.${prev.system}.default;
-          http4k = final.callPackage ./pkgs/http4k.nix { };
-        })
-      ];
       mkDarwinSystem =
         hostname:
         inputs.darwin.lib.darwinSystem {
@@ -46,7 +39,6 @@
           modules = [
             {
               nixpkgs.config.allowUnfree = true;
-              nixpkgs.overlays = overlays;
             }
             inputs.home-manager.darwinModules.home-manager
             {
