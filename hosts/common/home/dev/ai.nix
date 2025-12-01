@@ -18,24 +18,24 @@
   programs.mcp = {
     enable = true;
 
-    servers = {
-      shopifyDev = {
-        enable = false;
-        command = "npx";
-        args = [
-          "-y"
-          "@shopify/dev-mcp@latest"
-        ];
-      };
-      asana = {
-        enable = false;
-        command = "npx";
-        args = [
-          "-y"
-          "mcp-remote"
-          "https://mcp.asana.com/sse"
-        ];
-      };
-    };
+    # servers = {
+    #   shopifyDev = {
+    #     enable = false;
+    #     command = "npx";
+    #     args = [
+    #       "-y"
+    #       "@shopify/dev-mcp@latest"
+    #     ];
+    #   };
+    #   asana = {
+    #     enable = false;
+    #     command = "npx";
+    #     args = [
+    #       "-y"
+    #       "mcp-remote"
+    #       "https://mcp.asana.com/sse"
+    #     ];
+    #   };
+    # };
   };
 }

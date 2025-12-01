@@ -23,7 +23,6 @@
       font-family = "Terminus (TTF)";
       font-size = 20;
       font-thicken = true;
-      font-thicken-strength = 255;
 
       macos-titlebar-style = "hidden";
 
