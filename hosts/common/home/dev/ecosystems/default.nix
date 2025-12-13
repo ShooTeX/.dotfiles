@@ -1,10 +1,11 @@
 {
   imports = [
-    ./node.nix
     ./go.nix
-    ./rust.nix
     ./kotlin.nix
-    ./python.nix
     ./nix.nix
+    ./node.nix
+    ./python.nix
+    ./rust.nix
+    ./tex.nix
   ];
 }
