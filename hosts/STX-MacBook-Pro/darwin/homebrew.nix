@@ -7,5 +7,6 @@
     "parsec"
     "stremio"
     "teamspeak-client"
+    "orcaslicer"
   ];
 }
