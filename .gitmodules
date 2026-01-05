@@ -1,6 +1,0 @@
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/shootex/init.lua
-[submodule "wezterm"]
-	path = wezterm
-	url = https://github.com/shootex/wezterm.lua

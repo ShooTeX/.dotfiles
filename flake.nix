@@ -11,6 +11,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     neovim = {
       url = "github:nix-community/neovim-nightly-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -40,6 +44,7 @@
             {
               nixpkgs.config.allowUnfree = true;
             }
+            inputs.sops-nix.darwinModules.sops
             inputs.home-manager.darwinModules.home-manager
             {
               home-manager = {
@@ -47,6 +52,7 @@
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
                 backupFileExtension = "nixbak";
+                sharedModules = [ inputs.sops-nix.homeManagerModule ];
               };
             }
             ./hosts/${hostname}

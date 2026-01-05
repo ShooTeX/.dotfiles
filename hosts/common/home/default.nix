@@ -37,7 +37,6 @@
     hyperfine
     jq
     just
-    libfido2
     libiconv
     moonlight-qt
     ngrok

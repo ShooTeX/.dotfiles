@@ -1,9 +1,0 @@
-[identities]
-work = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIZh3CENBr3FeTjlstt822lkCu/XWICB+0jZlPHBlTI4"
-
-[groups]
-all = ["work"]
-
-[[paths]]
-glob = "secrets/default/*"
-identities = ["work"]

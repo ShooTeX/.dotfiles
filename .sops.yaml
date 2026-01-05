@@ -1,0 +1,10 @@
+keys:
+  - &yk_1 age1yubikey1qdcqfdq4r6adjrhz0p94vzxqr2d9j2a54x9g3luaex2c7tzxucgsycehlsu
+  - &yk_2 age1yubikey1qv5atjsz0n8xgyrsqug88fqlevn2mqcy87p5cl89vfh6cczk3tryqd4sent
+
+creation_rules:
+  - path_regex: secrets/shared.json
+    key_groups:
+      - age:
+          - *yk_1
+          - *yk_2
