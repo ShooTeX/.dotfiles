@@ -15,15 +15,25 @@
     provision = {
       enable = true;
 
-      datasources.settings.datasources = [
-        {
-          name = "Prometheus";
-          type = "prometheus";
-          url = "http://${config.services.prometheus.listenAddress}:${toString config.services.prometheus.port}";
-          isDefault = true;
-          editable = false;
-        }
-      ];
+      datasources = {
+        settings = {
+          datasources = [
+            {
+              name = "Prometheus";
+              type = "prometheus";
+              url = "http://${config.services.prometheus.listenAddress}:${toString config.services.prometheus.port}";
+              isDefault = true;
+              editable = false;
+            }
+            {
+              name = "Loki";
+              type = "loki";
+              url = "http://${toString config.services.loki.configuration.server.http_listen_address}:${toString config.services.loki.configuration.server.http_listen_port}";
+              editable = false;
+            }
+          ];
+        };
+      };
     };
   };
 
