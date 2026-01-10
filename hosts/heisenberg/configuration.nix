@@ -3,12 +3,13 @@
   lib,
   pkgs,
   ...
-}@args:
+}:
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     (modulesPath + "/profiles/qemu-guest.nix")
     ./disk-config.nix
+    ./users.nix
     ./services
   ];
   boot.loader.grub = {
@@ -23,11 +24,6 @@
     pkgs.curl
     pkgs.gitMinimal
   ];
-
-  users.users.root.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOC/I3GTOOTQFqLnFP8I5aTdfZoJB02C1phkTeetja1T"
-  ]
-  ++ (args.extraPublicKeys or [ ]); # this is used for unit-testing this module and can be removed if not needed
 
   networking.hostName = "heisenberg";
 

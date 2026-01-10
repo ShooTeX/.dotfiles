@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   services.grafana = {
     enable = true;
@@ -8,8 +9,21 @@
         enable_gzip = true;
         domain = "grafana.dottex.world";
       };
-
       analytics.reporting_enabled = false;
+    };
+
+    provision = {
+      enable = true;
+
+      datasources.settings.datasources = [
+        {
+          name = "Prometheus";
+          type = "prometheus";
+          url = "http://${config.services.prometheus.listenAddress}:${toString config.services.prometheus.port}";
+          isDefault = true;
+          editable = false;
+        }
+      ];
     };
   };
 
