@@ -2,9 +2,17 @@ keys:
   - &yk_1 age1yubikey1qdcqfdq4r6adjrhz0p94vzxqr2d9j2a54x9g3luaex2c7tzxucgsycehlsu
   - &yk_2 age1yubikey1qv5atjsz0n8xgyrsqug88fqlevn2mqcy87p5cl89vfh6cczk3tryqd4sent
 
+  - &heisenberg age1zq7up70zha9naafykmwnrvjsn7gkee6w7x4tmzr6auklmzx20avs3ahzl8
+
 creation_rules:
-  - path_regex: secrets/shared.json
+  - path_regex: hosts/common/core/secrets/.*.json
     key_groups:
       - age:
           - *yk_1
           - *yk_2
+  - path_regex: hosts/heisenberg/secrets/.*.enc
+    key_groups:
+      - age:
+          - *yk_1
+          - *yk_2
+          - *heisenberg
