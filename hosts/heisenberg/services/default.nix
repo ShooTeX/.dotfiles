@@ -1,3 +1,6 @@
 {
-  imports = [ ./caddy.nix ];
+  imports = [
+    ./caddy.nix
+    ./monitoring
+  ];
 }
