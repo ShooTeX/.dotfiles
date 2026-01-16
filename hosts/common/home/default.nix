@@ -27,7 +27,6 @@
     cmake
     d2
     deploy-rs
-    dogdns
     dust
     ffmpeg
     gawk

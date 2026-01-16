@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   home.packages = with pkgs; [
     github-mcp-server
@@ -6,7 +6,6 @@
 
   programs.opencode = {
     enable = true;
-    package = inputs.opencode.packages.${pkgs.system}.default;
 
     enableMcpIntegration = true;
 
