@@ -37,8 +37,10 @@
     };
   };
 
-  services.caddy.virtualHosts."grafana.dottex.world".extraConfig = ''
-    import cf_dns
-    reverse_proxy localhost:3000
-  '';
+  services.caddy.virtualHosts."grafana.dottex.world" = {
+    useACMEHost = "dottex.world";
+    extraConfig = ''
+      reverse_proxy localhost:3000
+    '';
+  };
 }

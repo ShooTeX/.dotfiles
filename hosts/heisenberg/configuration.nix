@@ -20,6 +20,14 @@
   };
   services.openssh.enable = true;
 
+  nix.settings = {
+    trusted-users = [
+      "root"
+      "@wheel"
+      "stx"
+    ];
+  };
+
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
