@@ -1,6 +1,6 @@
 {
   imports = [
-    ./security.nix
+    ./secrets.nix
     ./services
     ./system.nix
     ./homebrew.nix
