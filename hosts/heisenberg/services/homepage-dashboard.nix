@@ -74,13 +74,6 @@ in
               icon = "si-immich";
               description = "Photo/Video vault";
               href = "https://immich.dottex.world";
-              widgets = [
-                {
-                  type = "uptimekuma";
-                  url = "https://uptime-kuma.dottex.world";
-                  slug = "immich";
-                }
-              ];
             };
           }
         ];
@@ -99,7 +92,61 @@ in
               description = "Service health monitoring tool";
               href = "http://uptime-kuma.dottex.world";
               icon = "si-uptimekuma";
+              widgets = [
+                {
+                  type = "uptimekuma";
+                  url = "https://uptime-kuma.dottex.world";
+                  slug = "heisenberg";
+                }
+              ];
             };
+          }
+        ];
+      }
+    ];
+
+    bookmarks = [
+      {
+        Entertainment = [
+          {
+            YouTube = [
+              {
+                icon = "si-youtube";
+                href = "https://youtube.com/";
+              }
+            ];
+          }
+          {
+            Twitch = [
+              {
+                icon = "si-twitch";
+                href = "https://twitch.tv/";
+              }
+            ];
+          }
+        ];
+      }
+      {
+        Hosting = [
+          {
+            Hetzner = [
+              {
+                icon = "si-hetzner";
+                href = "https://console.hetzner.com/projects/1453084/dashboard";
+              }
+            ];
+          }
+        ];
+      }
+      {
+        Nix = [
+          {
+            "NixOS Options" = [
+              {
+                icon = "si-nixos";
+                href = "https://search.nixos.org/options";
+              }
+            ];
           }
         ];
       }
