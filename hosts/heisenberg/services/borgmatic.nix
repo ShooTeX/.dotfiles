@@ -25,6 +25,15 @@
       ssh_command = "ssh -p 23 -i ${config.sops.secrets.borg-ssh-key.path}";
 
       encryption_passcommand = "cat ${config.sops.secrets.borg-passphrase.path}";
+
+      uptime_kuma = {
+        push_url = "https://uptime-kuma.dottex.world/api/push/qTbDvvoKF5pbeKV4RZDKOyg2NqRBgdFi?status=up&msg=OK&ping=";
+        states = [
+          "start"
+          "finish"
+          "fail"
+        ];
+      };
     };
   };
 }

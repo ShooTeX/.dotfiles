@@ -74,6 +74,13 @@ in
               icon = "si-immich";
               description = "Photo/Video vault";
               href = "https://immich.dottex.world";
+              widgets = [
+                {
+                  type = "uptimekuma";
+                  url = "https://uptime-kuma.dottex.world";
+                  slug = "immich";
+                }
+              ];
             };
           }
         ];
@@ -85,15 +92,13 @@ in
               icon = "si-grafana";
               description = "Monitoring Dashboards";
               href = "https://grafana.dottex.world";
-              # widgets = [
-              #   {
-              #     type = "grafana";
-              #     version = 2;
-              #     url = "https://grafana.dottex.world";
-              #     username = "{{HOMEPAGE_VAR_GRAFANA_USER}}";
-              #     password = "{{HOMEPAGE_VAR_GRAFANA_PASS}}";
-              #   }
-              # ];
+            };
+          }
+          {
+            "Uptime Kuma" = {
+              description = "Service health monitoring tool";
+              href = "http://uptime-kuma.dottex.world";
+              icon = "si-uptimekuma";
             };
           }
         ];
