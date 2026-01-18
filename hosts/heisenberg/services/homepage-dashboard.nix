@@ -15,17 +15,16 @@ let
   });
 in
 {
-  sops.secrets.homepage = {
-    format = "dotenv";
-    sopsFile = ../secrets/homepage.enc.env;
-    key = "";
+
+  sops.secrets."homepage_dashboard/env" = {
+    restartUnits = [ "homepage-dashboard.service" ];
   };
 
   services.homepage-dashboard = {
     inherit package;
 
     enable = true;
-    environmentFile = config.sops.secrets.homepage.path;
+    environmentFile = config.sops.secrets."homepage_dashboard/env".path;
 
     allowedHosts = "dottex.world";
 
@@ -70,6 +69,21 @@ in
       {
         Services = [
           {
+            Adguard = {
+              icon = "si-adguard";
+              description = "Ad blocker/DNS server";
+              href = "http://adguard.home";
+              widgets = [
+                {
+                  type = "adguard";
+                  url = "http://adguard.home";
+                  username = "{{HOMEPAGE_VAR_ADGUARD_USER}}";
+                  password = "{{HOMEPAGE_VAR_ADGUARD_PASS}}";
+                }
+              ];
+            };
+          }
+          {
             Immich = {
               icon = "si-immich";
               description = "Photo/Video vault";
@@ -85,6 +99,15 @@ in
               icon = "si-grafana";
               description = "Monitoring Dashboards";
               href = "https://grafana.dottex.world";
+              widgets = [
+                {
+                  type = "grafana";
+                  version = 2;
+                  url = "https://grafana.dottex.world";
+                  username = "{{HOMEPAGE_VAR_GRAFANA_USER}}";
+                  password = "{{HOMEPAGE_VAR_GRAFANA_PASS}}";
+                }
+              ];
             };
           }
           {
