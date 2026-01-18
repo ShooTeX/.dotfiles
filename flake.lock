@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "dawarich-pr": {
+      "locked": {
+        "lastModified": 1768224118,
+        "narHash": "sha256-N1c2MK2j/r/Kfi7qSD9hv2PmhRVRX0KY3E3IKEM5Q0k=",
+        "owner": "diogotcorreia",
+        "repo": "nixpkgs",
+        "rev": "f14353c14118659611bddf4d65b30b56b3d0be52",
+        "type": "github"
+      },
+      "original": {
+        "owner": "diogotcorreia",
+        "ref": "dawarich-init",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "deploy-rs": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -221,6 +237,7 @@
     "root": {
       "inputs": {
         "darwin": "darwin",
+        "dawarich-pr": "dawarich-pr",
         "deploy-rs": "deploy-rs",
         "disko": "disko",
         "home-manager": "home-manager",

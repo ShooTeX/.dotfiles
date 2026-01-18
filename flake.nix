@@ -42,6 +42,10 @@
       flake = false;
     };
     deploy-rs.url = "github:serokell/deploy-rs";
+    dawarich-pr = {
+      url = "github:diogotcorreia/nixpkgs/dawarich-init";
+      flake = false;
+    };
   };
 
   outputs =
@@ -79,6 +83,14 @@
       nixosConfigurations.heisenberg = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          "${inputs.dawarich-pr}/nixos/modules/services/web-apps/dawarich.nix"
+          {
+            nixpkgs.overlays = [
+              (final: prev: {
+                dawarich = prev.callPackage "${inputs.dawarich-pr}/pkgs/by-name/da/dawarich/package.nix" { };
+              })
+            ];
+          }
           inputs.disko.nixosModules.disko
           ./hosts/heisenberg/configuration.nix
           inputs.nixos-facter-modules.nixosModules.facter

@@ -9,5 +9,6 @@
 
     ./caddy.nix
     ./immich.nix
+    ./dawarich.nix
   ];
 }
