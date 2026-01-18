@@ -20,12 +20,20 @@
   };
   services.openssh.enable = true;
 
-  nix.settings = {
-    trusted-users = [
-      "root"
-      "@wheel"
-      "stx"
-    ];
+  nix = {
+    optimise.automatic = true;
+    settings = {
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      auto-optimise-store = true;
+      trusted-users = [
+        "root"
+        "@wheel"
+        "stx"
+      ];
+    };
   };
 
   environment.systemPackages = map lib.lowPrio [

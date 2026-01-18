@@ -1,6 +1,7 @@
 {
   imports = [
     ./monitoring
+    ./borgmatic.nix
 
     ./ugreen-leds.nix
 
