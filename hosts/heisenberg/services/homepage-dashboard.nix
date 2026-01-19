@@ -69,6 +69,13 @@ in
       {
         Services = [
           {
+            "Actual Budget" = {
+              icon = "si-actualbudget";
+              description = "Personal finance manager";
+              href = "http://actual.home";
+            };
+          }
+          {
             Adguard = {
               icon = "si-adguard";
               description = "Ad blocker/DNS server";
