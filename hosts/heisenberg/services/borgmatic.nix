@@ -27,7 +27,7 @@
       encryption_passcommand = "cat ${config.sops.secrets.borg-passphrase.path}";
 
       uptime_kuma = {
-        push_url = "https://uptime-kuma.dottex.world/api/push/qTbDvvoKF5pbeKV4RZDKOyg2NqRBgdFi?status=up&msg=OK&ping=";
+        push_url = "https://uptime-kuma.dottex.world/api/push/qTbDvvoKF5pbeKV4RZDKOyg2NqRBgdFi";
         states = [
           "start"
           "finish"
