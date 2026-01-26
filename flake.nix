@@ -76,7 +76,7 @@
     {
       darwinConfigurations = {
         STX-MacBook-Pro = mkDarwinSystem "STX-MacBook-Pro";
-        Erik-RWG6T57T93 = mkDarwinSystem "Erik-RWG6T57T93";
+        Eriks-MacBook-Pro = mkDarwinSystem "Eriks-MacBook-Pro";
       };
       # Slightly experimental: Like generic, but with nixos-facter (https://github.com/numtide/nixos-facter)
       # nixos-anywhere --flake .#heisenberg --generate-hardware-config nixos-facter facter.json <hostname>

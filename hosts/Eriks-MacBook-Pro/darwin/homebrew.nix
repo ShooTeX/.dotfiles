@@ -1,8 +1,10 @@
 {
   homebrew.casks = [
+    "google-chrome"
     "kap"
-    "nordlayer"
     "slack"
     "tuple"
+    "granola"
+    "bruno"
   ];
 }
