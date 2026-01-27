@@ -1,5 +1,7 @@
 {
   homebrew.casks = [
+    "asana"
+    "discord"
     "google-chrome"
     "kap"
     "slack"
