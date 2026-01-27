@@ -7,6 +7,9 @@
   ];
 
   users.users.stx.home = "/Users/stx";
-  home-manager.users.stx.imports = [ ../common/home ];
+  home-manager.users.stx.imports = [
+    ../common/home
+    ./home
+  ];
   ids.gids.nixbld = lib.mkForce 350;
 }
