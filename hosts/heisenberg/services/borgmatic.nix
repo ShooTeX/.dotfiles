@@ -1,13 +1,11 @@
 { config, ... }:
 {
   sops.secrets = {
-    borg-passphrase = {
-      format = "binary";
-      sopsFile = ../secrets/borgmatic.passphrase.enc;
+    "borgmatic/passphrase" = {
+      restartUnits = [ "borgmatic.service" ];
     };
-    borg-ssh-key = {
-      format = "binary";
-      sopsFile = ../secrets/borgmatic.ssh.enc;
+    "borgmatic/ssh" = {
+      restartUnits = [ "borgmatic.service" ];
     };
   };
 
@@ -22,9 +20,16 @@
         }
       ];
 
-      ssh_command = "ssh -p 23 -i ${config.sops.secrets.borg-ssh-key.path}";
+      ssh_command = "ssh -p 23 -i ${config.sops.secrets."borgmatic/ssh".path}";
 
-      encryption_passcommand = "cat ${config.sops.secrets.borg-passphrase.path}";
+      encryption_passcommand = "cat ${config.sops.secrets."borgmatic/passphrase".path}";
+
+      retention = {
+        keep_daily = 7;
+        keep_weekly = 4;
+        keep_monthly = 6;
+        keep_yearly = 2;
+      };
 
       uptime_kuma = {
         push_url = "https://uptime-kuma.dottex.world/api/push/qTbDvvoKF5pbeKV4RZDKOyg2NqRBgdFi";
