@@ -34,7 +34,7 @@
       uptime_kuma = {
         push_url = "https://uptime-kuma.dottex.world/api/push/qTbDvvoKF5pbeKV4RZDKOyg2NqRBgdFi";
         states = [
-          "start"
+          # "start"
           "finish"
           "fail"
         ];
