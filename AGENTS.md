@@ -223,6 +223,63 @@ pkgs.stdenvNoCC.mkDerivation rec {
 2. Use programs.<name>.enable = true pattern
 3. Keep user-specific overrides in `hosts/<hostname>/`
 
+### Creating Custom AI Agents
+Agents are defined in `hosts/common/home/dev/ai/` using markdown files with YAML frontmatter.
+
+#### Agent Structure
+Location: `hosts/common/home/dev/ai/agents/<agent-name>.md`
+
+```markdown
+---
+description: Brief description of agent's purpose
+mode: primary|subagent
+temperature: 0.7  # Optional: 0.0-1.0, higher = more creative
+tools:
+  bash: false     # Disable command execution
+  write: false    # Disable file creation
+  edit: false     # Disable file editing
+---
+
+Agent instructions and personality description here.
+```
+
+#### Agent Modes
+- **primary**: Standalone agent that can be invoked directly by users
+- **subagent**: Helper agent invoked by other agents via Task tool
+
+#### Temperature Settings
+- `0.0-0.3`: Focused, deterministic responses (security audits, code analysis)
+- `0.4-0.6`: Balanced creativity and consistency (documentation)
+- `0.7-1.0`: Creative, varied responses (brainstorming, ideation)
+
+#### Tool Restrictions
+Disable tools to constrain agent behavior:
+- `bash: false` - Prevents command execution
+- `write: false` - Prevents file creation
+- `edit: false` - Prevents file modification
+- Omit restrictions to allow all tools
+
+#### Registration
+Add agent to `hosts/common/home/dev/ai/default.nix`:
+
+```nix
+agents = {
+  agent-name = ./agents/agent-name.md;
+  # ... other agents
+};
+```
+
+#### Example Agents
+- **brainstorm** (primary, temp 0.7): Creative ideation without execution
+- **docs-writer** (subagent, no bash): Technical documentation only
+- **security-auditor** (subagent, no write/edit): Read-only security analysis
+
+#### Deployment
+After creating or modifying agents:
+```bash
+darwin-rebuild switch --flake .#STX-MacBook-Pro
+```
+
 ## Error Handling
 
 - Always use `lib.optionalString` for conditional strings
