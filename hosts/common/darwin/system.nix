@@ -17,6 +17,18 @@
         CreateDesktop = false;
         QuitMenuItem = true;
       };
+      CustomUserPreferences = {
+        "com.apple.symbolichotkeys" = {
+          AppleSymbolicHotKeys = {
+            "60" = {
+              enabled = false;
+            };
+            "61" = {
+              enabled = false;
+            };
+          };
+        };
+      };
       NSGlobalDomain = {
         AppleKeyboardUIMode = 3;
         NSAutomaticWindowAnimationsEnabled = false;
