@@ -12,6 +12,11 @@
     settings = {
       theme = "kanagawa";
     };
+
+    agents = {
+      docs-writer = ./agents/docs-writer.md;
+      security-auditor = ./agents/security-auditor.md;
+    };
   };
 
   programs.mcp = {

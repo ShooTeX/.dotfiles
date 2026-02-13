@@ -2,6 +2,6 @@
   imports = [
     ./nvim.nix
     ./ecosystems
-    ./ai.nix
+    ./ai
   ];
 }
