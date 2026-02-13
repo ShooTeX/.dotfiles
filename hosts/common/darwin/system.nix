@@ -26,6 +26,9 @@
             "61" = {
               enabled = false;
             };
+            "64" = {
+              enabled = false;
+            };
           };
         };
       };
