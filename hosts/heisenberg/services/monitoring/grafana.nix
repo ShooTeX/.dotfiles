@@ -1,8 +1,14 @@
 { config, ... }:
 {
+  sops.secrets = {
+    "grafana/secret_key" = { };
+  };
   services.grafana = {
     enable = true;
     settings = {
+      security = {
+        secret_key = "$__{${config.sops.secrets."grafana/secret_key".path}}";
+      };
       server = {
         http_port = 3000;
         enforce_domain = true;

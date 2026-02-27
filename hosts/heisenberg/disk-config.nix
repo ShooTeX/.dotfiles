@@ -35,55 +35,55 @@
         };
       };
 
-      hdd1 = {
-        device = lib.mkDefault "/dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35JKF";
-        type = "disk";
-        content = {
-          type = "gpt";
-          partitions = {
-            storage = {
-              size = "100%";
-              content = {
-                type = "btrfs";
-                extraArgs = [
-                  "-m raid1"
-                  "-d raid1"
-                  "--label storage"
-                  "--force"
-                ];
-                mountpoint = "/mnt/storage";
-                mountOptions = [
-                  "defaults"
-                  "compress=zstd"
-                  "noatime"
-                ];
-              };
-            };
-          };
-        };
-      };
-
-      hdd2 = {
-        device = lib.mkDefault "/dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35MJ5";
-        type = "disk";
-        content = {
-          type = "gpt";
-          partitions = {
-            storage = {
-              size = "100%";
-              content = {
-                type = "btrfs";
-                extraArgs = [
-                  "-m raid1"
-                  "-d raid1"
-                  "--label storage"
-                  "--force"
-                ];
-              };
-            };
-          };
-        };
-      };
+      # hdd1 = {
+      #   device = lib.mkDefault "/dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35JKF";
+      #   type = "disk";
+      #   content = {
+      #     type = "gpt";
+      #     partitions = {
+      #       storage = {
+      #         size = "100%";
+      #         content = {
+      #           type = "btrfs";
+      #           extraArgs = [
+      #             "-m raid1"
+      #             "-d raid1"
+      #             "--label storage"
+      #             "--force"
+      #           ];
+      #           mountpoint = "/mnt/storage";
+      #           mountOptions = [
+      #             "defaults"
+      #             "compress=zstd"
+      #             "noatime"
+      #           ];
+      #         };
+      #       };
+      #     };
+      #   };
+      # };
+      #
+      # hdd2 = {
+      #   device = lib.mkDefault "/dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35MJ5";
+      #   type = "disk";
+      #   content = {
+      #     type = "gpt";
+      #     partitions = {
+      #       storage = {
+      #         size = "100%";
+      #         content = {
+      #           type = "btrfs";
+      #           extraArgs = [
+      #             "-m raid1"
+      #             "-d raid1"
+      #             "--label storage"
+      #             "--force"
+      #           ];
+      #         };
+      #       };
+      #     };
+      #   };
+      # };
 
     };
     lvm_vg = {

@@ -10,7 +10,7 @@
 
     borgmatic.settings = {
       source_directories = [
-        config.services.settings.DATA_DIR
+        config.services.uptime-kuma.settings.DATA_DIR
       ];
     };
 
