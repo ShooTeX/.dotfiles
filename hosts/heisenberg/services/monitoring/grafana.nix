@@ -7,7 +7,9 @@
     enable = true;
     settings = {
       security = {
-        secret_key = "$__{${config.sops.secrets."grafana/secret_key".path}}";
+        secret_key = "$__file{${config.sops.secrets."grafana/secret_key".path}}";
+        admin_user = "admin";
+        admin_password = "$__file{${config.sops.secrets."grafana/admin_pass".path}}";
       };
       server = {
         http_port = 3000;
