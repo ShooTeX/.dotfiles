@@ -2,21 +2,6 @@
   system = {
     stateVersion = 5;
     defaults = {
-      dock = {
-        autohide = true;
-        minimize-to-application = true;
-        show-recents = false;
-        static-only = true;
-        tilesize = 50;
-        # desktop
-        wvous-tr-corner = 4;
-        # mission control
-        wvous-br-corner = 2;
-      };
-      finder = {
-        CreateDesktop = false;
-        QuitMenuItem = true;
-      };
       CustomUserPreferences = {
         "com.apple.symbolichotkeys" = {
           AppleSymbolicHotKeys = {
@@ -32,6 +17,21 @@
           };
         };
       };
+      dock = {
+        autohide = true;
+        minimize-to-application = true;
+        show-recents = false;
+        static-only = true;
+        tilesize = 50;
+        # desktop
+        wvous-tr-corner = 4;
+        # mission control
+        wvous-br-corner = 2;
+      };
+      finder = {
+        CreateDesktop = false;
+        QuitMenuItem = true;
+      };
       NSGlobalDomain = {
         AppleKeyboardUIMode = 3;
         NSAutomaticWindowAnimationsEnabled = false;
@@ -39,6 +39,9 @@
       };
       spaces = {
         spans-displays = true;
+      };
+      universalaccess = {
+        reduceMotion = true;
       };
     };
     keyboard = {

@@ -30,15 +30,6 @@
         keep_monthly = 6;
         keep_yearly = 2;
       };
-
-      uptime_kuma = {
-        push_url = "https://uptime-kuma.dottex.world/api/push/qTbDvvoKF5pbeKV4RZDKOyg2NqRBgdFi";
-        states = [
-          # "start"
-          "finish"
-          "fail"
-        ];
-      };
     };
   };
 }

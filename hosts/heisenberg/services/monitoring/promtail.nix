@@ -22,13 +22,20 @@
             max_age = "12h";
             labels = {
               job = "systemd-journal";
-              host = "heisenberg";
             };
           };
           relabel_configs = [
             {
               source_labels = [ "__journal__systemd_unit" ];
               target_label = "unit";
+            }
+            {
+              source_labels = [ "__journal__priority_keyword" ];
+              target_label = "level";
+            }
+            {
+              source_labels = [ "__journal__hostname" ];
+              target_label = "host";
             }
           ];
         }

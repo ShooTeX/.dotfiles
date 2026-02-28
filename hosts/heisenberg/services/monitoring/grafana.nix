@@ -25,9 +25,9 @@
         settings = {
           datasources = [
             {
-              name = "Prometheus";
+              name = "VictoriaMetrics";
               type = "prometheus";
-              url = "http://${config.services.prometheus.listenAddress}:${toString config.services.prometheus.port}";
+              url = "http://${config.services.victoriametrics.listenAddress}";
               isDefault = true;
               editable = false;
             }
