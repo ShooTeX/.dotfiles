@@ -2,6 +2,7 @@
   imports = [
     ./monitoring
     ./borgmatic.nix
+    ./postgresql.nix
 
     ./ugreen-leds.nix
 

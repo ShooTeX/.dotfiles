@@ -5,6 +5,10 @@
       enable = true;
 
       mediaLocation = "/mnt/storage/immich";
+
+      database = {
+        # enableVectors = false;
+      };
     };
 
     borgmatic.settings = {

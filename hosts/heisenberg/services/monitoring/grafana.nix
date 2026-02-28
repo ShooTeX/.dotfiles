@@ -1,8 +1,17 @@
 { config, ... }:
 {
-  sops.secrets = {
-    "grafana/secret_key" = { };
-  };
+  sops.secrets =
+    let
+      owner = "grafana";
+    in
+    {
+      "grafana/secret_key" = {
+        inherit owner;
+      };
+      "grafana/admin_pass" = {
+        inherit owner;
+      };
+    };
   services.grafana = {
     enable = true;
     settings = {
