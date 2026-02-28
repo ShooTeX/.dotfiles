@@ -3,6 +3,8 @@
   services = {
     immich = {
       enable = true;
+
+      mediaLocation = "/mnt/storage/immich";
     };
 
     borgmatic.settings = {
