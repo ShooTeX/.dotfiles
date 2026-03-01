@@ -8,6 +8,7 @@
     ./dawarich.nix
     ./homepage-dashboard.nix
     ./immich.nix
+    ./netbird.nix
     ./postgresql.nix
     ./samba.nix
     ./ugreen-leds.nix
