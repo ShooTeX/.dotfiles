@@ -11,17 +11,9 @@
       };
     };
 
-    borgmatic.settings = {
-      source_directories = [
-        config.services.immich.mediaLocation
-      ];
-      postgresql_databases = [
-        {
-          inherit (config.services.immich.database) name;
-          username = config.services.immich.database.user;
-        }
-      ];
-    };
+    restic.backups.storagebox.paths = [
+      config.services.immich.mediaLocation
+    ];
 
     caddy.virtualHosts."immich.dottex.world" = {
       useACMEHost = "dottex.world";

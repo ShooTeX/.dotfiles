@@ -14,7 +14,7 @@
       '';
     };
 
-    borgmatic.settings.source_directories = [
+    restic.backups.storagebox.paths = [
       "/var/lib/actual"
     ];
   };

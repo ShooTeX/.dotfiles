@@ -48,10 +48,5 @@ in
     "d ${shares_dir}/public          0755 root  root   -"
   ];
 
-  services.borgmatic.settings = {
-    source_directories = [
-      shares_dir
-    ];
-  };
-
+  services.restic.backups.storagebox.paths = [ shares_dir ];
 }

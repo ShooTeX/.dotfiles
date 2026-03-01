@@ -4,13 +4,13 @@
 
     ./actual.nix
     ./adguardhome.nix
-    ./borgmatic.nix
     ./caddy.nix
     ./dawarich.nix
     ./homepage-dashboard.nix
     ./immich.nix
     ./netbird.nix
     ./postgresql.nix
+    ./restic.nix
     ./samba.nix
     ./ugreen-leds.nix
   ];

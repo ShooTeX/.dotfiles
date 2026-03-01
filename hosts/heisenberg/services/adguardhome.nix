@@ -17,11 +17,9 @@
       };
     };
 
-    borgmatic.settings = {
-      source_directories = [
-        "/var/lib/AdGuardHome/AdGuardHome.yaml"
-      ];
-    };
+    restic.backups.storagebox.paths = [
+      "/var/lib/AdGuardHome/AdGuardHome.yaml"
+    ];
   };
 
   networking.firewall.allowedUDPPorts = [ 53 ];
