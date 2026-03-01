@@ -57,9 +57,8 @@ in
       {
         search = {
           provider = "custom";
-          url = "https://www.ecosia.org/search?q=";
+          url = "duckduckgo";
           target = "_self";
-          suggestionUrl = "https://ac.ecosia.org/autocomplete?type=list&q=";
           showSearchSuggestions = true;
         };
       }

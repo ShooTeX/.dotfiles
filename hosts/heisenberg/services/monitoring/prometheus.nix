@@ -6,6 +6,7 @@
     enabledCollectors = [
       "ethtool"
       "tcpstat"
+      "btrfs"
     ];
   };
 

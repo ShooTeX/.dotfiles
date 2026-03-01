@@ -1,9 +1,8 @@
 {
   homebrew.casks = [
-    "discord"
-    "elmedia-player"
-    "figma"
     "google-chrome"
+    "discord"
+    "figma"
     "parsec"
     "teamspeak-client"
     "orcaslicer"

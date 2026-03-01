@@ -1,15 +1,14 @@
 {
   imports = [
     ./monitoring
+
     ./borgmatic.nix
-    ./postgresql.nix
-
-    ./ugreen-leds.nix
-
-    ./homepage-dashboard.nix
-
     ./caddy.nix
-    ./immich.nix
     ./dawarich.nix
+    ./homepage-dashboard.nix
+    ./immich.nix
+    ./postgresql.nix
+    ./samba.nix
+    ./ugreen-leds.nix
   ];
 }

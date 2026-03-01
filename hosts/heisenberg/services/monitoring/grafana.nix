@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   sops.secrets =
     let
@@ -51,6 +51,19 @@
           ];
         };
       };
+
+      dashboards.settings.providers = [
+        {
+          options.path = "/etc/grafana/dashboards";
+        }
+      ];
+    };
+  };
+
+  environment.etc."grafana/dashboards/node-exporter.json" = {
+    source = pkgs.fetchurl {
+      url = "https://grafana.com/api/dashboards/1860/revisions/42/download";
+      hash = "sha256-pNgn6xgZBEu6LW0lc0cXX2gRkQ8lg/rer34SPE3yEl4=";
     };
   };
 
