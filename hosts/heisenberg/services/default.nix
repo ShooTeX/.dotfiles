@@ -2,6 +2,7 @@
   imports = [
     ./monitoring
 
+    ./actual.nix
     ./adguardhome.nix
     ./borgmatic.nix
     ./caddy.nix

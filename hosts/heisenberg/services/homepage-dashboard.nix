@@ -71,7 +71,7 @@ in
             "Actual Budget" = {
               icon = "si-actualbudget";
               description = "Personal finance manager";
-              href = "http://actual.home";
+              href = "https://actual.dottex.world";
             };
           }
           {
@@ -79,14 +79,6 @@ in
               icon = "si-adguard";
               description = "Ad blocker/DNS server";
               href = "https://adguard.dottex.world";
-              widgets = [
-                {
-                  type = "adguard";
-                  url = "https://adguard.dottex.world";
-                  username = "{{HOMEPAGE_VAR_ADGUARD_USER}}";
-                  password = "{{HOMEPAGE_VAR_ADGUARD_PASS}}";
-                }
-              ];
             };
           }
           {
@@ -105,29 +97,6 @@ in
               icon = "si-grafana";
               description = "Monitoring Dashboards";
               href = "https://grafana.dottex.world";
-              widgets = [
-                {
-                  type = "grafana";
-                  version = 2;
-                  url = "https://grafana.dottex.world";
-                  username = "{{HOMEPAGE_VAR_GRAFANA_USER}}";
-                  password = "{{HOMEPAGE_VAR_GRAFANA_PASS}}";
-                }
-              ];
-            };
-          }
-          {
-            "Uptime Kuma" = {
-              description = "Service health monitoring tool";
-              href = "http://uptime-kuma.dottex.world";
-              icon = "si-uptimekuma";
-              widgets = [
-                {
-                  type = "uptimekuma";
-                  url = "https://uptime-kuma.dottex.world";
-                  slug = "heisenberg";
-                }
-              ];
             };
           }
         ];
