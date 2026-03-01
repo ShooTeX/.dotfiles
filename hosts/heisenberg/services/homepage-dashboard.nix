@@ -56,8 +56,7 @@ in
       }
       {
         search = {
-          provider = "custom";
-          url = "duckduckgo";
+          provider = "duckduckgo";
           target = "_self";
           showSearchSuggestions = true;
         };
