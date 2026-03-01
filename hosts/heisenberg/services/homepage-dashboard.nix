@@ -49,9 +49,16 @@ in
       }
       {
         resources = {
+          label = "System";
           cpu = true;
           disk = "/";
           memory = true;
+        };
+      }
+      {
+        resources = {
+          label = "Storage";
+          disk = "/mnt/storage";
         };
       }
       {
