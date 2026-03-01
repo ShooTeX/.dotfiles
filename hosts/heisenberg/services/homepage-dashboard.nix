@@ -78,11 +78,11 @@ in
             Adguard = {
               icon = "si-adguard";
               description = "Ad blocker/DNS server";
-              href = "http://adguard.home";
+              href = "https://adguard.dottex.world";
               widgets = [
                 {
                   type = "adguard";
-                  url = "http://adguard.home";
+                  url = "https://adguard.dottex.world";
                   username = "{{HOMEPAGE_VAR_ADGUARD_USER}}";
                   password = "{{HOMEPAGE_VAR_ADGUARD_PASS}}";
                 }

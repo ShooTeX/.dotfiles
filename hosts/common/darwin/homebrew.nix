@@ -10,7 +10,6 @@
       "1password"
       "orbstack"
       "raycast"
-      "tailscale"
       "whatsapp"
       "yubico-authenticator"
       "ghostty"
