@@ -7,7 +7,7 @@
       mediaLocation = "/mnt/storage/immich";
 
       database = {
-        # enableVectors = false;
+        enableVectors = false;
       };
     };
 

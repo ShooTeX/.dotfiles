@@ -8,11 +8,11 @@
 
   # https://github.com/NixOS/nixpkgs/pull/423867
   services.dawarich = {
-    enable = false;
+    enable = true;
 
     configureNginx = false;
     webPort = 5897;
-    localDomain = "dawarich.dottex.world";
+    localDomain = "dawarichbald.dottex.world";
     secretKeyBaseFile = config.sops.secrets."dawarich/secret_key_base".path;
 
     database = {
@@ -32,6 +32,8 @@
     useACMEHost = "dottex.world";
     extraConfig = ''
       reverse_proxy localhost:${toString config.services.dawarich.webPort}
+
+      encode zstd br gzip
     '';
   };
 }

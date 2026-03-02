@@ -33,8 +33,11 @@
   services.caddy = {
     enable = true;
     package = pkgs.caddy.withPlugins {
-      plugins = [ "github.com/caddy-dns/cloudflare@v0.2.2" ];
-      hash = "sha256-biQdtiscdmrwP6VUsuXmZrvcdewl+g50kdmab5lhE0s=";
+      plugins = [
+        "github.com/caddy-dns/cloudflare@v0.2.2"
+        "github.com/ueffel/caddy-brotli@v1.6.0"
+      ];
+      hash = "sha256-ubDUvDCjYZ5uoTsSpM5R2EF2qP2HeKVvPJVt1aF8IzQ=";
     };
   };
 

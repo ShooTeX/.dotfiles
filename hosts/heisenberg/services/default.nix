@@ -5,7 +5,7 @@
     ./actual.nix
     ./adguardhome.nix
     ./caddy.nix
-    ./dawarich.nix
+    # ./dawarich.nix
     ./homepage-dashboard.nix
     ./immich.nix
     ./mealie.nix
