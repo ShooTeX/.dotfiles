@@ -79,6 +79,10 @@
       nixosConfigurations.heisenberg = inputs.nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          {
+            # Until: https://github.com/NixOS/nixpkgs/issues/494075
+            nixpkgs.overlays = [ (import ./overlays/pyhumps.nix) ];
+          }
           inputs.disko.nixosModules.disko
           ./hosts/heisenberg/configuration.nix
           inputs.nixos-facter-modules.nixosModules.facter

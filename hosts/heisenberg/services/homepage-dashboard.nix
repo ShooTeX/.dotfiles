@@ -74,13 +74,6 @@ in
       {
         Services = [
           {
-            "Actual Budget" = {
-              icon = "si-actualbudget";
-              description = "Personal finance manager";
-              href = "https://actual.dottex.world";
-            };
-          }
-          {
             Adguard = {
               icon = "si-adguard";
               description = "Ad blocker/DNS server";
@@ -88,10 +81,24 @@ in
             };
           }
           {
+            "Actual Budget" = {
+              icon = "si-actualbudget";
+              description = "Personal finance manager";
+              href = "https://actual.dottex.world";
+            };
+          }
+          {
             Immich = {
               icon = "si-immich";
               description = "Photo/Video vault";
               href = "https://immich.dottex.world";
+            };
+          }
+          {
+            Mealie = {
+              icon = "si-mealie";
+              description = "Recipe management";
+              href = "https://mealie.dottex.world";
             };
           }
         ];
