@@ -88,6 +88,13 @@ in
             };
           }
           {
+            Dawarich = {
+              icon = "sh-dawarich";
+              description = "Location History Tracker";
+              href = "https://dawarich.dottex.world";
+            };
+          }
+          {
             Immich = {
               icon = "si-immich";
               description = "Photo/Video vault";

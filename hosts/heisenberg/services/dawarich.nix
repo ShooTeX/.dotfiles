@@ -12,7 +12,7 @@
 
     configureNginx = false;
     webPort = 5897;
-    localDomain = "dawarichbald.dottex.world";
+    localDomain = "dawarich.dottex.world";
     secretKeyBaseFile = config.sops.secrets."dawarich/secret_key_base".path;
 
     database = {
@@ -28,7 +28,7 @@
     ];
   };
 
-  services.caddy.virtualHosts."dawarichbald.dottex.world" = {
+  services.caddy.virtualHosts."${config.services.dawarich.localDomain}" = {
     useACMEHost = "dottex.world";
     extraConfig = ''
       reverse_proxy localhost:${toString config.services.dawarich.webPort}
