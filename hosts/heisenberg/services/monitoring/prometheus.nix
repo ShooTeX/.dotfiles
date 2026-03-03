@@ -22,6 +22,14 @@
             }
           ];
         }
+        {
+          job_name = "restic";
+          static_configs = [
+            {
+              targets = [ "localhost:${toString config.services.prometheus.exporters.restic.port}" ];
+            }
+          ];
+        }
       ];
     };
   };

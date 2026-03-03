@@ -49,5 +49,46 @@
         "/tmp/postgresql-backup"
       ];
     };
+
+    prometheus.exporters.restic = {
+      enable = true;
+      inherit (config.services.restic.backups.storagebox)
+        repository
+        passwordFile
+        user
+        ;
+    };
+  };
+
+  environment.etc."grafana/dashboards/restic.json" = {
+    source =
+      pkgs.runCommand "restic-dashboard.json"
+        {
+          nativeBuildInputs = [ pkgs.jq ];
+          src = pkgs.fetchurl {
+            url = "https://grafana.com/api/dashboards/17554/revisions/3/download";
+            hash = "sha256-jMv2ag4DlA4Bx+szNFEVF+WrBipICMx1D9uy/oD5Blw=";
+          };
+        }
+        ''
+          jq '
+            del(.__inputs) |
+            del(.__elements) |
+            del(.__requires) |
+            (.. | objects | select(.type? == "datasource")) .uid = "''${datasource}" |
+            (.. | strings | select(. == "''${DS_PROMETHEUS}")) |= "''${datasource}" |
+            .templating.list = [{
+              "name": "datasource",
+              "type": "datasource",
+              "query": "prometheus",
+              "pluginId": "prometheus",
+              "label": "Data Source",
+              "refresh": 1,
+              "hide": 0,
+              "includeAll": false,
+              "multi": false
+            }] + .templating.list
+          ' $src > $out
+        '';
   };
 }
