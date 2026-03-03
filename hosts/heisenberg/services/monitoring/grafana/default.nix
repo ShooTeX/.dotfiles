@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  imports = [ ./alerting.nix ];
   sops.secrets =
     let
       owner = "grafana";
@@ -9,6 +10,9 @@
         inherit owner;
       };
       "grafana/admin_pass" = {
+        inherit owner;
+      };
+      "grafana/alerting_webhook" = {
         inherit owner;
       };
     };

@@ -7,6 +7,7 @@
       "ethtool"
       "tcpstat"
       "btrfs"
+      "systemd"
     ];
   };
 
