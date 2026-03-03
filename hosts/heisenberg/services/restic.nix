@@ -66,13 +66,12 @@
         {
           nativeBuildInputs = [ pkgs.jq ];
           src = pkgs.fetchurl {
-            url = "https://grafana.com/api/dashboards/17554/revisions/3/download";
-            hash = "sha256-jMv2ag4DlA4Bx+szNFEVF+WrBipICMx1D9uy/oD5Blw=";
+            url = "https://raw.githubusercontent.com/ngosang/restic-exporter/refs/tags/2.0.2/grafana/grafana_dashboard.json";
+            hash = "sha256-JxVAkbiO/Oxyrw87rb5Sl8E9JwQz5I/+lzRxgaznqn4=";
           };
         }
         ''
           jq '
-            del(.__inputs) |
             del(.__elements) |
             del(.__requires) |
             (.. | objects | select(.type? == "datasource")) .uid = "''${datasource}" |

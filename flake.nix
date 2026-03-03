@@ -81,7 +81,9 @@
         modules = [
           {
             # Until: https://github.com/NixOS/nixpkgs/issues/494075
-            nixpkgs.overlays = [ (import ./overlays/pyhumps.nix) ];
+            nixpkgs.overlays = [
+              (import ./overlays/pyhumps.nix)
+            ];
           }
           inputs.disko.nixosModules.disko
           ./hosts/heisenberg/configuration.nix
@@ -94,6 +96,7 @@
                 throw "Have you forgotten to run nixos-anywhere with `--generate-hardware-config nixos-facter ./facter.json`?";
           }
           inputs.sops-nix.nixosModules.sops
+
         ];
       };
       deploy.nodes.heisenberg = {
