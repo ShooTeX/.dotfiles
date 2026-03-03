@@ -23,7 +23,7 @@
     };
 
     restic.backups.storagebox.paths = [
-      "/var/lib/mealie"
+      "/var/lib/private/mealie"
     ];
   };
 

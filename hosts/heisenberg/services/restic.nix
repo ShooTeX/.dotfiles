@@ -14,15 +14,20 @@
     "restic/ssh" = { };
   };
 
+  programs.ssh.extraConfig = ''
+    Host storagebox
+      HostName u533631.your-storagebox.de
+      User u533631
+      IdentityFile ${config.sops.secrets."restic/ssh".path}
+      StrictHostKeyChecking no
+      Port 23
+  '';
+
   services = {
     restic.backups.storagebox = {
-      repository = "sftp://u533631@u533631.your-storagebox.de:23/./heisenberg.restic";
+      repository = "sftp://storagebox/./heisenberg.restic";
       passwordFile = config.sops.secrets."restic/passphrase".path;
       initialize = true;
-
-      extraOptions = [
-        "sftp.args=\"-i ${config.sops.secrets."restic/ssh".path} -o StrictHostKeyChecking=no\""
-      ];
 
       pruneOpts = [
         "--keep-daily 7"

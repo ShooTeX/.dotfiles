@@ -15,7 +15,7 @@
     };
 
     restic.backups.storagebox.paths = [
-      "/var/lib/actual"
+      "/var/lib/private/actual"
     ];
   };
 }
