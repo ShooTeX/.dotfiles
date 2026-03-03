@@ -83,6 +83,7 @@
             # Until: https://github.com/NixOS/nixpkgs/issues/494075
             nixpkgs.overlays = [
               (import ./overlays/pyhumps.nix)
+              (import ./overlays/prometheus-restic-exporter.nix)
             ];
           }
           inputs.disko.nixosModules.disko
