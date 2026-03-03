@@ -31,6 +31,14 @@
             }
           ];
         }
+        {
+          job_name = "storagebox";
+          static_configs = [
+            {
+              targets = [ "localhost:${toString config.services.prometheus.exporters.storagebox.port}" ];
+            }
+          ];
+        }
       ];
     };
   };

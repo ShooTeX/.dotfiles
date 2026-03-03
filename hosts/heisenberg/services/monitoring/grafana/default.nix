@@ -71,6 +71,13 @@
     };
   };
 
+  environment.etc."grafana/dashboards/alerts.json" = {
+    source = pkgs.fetchurl {
+      url = "https://grafana.com/api/dashboards/11098/revisions/1/download";
+      hash = "sha256-pNgn6xgZBEu6LW0lc0cXX2gRkQ8lg/rer34SPE3yEl4=";
+    };
+  };
+
   services.caddy.virtualHosts."grafana.dottex.world" = {
     useACMEHost = "dottex.world";
     extraConfig = ''

@@ -5,6 +5,7 @@
     ./loki.nix
     ./prometheus.nix
     ./promtail.nix
+    ./storagebox.nix
     ./uptime-kuma.nix
   ];
 }
