@@ -251,7 +251,7 @@
                   };
                   datasourceUid = "P4169E866C3094E38";
                   model = {
-                    expr = "time() - restic_backup_timestamp";
+                    expr = "time() - max(restic_backup_timestamp)";
                     refId = "B";
                     instant = true;
                   };
