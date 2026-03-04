@@ -145,7 +145,7 @@
               title = "High log error rate";
               condition = "A";
               for = "5m";
-              noDataState = "OK";
+              noDataState = "NoData";
               execErrState = "Alerting";
               annotations = {
                 summary = "Elevated error rate in systemd journal";
@@ -159,7 +159,7 @@
                   };
                   datasourceUid = "P8E80F9AEF21F6940";
                   model = {
-                    expr = "sum(rate({job=\"systemd-journal\"} | detected_level=`error` [5m]))";
+                    expr = "sum(rate({job=\"systemd-journal\"} | detected_level=`error` [5m])) or on() group_left vector(0)";
                     refId = "B";
                     instant = false;
                     queryType = "range";
