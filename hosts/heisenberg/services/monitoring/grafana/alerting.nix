@@ -145,7 +145,7 @@
               title = "High log error rate";
               condition = "A";
               for = "5m";
-              noDataState = "NoData";
+              noDataState = "OK";
               execErrState = "Alerting";
               annotations = {
                 summary = "Elevated error rate in systemd journal";
