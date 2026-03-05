@@ -8,6 +8,7 @@
     ./dawarich.nix
     ./homepage-dashboard.nix
     ./immich.nix
+    ./karakeep.nix
     ./mealie.nix
     ./netbird.nix
     ./postgresql.nix

@@ -74,13 +74,6 @@ in
       {
         Services = [
           {
-            Adguard = {
-              icon = "si-adguard";
-              description = "Ad blocker/DNS server";
-              href = "https://adguard.dottex.world";
-            };
-          }
-          {
             "Actual Budget" = {
               icon = "si-actualbudget";
               description = "Personal finance manager";
@@ -88,8 +81,15 @@ in
             };
           }
           {
+            Adguard = {
+              icon = "si-adguard";
+              description = "Ad blocker/DNS server";
+              href = "https://adguard.dottex.world";
+            };
+          }
+          {
             Dawarich = {
-              icon = "sh-dawarich";
+              icon = "si-googlemaps";
               description = "Location History Tracker";
               href = "https://dawarich.dottex.world";
             };
@@ -99,6 +99,13 @@ in
               icon = "si-immich";
               description = "Photo/Video vault";
               href = "https://immich.dottex.world";
+            };
+          }
+          {
+            Karakeep = {
+              icon = "si-karakeep";
+              description = "Link hoarder";
+              href = "https://karakeep.dottex.world";
             };
           }
           {
