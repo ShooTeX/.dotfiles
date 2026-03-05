@@ -57,6 +57,8 @@
         passwordFile
         user
         ;
+
+      refreshInterval = 18000;
     };
   };
 
