@@ -29,6 +29,7 @@
         wvous-br-corner = 2;
       };
       finder = {
+        AppleShowAllFiles = true;
         CreateDesktop = false;
         QuitMenuItem = true;
       };

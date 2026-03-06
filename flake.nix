@@ -80,9 +80,7 @@
         system = "x86_64-linux";
         modules = [
           {
-            # Until: https://github.com/NixOS/nixpkgs/issues/494075
             nixpkgs.overlays = [
-              (import ./overlays/pyhumps.nix)
               (import ./overlays/prometheus-restic-exporter.nix)
             ];
           }
