@@ -58,7 +58,7 @@
         user
         ;
 
-      refreshInterval = 18000;
+      refreshInterval = 21600;
     };
   };
 

@@ -236,7 +236,7 @@
               uid = "restic-backup-stale";
               title = "Restic backup stale";
               condition = "A";
-              for = "0s";
+              for = "1d";
               noDataState = "Alerting";
               execErrState = "Alerting";
               annotations = {
