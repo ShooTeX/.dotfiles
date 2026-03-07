@@ -1,3 +1,6 @@
 {
-  imports = [ ./homeassistant.nix ];
+  imports = [
+    ./homeassistant.nix
+    ./mosquitto.nix
+  ];
 }
