@@ -46,10 +46,17 @@
 
   system.stateVersion = "24.05";
 
-  powerManagement.powerUpCommands = ''
-    ${pkgs.hdparm}/sbin/hdparm -B 127 -S 120 /dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35JKF
-    ${pkgs.hdparm}/sbin/hdparm -B 127 -S 120 /dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35MJ5
-  '';
+  systemd.services.hdparm-disks = {
+    description = "Set HDD power management settings";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = pkgs.writeShellScript "hdparm-disks" ''
+        ${pkgs.hdparm}/sbin/hdparm -B 127 -S 120 /dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35JKF
+        ${pkgs.hdparm}/sbin/hdparm -B 127 -S 120 /dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35MJ5
+      '';
+    };
+  };
 
   virtualisation = {
     containers.enable = true;
