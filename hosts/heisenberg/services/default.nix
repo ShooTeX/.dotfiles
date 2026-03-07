@@ -1,5 +1,6 @@
 {
   imports = [
+    ./home-automation
     ./monitoring
 
     ./actual.nix

@@ -72,6 +72,17 @@ in
 
     services = [
       {
+        "Home Automation" = [
+          {
+            "Home Assistant" = {
+              icon = "si-homeassistant";
+              description = "Centralized home automation";
+              href = "https://homeassistant.dottex.world";
+            };
+          }
+        ];
+      }
+      {
         Services = [
           {
             "Actual Budget" = {
