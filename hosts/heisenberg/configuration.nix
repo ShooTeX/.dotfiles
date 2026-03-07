@@ -50,4 +50,13 @@
     ${pkgs.hdparm}/sbin/hdparm -B 127 -S 120 /dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35JKF
     ${pkgs.hdparm}/sbin/hdparm -B 127 -S 120 /dev/disk/by-id/ata-ST8000VN002-2ZM188_WPV35MJ5
   '';
+
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
+    };
+  };
 }
