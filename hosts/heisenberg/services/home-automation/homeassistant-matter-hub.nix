@@ -38,4 +38,7 @@ in
     '';
   };
 
+  services.restic.backups.storagebox.paths = [
+    dataDir
+  ];
 }
