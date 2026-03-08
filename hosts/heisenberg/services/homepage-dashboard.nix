@@ -15,16 +15,10 @@ let
   });
 in
 {
-
-  sops.secrets."homepage_dashboard/env" = {
-    restartUnits = [ "homepage-dashboard.service" ];
-  };
-
   services.homepage-dashboard = {
     inherit package;
 
     enable = true;
-    environmentFiles = [ config.sops.secrets."homepage_dashboard/env".path ];
 
     allowedHosts = "dottex.world";
 
