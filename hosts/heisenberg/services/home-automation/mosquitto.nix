@@ -3,8 +3,9 @@
     enable = true;
     listeners = [
       {
-        address = "127.0.0.1";
+        acl = [ "pattern readwrite #" ];
         port = 1883;
+        omitPasswordAuth = true;
         settings.allow_anonymous = true;
       }
     ];
