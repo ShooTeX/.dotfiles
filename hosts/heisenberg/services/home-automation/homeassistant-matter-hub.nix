@@ -6,7 +6,7 @@ in
   sops.secrets."homeassistant_matter_hub/env" = { };
 
   virtualisation.oci-containers.containers."homeassistant-matter-hub" = {
-    image = "ghcr.io/t0bst4r/home-assistant-matter-hub:3.0.3";
+    image = "ghcr.io/riddix/home-assistant-matter-hub:2.0.31";
     environment.TZ = "Europe/Berlin";
     volumes = [
       "${dataDir}:/data"
@@ -20,8 +20,16 @@ in
     environmentFiles = [ config.sops.secrets."homeassistant_matter_hub/env".path ];
   };
 
-  networking.firewall.allowedTCPPorts = [ 5540 ];
-  networking.firewall.allowedUDPPorts = [ 5540 ];
+  networking.firewall.allowedTCPPorts = [
+    5353
+    5540
+    5541
+  ];
+  networking.firewall.allowedUDPPorts = [
+    5353
+    5540
+    5541
+  ];
 
   services.caddy.virtualHosts."matterhub.dottex.world" = {
     useACMEHost = "dottex.world";
