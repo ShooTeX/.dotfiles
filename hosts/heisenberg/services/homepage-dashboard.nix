@@ -24,7 +24,7 @@ in
     inherit package;
 
     enable = true;
-    environmentFile = config.sops.secrets."homepage_dashboard/env".path;
+    environmentFiles = [ config.sops.secrets."homepage_dashboard/env".path ];
 
     allowedHosts = "dottex.world";
 
@@ -78,6 +78,13 @@ in
               icon = "si-homeassistant";
               description = "Centralized home automation";
               href = "https://homeassistant.dottex.world";
+            };
+          }
+          {
+            "Zigbee2MQTT" = {
+              icon = "si-zigbee2mqtt";
+              description = "Zigbee to MQTT bridge";
+              href = "https://z2m.dottex.world";
             };
           }
         ];
