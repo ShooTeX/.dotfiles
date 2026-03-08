@@ -3,7 +3,7 @@ let
 in
 {
   virtualisation.oci-containers.containers.homeassistant = {
-    image = "ghcr.io/home-assistant/home-assistant:2025.4.4";
+    image = "ghcr.io/home-assistant/home-assistant:2026.3.1";
     environment.TZ = "Europe/Berlin";
     volumes = [
       "${dataDir}:/config"

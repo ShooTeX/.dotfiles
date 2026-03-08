@@ -75,6 +75,13 @@ in
             };
           }
           {
+            "HA Matter Hub" = {
+              icon = "si-matterdotjs";
+              description = "Home Assistant Matter Bridge";
+              href = "https://matterhub.dottex.world";
+            };
+          }
+          {
             "Zigbee2MQTT" = {
               icon = "si-zigbee2mqtt";
               description = "Zigbee to MQTT bridge";
