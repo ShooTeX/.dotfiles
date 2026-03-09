@@ -1,20 +1,13 @@
 {
   imports = [
+    ./backup
+    ./databases
     ./home-automation
+    ./misc
     ./monitoring
-
-    ./actual.nix
-    ./adguardhome.nix
-    ./caddy.nix
-    ./dawarich.nix
-    ./homepage-dashboard.nix
-    ./immich.nix
-    ./karakeep.nix
-    ./mealie.nix
-    ./netbird.nix
-    ./postgresql.nix
-    ./restic.nix
-    ./samba.nix
-    ./ugreen-leds.nix
+    ./network-filesystems
+    ./networking
+    ./web-apps
+    ./web-servers
   ];
 }

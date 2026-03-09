@@ -2,7 +2,7 @@
 {
   sops.secrets.caddy = {
     format = "dotenv";
-    sopsFile = ../secrets/caddy.enc.env;
+    sopsFile = ../../secrets/caddy.enc.env;
     key = "CLOUDFLARE_DNS_API_TOKEN";
   };
   security.acme = {
