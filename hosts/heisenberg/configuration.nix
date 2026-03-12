@@ -40,6 +40,7 @@
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
+    pkgs.ffmpeg
   ];
 
   networking.hostName = "heisenberg";
