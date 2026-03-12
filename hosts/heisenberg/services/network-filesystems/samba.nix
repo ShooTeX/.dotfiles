@@ -66,6 +66,8 @@ in
     };
 
     restic.backups.storagebox.paths = [ shares_dir ];
+    # ignore while cleaning up and re-encoding
+    restic.backups.storagebox.exclude = [ "${shares_dir}/stx/archive/2020HDD" ];
   };
 
   systemd.tmpfiles.rules = [
