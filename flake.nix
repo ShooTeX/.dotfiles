@@ -95,7 +95,15 @@
                 throw "Have you forgotten to run nixos-anywhere with `--generate-hardware-config nixos-facter ./facter.json`?";
           }
           inputs.sops-nix.nixosModules.sops
-
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              backupFileExtension = "nixbak";
+            };
+          }
         ];
       };
       deploy.nodes.heisenberg = {

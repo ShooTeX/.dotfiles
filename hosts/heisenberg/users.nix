@@ -5,6 +5,7 @@
       root.hashedPassword = "!";
       stx = {
         isNormalUser = true;
+        shell = pkgs.nushell;
         extraGroups = [
           "wheel"
           "dottex"

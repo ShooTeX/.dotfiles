@@ -37,6 +37,8 @@
     };
   };
 
+  home-manager.users.stx.imports = [ ./home ];
+
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl
     pkgs.gitMinimal
