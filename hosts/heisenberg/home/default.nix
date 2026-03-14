@@ -12,6 +12,8 @@
       ];
     };
 
+    starship.enableNushellIntegration = true;
+
     carapace = {
       enable = true;
       enableNushellIntegration = true;
