@@ -15,7 +15,7 @@
     #   enable = true;
     # };
 
-    package = null; # managed by homebrew
+    # package = null; # this is darwin specific
 
     settings = {
       theme = "Kanagawa Dragon";
