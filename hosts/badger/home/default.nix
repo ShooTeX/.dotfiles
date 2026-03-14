@@ -4,6 +4,22 @@
 
   imports = [ ../../common/home ];
 
+  wayland.windowManager.hyprland = {
+    enable = true;
+
+    settings = {
+      "$mod" = "SUPER";
+      "$terminal" = "ghostty";
+      bind = [
+        "$mod, Return, exec, $terminal"
+      ];
+
+      exec-once = [
+        "$terminal"
+      ];
+    };
+  };
+
   programs = {
     nushell = {
       enable = true;
