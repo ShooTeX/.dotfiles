@@ -76,35 +76,55 @@
       };
       # Slightly experimental: Like generic, but with nixos-facter (https://github.com/numtide/nixos-facter)
       # nixos-anywhere --flake .#heisenberg --generate-hardware-config nixos-facter facter.json <hostname>
-      nixosConfigurations.heisenberg = inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          {
-            nixpkgs.overlays = [
-              (import ./overlays/prometheus-restic-exporter.nix)
-            ];
-          }
-          inputs.disko.nixosModules.disko
-          ./hosts/heisenberg/configuration.nix
-          inputs.nixos-facter-modules.nixosModules.facter
-          {
-            config.facter.reportPath =
-              if builtins.pathExists ./hosts/heisenberg/facter.json then
-                ./hosts/heisenberg/facter.json
-              else
-                throw "Have you forgotten to run nixos-anywhere with `--generate-hardware-config nixos-facter ./facter.json`?";
-          }
-          inputs.sops-nix.nixosModules.sops
-          inputs.home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
-              backupFileExtension = "nixbak";
-            };
-          }
-        ];
+      nixosConfigurations = {
+        badger = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            inputs.disko.nixosModules.disko
+            ./hosts/badger/configuration.nix
+            ./hosts/badger/hardware-configuration.nix
+            inputs.sops-nix.nixosModules.sops
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                backupFileExtension = "nixbak";
+              };
+            }
+          ];
+        };
+        heisenberg = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            {
+              nixpkgs.overlays = [
+                (import ./overlays/prometheus-restic-exporter.nix)
+              ];
+            }
+            inputs.disko.nixosModules.disko
+            ./hosts/heisenberg/configuration.nix
+            inputs.nixos-facter-modules.nixosModules.facter
+            {
+              config.facter.reportPath =
+                if builtins.pathExists ./hosts/heisenberg/facter.json then
+                  ./hosts/heisenberg/facter.json
+                else
+                  throw "Have you forgotten to run nixos-anywhere with `--generate-hardware-config nixos-facter ./facter.json`?";
+            }
+            inputs.sops-nix.nixosModules.sops
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                backupFileExtension = "nixbak";
+              };
+            }
+          ];
+        };
       };
       deploy.nodes.heisenberg = {
         hostname = "heisenberg";

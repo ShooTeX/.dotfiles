@@ -11,3 +11,8 @@ creation_rules:
           - *yk_1
           - *yk_2
           - *heisenberg
+  - path_regex: hosts/badger/secrets/.*.enc
+    key_groups:
+      - age:
+          - *yk_1
+          - *yk_2
