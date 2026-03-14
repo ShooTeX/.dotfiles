@@ -9,15 +9,17 @@
 
   imports = [
     inputs.walker.homeManagerModules.default
+    inputs.zen-browser.homeModules.default
     ../../common/home
     ./hyprland.nix
     ./waybar.nix
+    ./browser.nix
   ];
 
   home.packages = with pkgs; [
     gcc
     _1password-gui
-    pwvucontrol
+    playerctl
   ];
 
   programs = {
@@ -54,14 +56,11 @@
       enableNushellIntegration = true;
     };
 
-    firefox = {
-      enable = true;
-    };
-
     ghostty = {
       settings = {
-        font-size = 18;
+        font-size = 14;
         font-thicken = false;
+        font-family = "Iosevka Comfy Fixed";
       };
     };
 

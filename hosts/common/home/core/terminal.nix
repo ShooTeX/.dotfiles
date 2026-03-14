@@ -20,7 +20,7 @@
     settings = {
       theme = "Kanagawa Dragon";
 
-      font-family = "Terminus (TTF)";
+      font-family = "Iosevka Comfy Fixed";
       font-size = 20;
       font-thicken = true;
 
