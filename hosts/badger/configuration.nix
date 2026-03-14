@@ -19,22 +19,40 @@
     efi.canTouchEfiVariables = true;
   };
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    open = false;
-    nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware = {
+    nvidia = {
+      modesetting.enable = true;
+      open = false;
+      nvidiaSettings = true;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+    };
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    steam-hardware.enable = true;
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
   };
-  services.xserver.videoDrivers = [ "nvidia" ];
-  hardware.graphics.enable = true;
+  services = {
+    xserver.videoDrivers = [ "nvidia" ];
+    pipewire.enable = true;
+    displayManager.ly.enable = true;
+  };
+
+  programs = {
+    hyprland.enable = true;
+    nix-ld.enable = true;
+    dconf.enable = true;
+    steam.enable = true;
+    gamemode.enable = true;
+    gamescope.enable = true;
+  };
 
   time.timeZone = "Europe/Berlin";
-
   i18n.defaultLocale = "en_US.UTF-8";
-
-  services.pipewire.enable = true;
-
-  programs.dconf.enable = true;
 
   nix = {
     optimise.automatic = true;
@@ -52,8 +70,6 @@
     };
   };
 
-  programs.hyprland.enable = true;
-
   home-manager.users.stx.imports = [ ./home ];
 
   environment.systemPackages = map lib.lowPrio [
@@ -65,5 +81,4 @@
 
   system.stateVersion = "24.05";
 
-  services.displayManager.ly.enable = true;
 }
