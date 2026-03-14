@@ -9,7 +9,6 @@
     ./disk-config.nix
     ./users.nix
     ./sops.nix
-    ./services
   ];
 
   boot.loader = {
