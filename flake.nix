@@ -80,6 +80,9 @@
         badger = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            {
+              nixpkgs.config.allowUnfree = true;
+            }
             inputs.disko.nixosModules.disko
             ./hosts/badger/configuration.nix
             ./hosts/badger/hardware-configuration.nix

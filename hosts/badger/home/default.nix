@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   home.stateVersion = "24.05";
 
-  imports = [ ../../common/home/core/shell/starship.nix ];
+  imports = [ ../../common/home ];
 
   programs = {
     nushell = {
@@ -10,6 +10,10 @@
       plugins = [
         pkgs.nushellPlugins.formats
       ];
+    };
+
+    zsh = {
+      enable = lib.mkForce false;
     };
 
     starship.enableNushellIntegration = true;

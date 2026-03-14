@@ -1,4 +1,4 @@
-{ lib, pkgs }:
+{ lib, pkgs, ... }:
 {
   environment.etc."sops-key.txt" = {
     text = ''
@@ -11,6 +11,8 @@
     pkgs.age
     pkgs.sops
   ];
+
+  services.pcscd.enable = true;
 
   sops = {
     age = {

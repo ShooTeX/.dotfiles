@@ -7,8 +7,11 @@
 {
   imports = [
     ./disk-config.nix
+    ./hardware-configuration.nix
     ./users.nix
     ./sops.nix
+
+    ../common/core/fonts.nix
   ];
 
   boot.loader = {
@@ -61,4 +64,6 @@
   networking.hostName = "badger";
 
   system.stateVersion = "24.05";
+
+  services.displayManager.ly.enable = true;
 }
