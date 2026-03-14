@@ -3,7 +3,7 @@
   disko.devices = {
     disk = {
       system = {
-        device = lib.mkDefault "/dev/disk/by-id/nvme-WD_BLACK_SN850X_1000GB_25362Q400052";
+        device = lib.mkDefault "/dev/disk/by-id/nvme-CT1000P1SSD8_20452B5E6B16";
         type = "disk";
         content = {
           type = "gpt";
