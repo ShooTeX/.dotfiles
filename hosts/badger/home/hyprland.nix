@@ -69,4 +69,20 @@
     name = "Bibata-Modern-Classic";
     size = 24;
   };
+
+  services.hyprpaper =
+    let
+      wallpaper = ../../common/wallpapers/kanagawa.jpg;
+    in
+    {
+      enable = true;
+      settings = {
+        ipc = "on";
+        splash = false;
+        wallpaper = {
+          monitor = "";
+          path = "${wallpaper}";
+        };
+      };
+    };
 }
