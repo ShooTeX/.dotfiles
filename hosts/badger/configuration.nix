@@ -24,7 +24,7 @@
       modesetting.enable = true;
       open = false;
       nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
     };
     graphics = {
       enable = true;
@@ -76,11 +76,6 @@
     pkgs.curl
     pkgs.gitMinimal
   ];
-
-  environment.sessionVariables = {
-    PROTON_ENABLE_NVAPI = "1";
-    __GL_THREADED_OPTIMIZATIONS = "1";
-  };
 
   networking.hostName = "badger";
 
