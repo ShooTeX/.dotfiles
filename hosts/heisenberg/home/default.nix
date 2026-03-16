@@ -4,6 +4,10 @@
 
   imports = [ ../../common/home/core/shell/starship.nix ];
 
+  home.packages = with pkgs; [
+    bottom
+  ];
+
   programs = {
     nushell = {
       enable = true;

@@ -79,4 +79,6 @@
       fileSystems = [ "/mnt/storage" ];
     };
   };
+
+  zramSwap.enable = true;
 }
