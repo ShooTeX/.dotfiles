@@ -5,10 +5,6 @@
       enable = true;
 
       mediaLocation = "/mnt/storage/immich";
-
-      database = {
-        enableVectors = false;
-      };
     };
 
     restic.backups.storagebox.paths = [

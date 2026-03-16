@@ -15,14 +15,15 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-darwin.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     darwin = {
       url = "github:LnL7/nix-darwin";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-darwin";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -81,7 +82,12 @@
           system = "aarch64-darwin";
           modules = [
             {
-              nixpkgs.config.allowUnfree = true;
+              nixpkgs = {
+                pkgs = import inputs.nixpkgs-darwin {
+                  system = "aarch64-darwin";
+                  config.allowUnfree = true;
+                };
+              };
             }
             inputs.sops-nix.darwinModules.sops
             inputs.home-manager.darwinModules.home-manager
@@ -160,7 +166,6 @@
       };
       deploy.nodes.heisenberg = {
         hostname = "heisenberg";
-        remoteBuild = true;
         profiles.system = {
           user = "root";
           path = inputs.deploy-rs.lib.x86_64-linux.activate.nixos inputs.self.nixosConfigurations.heisenberg;

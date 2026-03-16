@@ -64,10 +64,6 @@
       };
     };
 
-    walker = {
-      enable = true;
-      runAsService = true;
-    };
-
+    mangohud.enable = true;
   };
 }

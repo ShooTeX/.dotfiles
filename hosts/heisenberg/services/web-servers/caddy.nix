@@ -37,7 +37,7 @@
         "github.com/caddy-dns/cloudflare@v0.2.2"
         "github.com/ueffel/caddy-brotli@v1.6.0"
       ];
-      hash = "sha256-ubDUvDCjYZ5uoTsSpM5R2EF2qP2HeKVvPJVt1aF8IzQ=";
+      hash = "sha256-9dVmVsqlzWz5nhe3thdYJBrsL855cP+yjgZ67Bxv16o=";
     };
   };
 
