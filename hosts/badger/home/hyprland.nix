@@ -20,6 +20,10 @@
         "col.inactive_border" = "rgba(2D4F67ff)";
         border_size = 2;
       };
+      input = {
+        accel_profile = "flat";
+        sensitivity = 0;
+      };
       monitor = [ "DP-2,2560x1440@360,0x0,1" ];
       "$mod" = "SUPER";
       "$terminal" = "ghostty";

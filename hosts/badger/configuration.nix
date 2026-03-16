@@ -77,6 +77,11 @@
     pkgs.gitMinimal
   ];
 
+  environment.sessionVariables = {
+    PROTON_ENABLE_NVAPI = "1";
+    __GL_THREADED_OPTIMIZATIONS = "1";
+  };
+
   networking.hostName = "badger";
 
   system.stateVersion = "24.05";
