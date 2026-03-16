@@ -64,6 +64,12 @@
       };
     };
 
-    mangohud.enable = true;
+    mangohud = {
+      enable = true;
+      enableSessionWide = true;
+      settings = {
+        output_folder = "~/mangohud";
+      };
+    };
   };
 }
