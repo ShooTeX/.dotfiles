@@ -1,4 +1,9 @@
-{ inputs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   home.sessionVariables = {
@@ -15,13 +20,13 @@
     #   enable = true;
     # };
 
-    # package = null; # this is darwin specific
+    package = lib.mkIf pkgs.stdenv.isDarwin null;
 
     settings = {
       theme = "Kanagawa Dragon";
 
       font-family = "Iosevka Comfy Fixed";
-      font-size = 20;
+      font-size = 16;
       font-thicken = true;
 
       macos-titlebar-style = "hidden";
