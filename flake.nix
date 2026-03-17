@@ -3,14 +3,18 @@
 
   nixConfig = {
     extra-substituters = [
+      "https://attic.xuyh0120.win/lantian"
+      "https://cache.garnix.io"
       "https://nix-community.cachix.org"
-      "https://walker.cachix.org"
       "https://walker-git.cachix.org"
+      "https://walker.cachix.org"
     ];
     extra-trusted-public-keys = [
+      "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
+      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "walker.cachix.org-1:fG8q+uAaMqhsMxWjwvk0IMb4mFPFLqHjuvfwQxE4oJM="
       "walker-git.cachix.org-1:vmC0ocfPWh0S/vRAQGtChuiZBTAe4wiKDeyyXM0/7pM="
+      "walker.cachix.org-1:fG8q+uAaMqhsMxWjwvk0IMb4mFPFLqHjuvfwQxE4oJM="
     ];
   };
 
@@ -28,6 +32,9 @@
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nix-cachyos-kernel = {
+      url = "github:xddxdd/nix-cachyos-kernel/release";
     };
     disko = {
       url = "github:nix-community/disko";
@@ -116,7 +123,10 @@
           modules = [
             {
               nixpkgs.config.allowUnfree = true;
-              nixpkgs.overlays = [ inputs.nur.overlays.default ];
+              nixpkgs.overlays = [
+                inputs.nur.overlays.default
+                inputs.nix-cachyos-kernel.overlays.default
+              ];
             }
             inputs.disko.nixosModules.disko
             ./hosts/badger/configuration.nix
