@@ -89,6 +89,7 @@
           system = "aarch64-darwin";
           modules = [
             ./modules/core
+            ./modules/macos
             {
               nixpkgs = {
                 pkgs = import inputs.nixpkgs-darwin {
