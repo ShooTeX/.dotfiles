@@ -1,4 +1,3 @@
-{ lib, ... }:
 {
   system.primaryUser = "stx";
   users.users.stx.home = "/Users/stx";
@@ -16,5 +15,5 @@
     "granola"
     "bruno"
   ];
-  ids.gids.nixbld = lib.mkForce 350;
+  ids.gids.nixbld = 350;
 }
