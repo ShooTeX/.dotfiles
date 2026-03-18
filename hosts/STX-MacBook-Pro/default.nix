@@ -1,10 +1,16 @@
 {
-  imports = [
-    ../common/darwin
-    ./darwin
+  users.users.stx.home = "/Users/stx";
+
+  homebrew.casks = [
+    "google-chrome"
+    "discord"
+    "figma"
+    "parsec"
+    "teamspeak-client"
+    "orcaslicer"
   ];
 
-  users.users.stx.home = "/Users/stx";
+  system.primaryUser = "stx";
 
   home-manager.users.stx.imports = [ ../common/home ];
 }

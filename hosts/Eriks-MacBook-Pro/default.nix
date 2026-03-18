@@ -1,14 +1,20 @@
 { lib, ... }:
 {
-  imports = [
-    ../common/darwin
-    ./darwin
-  ];
-
+  system.primaryUser = "stx";
   users.users.stx.home = "/Users/stx";
   home-manager.users.stx.imports = [
     ../common/home
-    ./home
+    ./home.nix
+  ];
+  homebrew.casks = [
+    "asana"
+    "discord"
+    "google-chrome"
+    "kap"
+    "slack"
+    "tuple"
+    "granola"
+    "bruno"
   ];
   ids.gids.nixbld = lib.mkForce 350;
 }
