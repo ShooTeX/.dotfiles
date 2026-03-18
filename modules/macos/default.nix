@@ -8,9 +8,10 @@ let
 in
 {
   imports = [
-    ./aerospace.nix
-    ./jankyborders.nix
-    ./netbird.nix
+    ./services
+
+    ./system.nix
+    ./homebrew.nix
   ];
 
   options.lab.macos = {
@@ -21,6 +22,9 @@ in
 
   config = lib.mkIf cfg.enable {
     lab = {
+      macosSystemConfig.enable = true;
+      homebrew.enable = true;
+
       aerospace.enable = true;
       jankyborders.enable = true;
       netbird.enable = true;
