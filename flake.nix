@@ -88,6 +88,7 @@
         inputs.darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
+            ./modules/core
             {
               nixpkgs = {
                 pkgs = import inputs.nixpkgs-darwin {
@@ -121,6 +122,7 @@
         badger = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            ./modules/core
             {
               nixpkgs.config.allowUnfree = true;
               nixpkgs.overlays = [
@@ -146,6 +148,7 @@
         heisenberg = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            ./modules/common
             {
               nixpkgs.overlays = [
                 (import ./overlays/prometheus-restic-exporter.nix)
