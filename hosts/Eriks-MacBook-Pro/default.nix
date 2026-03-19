@@ -16,4 +16,8 @@
     "bruno"
   ];
   ids.gids.nixbld = 350;
+
+  lab = {
+    sops.usingSecurityKey = true;
+  };
 }
