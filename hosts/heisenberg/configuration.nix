@@ -28,22 +28,6 @@
     efiInstallAsRemovable = true;
   };
 
-  nix = {
-    optimise.automatic = true;
-    settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      auto-optimise-store = true;
-      trusted-users = [
-        "root"
-        "@wheel"
-        "stx"
-      ];
-    };
-  };
-
   home-manager.users.stx.imports = [ ./home ];
 
   environment.systemPackages = map lib.lowPrio [

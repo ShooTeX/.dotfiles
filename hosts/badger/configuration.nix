@@ -58,22 +58,6 @@
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  nix = {
-    optimise.automatic = true;
-    settings = {
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      auto-optimise-store = true;
-      trusted-users = [
-        "root"
-        "@wheel"
-        "stx"
-      ];
-    };
-  };
-
   home-manager.users.stx.imports = [ ./home ];
 
   environment.systemPackages = map lib.lowPrio [
