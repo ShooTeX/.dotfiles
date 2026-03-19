@@ -9,9 +9,6 @@
     ./disk-config.nix
     ./hardware-configuration.nix
     ./users.nix
-    ./sops.nix
-
-    ../common/core/fonts.nix
   ];
 
   boot = {

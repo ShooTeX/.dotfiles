@@ -149,7 +149,7 @@
         heisenberg = inputs.nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./modules/common
+            ./modules/core
             {
               nixpkgs.overlays = [
                 (import ./overlays/prometheus-restic-exporter.nix)

@@ -1,3 +1,7 @@
+{ config, lib, ... }:
+let
+  cfg = config.lab.core;
+in
 {
   imports = [
     ./fonts.nix
@@ -5,9 +9,15 @@
     ./sops.nix
   ];
 
-  lab = {
-    sops.enable = true;
-    fonts.enable = true;
-    nix.enable = true;
+  options.lab.core = {
+    isHeadless = lib.mkEnableOption "headless mode (disables DE-specific config)";
+  };
+
+  config = {
+    lab = {
+      sops.enable = true;
+      fonts.enable = !cfg.isHeadless;
+      nix.enable = true;
+    };
   };
 }

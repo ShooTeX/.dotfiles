@@ -10,9 +10,16 @@
     (modulesPath + "/profiles/qemu-guest.nix")
     ./disk-config.nix
     ./users.nix
-    ./sops.nix
     ./services
   ];
+
+  lab = {
+    core = {
+      isHeadless = true;
+    };
+
+    sops.defaultSopsFile = ./secrets/main.enc.yaml;
+  };
 
   boot.loader.grub = {
     # no need to set devices, disko will add all devices that have a EF02 partition to the list already
