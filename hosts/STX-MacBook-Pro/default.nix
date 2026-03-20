@@ -15,11 +15,7 @@
   home-manager.users.stx.imports = [
     ../../modules/home
     ../common/home
+    ./home.nix
   ];
 
-  lab = {
-    multiplexer.zellij = true;
-    sops.usingSecurityKey = true;
-    terminal.enable = true;
-  };
 }

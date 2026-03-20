@@ -22,7 +22,10 @@
     playerctl
   ];
 
-  lab.terminal.enable = true;
+  lab = {
+    terminal.enable = true;
+    dev.enable = true;
+  };
 
   programs = {
     ghostty = {

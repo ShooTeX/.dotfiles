@@ -1,5 +1,6 @@
 {
   imports = [
+    ./dev
     ./multiplexer
     ./shell
     ./terminals

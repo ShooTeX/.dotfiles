@@ -9,6 +9,7 @@
   services.ollama.enable = true;
 
   lab = {
+    dev.enable = true;
     multiplexer.zellij.enable = true;
     terminal.enable = true;
   };
