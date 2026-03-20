@@ -5,4 +5,6 @@
   ];
 
   home.stateVersion = "22.05";
+
+  services.ollama.enable = true;
 }
