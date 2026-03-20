@@ -18,11 +18,13 @@ in
       bat
       bottom
       dust
+      fd
       hyperfine
       jq
       pgcli
       ripgrep
       sd
+      sops
     ];
   };
 }

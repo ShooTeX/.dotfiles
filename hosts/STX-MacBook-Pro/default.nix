@@ -18,7 +18,8 @@
   ];
 
   lab = {
-    sops.usingSecurityKey = true;
     multiplexer.zellij = true;
+    sops.usingSecurityKey = true;
+    terminal.enable = true;
   };
 }

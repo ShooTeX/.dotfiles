@@ -22,6 +22,8 @@
     playerctl
   ];
 
+  lab.terminal.enable = true;
+
   programs = {
     ghostty = {
       settings = {

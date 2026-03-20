@@ -2,13 +2,16 @@
   imports = [
     ./multiplexer
     ./shell
+    ./terminals
 
     ./cli-goodies.nix
+    ./git.nix
   ];
 
   lab = {
     cli-goodies.enable = true;
     shell.enable = true;
+    git.enable = true;
   };
 
   programs = {

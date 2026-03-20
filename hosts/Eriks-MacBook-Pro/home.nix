@@ -10,5 +10,6 @@
 
   lab = {
     multiplexer.zellij.enable = true;
+    terminal.enable = true;
   };
 }
