@@ -1,6 +1,5 @@
 {
   pkgs,
-  lib,
   inputs,
   ...
 }:
@@ -24,39 +23,6 @@
   ];
 
   programs = {
-    nushell = {
-      enable = true;
-      plugins = [
-        pkgs.nushellPlugins.formats
-      ];
-    };
-
-    zsh = {
-      enable = lib.mkForce false;
-    };
-
-    starship.enableNushellIntegration = true;
-
-    carapace = {
-      enable = true;
-      enableNushellIntegration = true;
-    };
-
-    fzf = {
-      enable = true;
-      enableBashIntegration = true;
-    };
-
-    atuin = {
-      enable = true;
-      enableNushellIntegration = true;
-    };
-
-    zoxide = {
-      enable = true;
-      enableNushellIntegration = true;
-    };
-
     ghostty = {
       settings = {
         font-size = 14;

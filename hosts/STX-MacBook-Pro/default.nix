@@ -19,5 +19,6 @@
 
   lab = {
     sops.usingSecurityKey = true;
+    multiplexer.zellij = true;
   };
 }
