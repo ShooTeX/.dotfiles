@@ -2,6 +2,7 @@
   system.primaryUser = "stx";
   users.users.stx.home = "/Users/stx";
   home-manager.users.stx.imports = [
+    ../../modules/home
     ../common/home
     ./home.nix
   ];

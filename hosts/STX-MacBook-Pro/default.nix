@@ -12,7 +12,10 @@
 
   system.primaryUser = "stx";
 
-  home-manager.users.stx.imports = [ ../common/home ];
+  home-manager.users.stx.imports = [
+    ../../modules/home
+    ../common/home
+  ];
 
   lab = {
     sops.usingSecurityKey = true;

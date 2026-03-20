@@ -8,6 +8,7 @@
   home.stateVersion = "24.05";
 
   imports = [
+    ../../../modules/home
     inputs.walker.homeManagerModules.default
     inputs.zen-browser.homeModules.default
     ../../common/home

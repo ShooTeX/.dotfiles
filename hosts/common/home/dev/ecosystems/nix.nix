@@ -4,5 +4,6 @@
     nixd
     nixfmt
     statix
+    deploy-rs
   ];
 }
