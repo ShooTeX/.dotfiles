@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./opencode
+    ./ecosystems
 
     ./neovim.nix
   ];
@@ -15,6 +16,7 @@ in
 
   config = lib.mkIf cfg.enable {
     lab.dev = {
+      ecosystems.enable = true;
       neovim.enable = true;
       opencode.enable = true;
     };

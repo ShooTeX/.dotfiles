@@ -105,7 +105,7 @@
 
   services.hyprpaper =
     let
-      wallpaper = ../../common/wallpapers/kanagawa.jpg;
+      wallpaper = ../../../wallpapers/kanagawa.jpg;
     in
     {
       enable = true;

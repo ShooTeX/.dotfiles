@@ -28,7 +28,10 @@
     efiInstallAsRemovable = true;
   };
 
-  home-manager.users.stx.imports = [ ./home ];
+  home-manager.users.stx.imports = [
+    ../../modules/home
+    ./home
+  ];
 
   environment.systemPackages = map lib.lowPrio [
     pkgs.curl

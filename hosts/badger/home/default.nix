@@ -10,7 +10,6 @@
     ../../../modules/home
     inputs.walker.homeManagerModules.default
     inputs.zen-browser.homeModules.default
-    ../../common/home
     ./hyprland.nix
     ./waybar.nix
     ./browser.nix

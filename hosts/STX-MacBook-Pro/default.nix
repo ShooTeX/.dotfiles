@@ -14,7 +14,6 @@
 
   home-manager.users.stx.imports = [
     ../../modules/home
-    ../common/home
     ./home.nix
   ];
 
