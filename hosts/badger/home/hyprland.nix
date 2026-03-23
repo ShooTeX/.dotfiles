@@ -16,20 +16,22 @@
         "HYPRCURSOR_SIZE,24"
       ];
       decoration = {
-        rounding = 10;
+        shadow = {
+          enabled = false;
+        };
       };
       general = {
-        "col.active_border" = "rgba(76946Aff)";
-        "col.inactive_border" = "rgba(2D4F67ff)";
-        border_size = 1;
+        "col.active_border" = "rgba(A292A3FF)";
+        "col.inactive_border" = "rgba(00000000)";
+        border_size = 2;
       };
       input = {
         accel_profile = "flat";
         sensitivity = 0;
       };
       monitor = [
-        "DP-1,2560x1440@60,0x0,1"
-        "DP-2,2560x1440@360,2560x0,1,bitdepth,10,cm,auto"
+        "DP-1,2560x1440@60,-2560x0,1"
+        "DP-2,2560x1440@360,0x0,1,bitdepth,10,cm,auto"
       ];
       workspace = [
         "1,monitor:DP-2,default:true"

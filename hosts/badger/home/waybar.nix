@@ -8,7 +8,6 @@
         position = "top";
         height = 30;
         modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "hyprland/window" ];
         modules-right = [
           "network"
           "tray"
@@ -18,10 +17,6 @@
         "hyprland/workspaces" = {
           format = "{id}";
           on-click = "activate";
-        };
-
-        "hyprland/window" = {
-          format = "{}";
         };
 
         "network" = {
@@ -37,40 +32,32 @@
 
     style = ''
       window#waybar {
+         color: #c4b28a;
          background: transparent;
-         color: #C8C093;
+         font-family: "Iosevka Comfy Fixed";
+         font-weight: bold;
        }
        .modules-left, .modules-right, .modules-center {
-         margin: 4px 8px;
+         margin: 10px 20px 0px;
        }
        #workspaces {
-         background: #1F1F28;
-         border-radius: 10px;
-         padding: 0 4px;
+         background: #181616;
        }
        #workspaces button {
-         color: #7FB4CA;
-         padding: 2px 10px;
-         border-radius: 8px;
-         border: none;
+         color: #c4b28a;
          background: transparent;
+         border-radius: 0;
        }
        #workspaces button.active {
-         background: #76946A;
-         color: #1F1F28;
-       }
-       #window {
-         background: #1F1F28;
-         border-radius: 10px;
-         padding: 2px 16px;
+         background: #8ba4b0;
+         color: #181616;
        }
        #network, #clock, #tray {
-         background: #1F1F28;
-         border-radius: 10px;
+         background: #181616;
          padding: 2px 12px;
          margin: 0 2px;
        }
-       #network { color: #7FB4CA; }
+       #network { color: #8ba4b0; }
     '';
   };
 }

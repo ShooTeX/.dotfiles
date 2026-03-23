@@ -50,7 +50,10 @@
     hyprland.enable = true;
     nix-ld.enable = true;
     dconf.enable = true;
-    steam.enable = true;
+    steam = {
+      enable = true;
+      localNetworkGameTransfers.openFirewall = true;
+    };
     gamemode.enable = true;
     gamescope.enable = true;
   };
