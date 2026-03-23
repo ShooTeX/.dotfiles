@@ -26,6 +26,10 @@
     dev.enable = true;
   };
 
+  services = {
+    ollama.enable = true;
+  };
+
   programs = {
     ghostty = {
       settings = {

@@ -125,7 +125,10 @@
           modules = [
             ./modules/core
             {
-              nixpkgs.config.allowUnfree = true;
+              nixpkgs.config = {
+                allowUnfree = true;
+                cudaSupport = true;
+              };
               nixpkgs.overlays = [
                 inputs.nur.overlays.default
                 inputs.nix-cachyos-kernel.overlays.default
