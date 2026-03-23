@@ -39,7 +39,7 @@ in
           cd = "z";
         };
 
-        initContent = lib.mkIf (pkgs.stdenv.isDarwin && config.lab.homebrew.enable) ''
+        initContent = lib.mkIf pkgs.stdenv.isDarwin ''
           export LIBRARY_PATH=$LIBRARY_PATH:${pkgs.libiconv}/lib
           if [[ $(uname -m) == 'arm64' ]]; then
               eval "$(/opt/homebrew/bin/brew shellenv)"

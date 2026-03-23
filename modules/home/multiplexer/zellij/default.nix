@@ -21,6 +21,7 @@ in
     programs.zellij = {
       enable = true;
       exitShellOnExit = true;
+      enableZshIntegration = config.lab.shell.defaultShell == "zsh";
 
       settings = {
         theme = "kanagawa";

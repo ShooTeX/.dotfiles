@@ -30,10 +30,13 @@ in
 
       package = lib.mkIf pkgs.stdenv.isDarwin null; # Currently broken on macos, installed via homebrew
 
-      installVimSyntax = true;
-      systemd.enable = lib.mkIf pkgs.stdenv.isDarwin null;
+      installVimSyntax = lib.mkIf (!pkgs.stdenv.isDarwin) true;
+      systemd.enable = lib.mkIf (!pkgs.stdenv.isDarwin) true;
 
       settings = {
+        command = lib.mkIf (
+          config.lab.shell.defaultShell == "nushell" && pkgs.stdenv.isDarwin
+        ) "${pkgs.nushell}/bin/nu";
         theme = lib.mkDefault "Kanagawa Dragon";
 
         font-family = lib.mkDefault "Iosevka Comfy Fixed";
