@@ -19,6 +19,7 @@
     gcc
     _1password-gui
     playerctl
+    teamspeak6-client
   ];
 
   lab = {
