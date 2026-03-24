@@ -277,51 +277,51 @@
                 }
               ];
             }
-            {
-              uid = "storagebox-disk-usage";
-              title = "Storagebox disk usage above 70%";
-              condition = "A";
-              for = "5m";
-              noDataState = "Alerting";
-              execErrState = "Alerting";
-              annotations = {
-                summary = "Storagebox disk usage is above 70%";
-              };
-              data = [
-                {
-                  refId = "B";
-                  relativeTimeRange = {
-                    from = 300;
-                    to = 0;
-                  };
-                  datasourceUid = "P4169E866C3094E38";
-                  model = {
-                    expr = "storagebox_disk_usage / storagebox_disk_quota";
-                    refId = "B";
-                    instant = true;
-                  };
-                }
-                {
-                  refId = "C";
-                  datasourceUid = "-100";
-                  model = {
-                    type = "reduce";
-                    expression = "B";
-                    reducer = "last";
-                    refId = "C";
-                  };
-                }
-                {
-                  refId = "A";
-                  datasourceUid = "-100";
-                  model = {
-                    type = "math";
-                    expression = "$C > 0.7";
-                    refId = "A";
-                  };
-                }
-              ];
-            }
+            # {
+            #   uid = "storagebox-disk-usage";
+            #   title = "Storagebox disk usage above 70%";
+            #   condition = "A";
+            #   for = "5m";
+            #   noDataState = "Alerting";
+            #   execErrState = "Alerting";
+            #   annotations = {
+            #     summary = "Storagebox disk usage is above 70%";
+            #   };
+            #   data = [
+            #     {
+            #       refId = "B";
+            #       relativeTimeRange = {
+            #         from = 300;
+            #         to = 0;
+            #       };
+            #       datasourceUid = "P4169E866C3094E38";
+            #       model = {
+            #         expr = "storagebox_disk_usage / storagebox_disk_quota";
+            #         refId = "B";
+            #         instant = true;
+            #       };
+            #     }
+            #     {
+            #       refId = "C";
+            #       datasourceUid = "-100";
+            #       model = {
+            #         type = "reduce";
+            #         expression = "B";
+            #         reducer = "last";
+            #         refId = "C";
+            #       };
+            #     }
+            #     {
+            #       refId = "A";
+            #       datasourceUid = "-100";
+            #       model = {
+            #         type = "math";
+            #         expression = "$C > 0.7";
+            #         refId = "A";
+            #       };
+            #     }
+            #   ];
+            # }
           ];
         }
       ];

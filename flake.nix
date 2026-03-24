@@ -155,6 +155,7 @@
             ./modules/core
             {
               nixpkgs.overlays = [
+                (import ./overlays/netbird.nix)
                 (import ./overlays/prometheus-restic-exporter.nix)
               ];
             }
