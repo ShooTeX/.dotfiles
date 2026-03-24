@@ -24,11 +24,8 @@
 
     profiles.default = {
       settings = {
-        "zen.workspaces.continue-where-left-off" = true;
+        "zen.workspaces.continue-where-left-off" = false;
         "zen.workspaces.natural-scroll" = true;
-        "zen.view.compact.hide-tabbar" = true;
-        "zen.view.compact.hide-toolbar" = true;
-        "zen.view.compact.animate-sidebar" = false;
         "zen.welcome-screen.seen" = true;
         "zen.urlbar.behavior" = "float";
         "zen.view.window.scheme" = 0;
@@ -48,15 +45,27 @@
         "cb15abdb-0514-4e09-8ce5-722cf1f4a20f" # Hide Extension Name
         "803c7895-b39b-458e-84f8-a521f4d7a064" # Hide Inactive Workspaces
         "4ab93b88-151c-451b-a1b7-a1e0e28fa7f8" # No Sidebar Scrollbar
-        "e122b5d9-d385-4bf8-9971-e137809097d0" # No Top Sites
-        "c8d9e6e6-e702-4e15-8972-3596e57cf398" # Zen Back Forward
       ];
       containersForce = true;
+      containers = {
+        Personal = {
+          color = "red";
+          icon = "fingerprint";
+          id = 1;
+        };
+        Work = {
+          color = "red";
+          icon = "briefcase";
+          id = 2;
+        };
+      };
       spacesForce = true;
       spaces = {
         Main = {
-          id = "b23180fc-ac16-4ab6-afa1-1f878327b3b8";
+          id = "3fe4c481-0a22-48d4-b945-e22f2af0124e";
+          icon = "🔥";
           position = 1000;
+          container = 1;
           theme.colors = [
             {
               type = "explicit-lightness";
@@ -67,23 +76,38 @@
             }
           ];
         };
+        Work = {
+          id = "1356a16e-09c0-4c6f-8edb-9690a2240f60";
+          icon = "🧑‍💻";
+          position = 2000;
+          container = 2;
+          theme.colors = [
+            {
+              red = 120;
+              green = 93;
+              blue = 56;
+              lightness = 100;
+            }
+          ];
+        };
       };
       pinsForce = true;
       pins = {
         "apple music" = {
-          id = "8653a1ab-fc32-47f4-b95e-1decdb7b6104";
+          id = "f376b41a-c12e-4335-8950-63de03f76ee4";
+          container = 1;
           isEssential = true;
           position = 101;
-          url = "https://music.apple.com";
+          url = "https://music.apple.com/de/home";
         };
         youtube = {
-          id = "796ba193-8b92-47f2-b388-c0d0d2591f8a";
+          id = "7a3abd7c-2e46-4174-a775-c085911fe3c0";
           isEssential = true;
           position = 102;
           url = "https://youtube.com";
         };
         twitch = {
-          id = "0383d5f3-6e09-4816-b9ed-e931380021cc";
+          id = "40001650-c6cf-4651-8d95-c95dce2e70b0";
           isEssential = true;
           position = 103;
           url = "https://twitch.com";
