@@ -159,6 +159,11 @@
           modules = [
             ./modules/core
             {
+              nixpkgs.config.allowUnfreePredicate =
+                pkg:
+                builtins.elem (inputs.nixpkgs.lib.getName pkg) [
+                  "teamspeak-server"
+                ];
               nixpkgs.overlays = [
                 self.overlays.default
                 (import ./overlays/prometheus-restic-exporter.nix)
