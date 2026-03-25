@@ -25,6 +25,7 @@ in
       ripgrep
       sd
       sops
+      unzip
     ];
   };
 }
