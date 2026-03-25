@@ -81,7 +81,7 @@
   };
 
   outputs =
-    inputs:
+    inputs@{ self, ... }:
     let
       mkDarwinSystem =
         hostname:
@@ -92,6 +92,10 @@
             ./modules/macos
             {
               nixpkgs = {
+                overlays = [
+                  (import ./overlays/direnv.nix)
+                  self.overlays.default
+                ];
                 pkgs = import inputs.nixpkgs-darwin {
                   system = "aarch64-darwin";
                   config.allowUnfree = true;
@@ -130,6 +134,7 @@
                 cudaSupport = true;
               };
               nixpkgs.overlays = [
+                self.overlays.default
                 inputs.nur.overlays.default
                 inputs.nix-cachyos-kernel.overlays.default
               ];
@@ -155,7 +160,7 @@
             ./modules/core
             {
               nixpkgs.overlays = [
-                (import ./overlays/netbird.nix)
+                self.overlays.default
                 (import ./overlays/prometheus-restic-exporter.nix)
               ];
             }
@@ -182,6 +187,7 @@
           ];
         };
       };
+      overlays.default = import ./overlays/netbird.nix;
       deploy.nodes.heisenberg = {
         hostname = "heisenberg";
         profiles.system = {
