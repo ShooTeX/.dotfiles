@@ -30,6 +30,8 @@ in
           ".nvim.lua"
         ];
 
+        signing.format = null;
+
         settings = {
           user = {
             name = "Erik Simon";
