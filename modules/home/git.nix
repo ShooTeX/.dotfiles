@@ -24,6 +24,12 @@ in
       git = {
         enable = true;
 
+        ignores = [
+          "*~"
+          "*.swp"
+          ".nvim.lua"
+        ];
+
         settings = {
           user = {
             name = "Erik Simon";
