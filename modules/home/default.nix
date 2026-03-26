@@ -7,6 +7,7 @@
 
     ./cli-goodies.nix
     ./git.nix
+    ./sops.nix
   ];
 
   lab = {

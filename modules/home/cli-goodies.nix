@@ -24,8 +24,8 @@ in
       pgcli
       ripgrep
       sd
-      sops
       unzip
     ];
+
   };
 }
