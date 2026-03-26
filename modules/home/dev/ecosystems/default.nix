@@ -6,6 +6,7 @@
     ./node.nix
     ./python.nix
     ./rust.nix
+    ./terraform.nix
     ./tex.nix
   ];
 
@@ -21,6 +22,7 @@
           "node"
           "python"
           "rust"
+          "terraform"
           "tex"
         ]
       );

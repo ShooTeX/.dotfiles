@@ -7,7 +7,10 @@
   home.stateVersion = "22.05";
 
   lab = {
-    dev.enable = true;
+    dev = {
+      enable = true;
+      ecosystems.active = [ "terraform" ];
+    };
     multiplexer.zellij.enable = true;
     shell.defaultShell = "zsh";
     terminal.enable = true;
