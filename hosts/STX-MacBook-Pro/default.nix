@@ -12,6 +12,12 @@
 
   system.primaryUser = "stx";
 
+  lab = {
+    sops.usingSecurityKey = true;
+  };
+
+  ids.gids.nixbld = 30000;
+
   home-manager.users.stx.imports = [
     ../../modules/home
     ./home.nix
