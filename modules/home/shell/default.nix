@@ -17,7 +17,7 @@ in
         "nushell"
         "zsh"
       ];
-      default = "nushell";
+      default = "zsh";
       description = "Select the default shell";
     };
   };

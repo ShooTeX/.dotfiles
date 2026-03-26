@@ -12,7 +12,6 @@
       ecosystems.active = [ "terraform" ];
     };
     multiplexer.zellij.enable = true;
-    shell.defaultShell = "zsh";
     terminal.enable = true;
   };
 
