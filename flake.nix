@@ -93,6 +93,7 @@
             {
               nixpkgs = {
                 overlays = [
+                  inputs.nur.overlays.default
                   (import ./overlays/direnv.nix)
                   self.overlays.default
                 ];

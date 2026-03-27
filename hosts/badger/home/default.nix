@@ -9,10 +9,8 @@
   imports = [
     ../../../modules/home
     inputs.walker.homeManagerModules.default
-    inputs.zen-browser.homeModules.default
     ./hyprland.nix
     ./waybar.nix
-    ./browser.nix
   ];
 
   home.packages = with pkgs; [
@@ -23,8 +21,9 @@
   ];
 
   lab = {
-    terminal.enable = true;
+    browser.zen.enable = true;
     dev.enable = true;
+    terminal.enable = true;
   };
 
   services = {

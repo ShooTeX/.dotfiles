@@ -1,5 +1,8 @@
+{ inputs, ... }:
 {
   imports = [
+    inputs.zen-browser.homeModules.default
+    ./browser
     ./dev
     ./multiplexer
     ./shell
