@@ -6,6 +6,7 @@
 {
   home.packages = with pkgs; [
     notion-app
+    awscli2
   ];
 
   home.stateVersion = "22.05";
