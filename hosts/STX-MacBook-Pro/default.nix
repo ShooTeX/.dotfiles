@@ -2,12 +2,13 @@
   users.users.stx.home = "/Users/stx";
 
   homebrew.casks = [
-    "google-chrome"
+    "ableton-live-suite"
     "discord"
     "figma"
+    "google-chrome"
+    "orcaslicer"
     "parsec"
     "teamspeak-client"
-    "orcaslicer"
   ];
 
   system.primaryUser = "stx";
