@@ -5,7 +5,7 @@
       root.hashedPassword = "!";
       stx = {
         isNormalUser = true;
-        shell = pkgs.nushell;
+        shell = pkgs.zsh;
         extraGroups = [
           "wheel"
           "dottex"
@@ -17,6 +17,8 @@
       stx = { };
     };
   };
+
+  programs.zsh.enable = true;
 
   security.sudo.wheelNeedsPassword = false;
   services.openssh.settings.PermitRootLogin = "no";
