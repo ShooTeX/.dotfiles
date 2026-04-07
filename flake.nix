@@ -71,10 +71,6 @@
       url = "github:serokell/deploy-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    opencode = {
-      url = "github:sst/opencode";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs = {
@@ -97,9 +93,6 @@
             {
               nixpkgs = {
                 overlays = [
-                  (final: prev: {
-                    opencode = inputs.opencode.packages.${prev.system}.default;
-                  })
                   inputs.nur.overlays.default
                   (import ./overlays/direnv.nix)
                   self.overlays.default
