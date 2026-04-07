@@ -419,6 +419,26 @@
         "type": "github"
       }
     },
+    "opencode": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1774930076,
+        "narHash": "sha256-N/7wjq0NnZkZzlfNj+3fRiDiybn+Q+yRY85YJgAVW0Y=",
+        "owner": "sst",
+        "repo": "opencode",
+        "rev": "2cc738fb1794470d28b6795f2267b9b756d4be88",
+        "type": "github"
+      },
+      "original": {
+        "owner": "sst",
+        "repo": "opencode",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "darwin": "darwin",
@@ -433,6 +453,7 @@
         "nixpkgs-darwin": "nixpkgs-darwin",
         "nur": "nur",
         "nvim-config": "nvim-config",
+        "opencode": "opencode",
         "sops-nix": "sops-nix",
         "walker": "walker",
         "wezterm-config": "wezterm-config",

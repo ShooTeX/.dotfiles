@@ -23,7 +23,6 @@
     "granola"
     "kap"
     "slack"
-    "tuple"
   ];
   ids.gids.nixbld = 350;
 

@@ -16,6 +16,7 @@ in
 
       settings = {
         theme = "kanagawa";
+        plugin = [ "opencode-anthropic-auth" ];
       };
 
       agents = {
