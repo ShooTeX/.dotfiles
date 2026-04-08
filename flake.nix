@@ -93,6 +93,9 @@
             {
               nixpkgs = {
                 overlays = [
+                  (final: prev: {
+                    bt-cli = final.callPackage ./pkgs/bt-cli { };
+                  })
                   inputs.nur.overlays.default
                   (import ./overlays/direnv.nix)
                   self.overlays.default

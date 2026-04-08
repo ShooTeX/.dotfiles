@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     notion-app
     awscli2
+    bt-cli
   ];
 
   home.stateVersion = "22.05";
