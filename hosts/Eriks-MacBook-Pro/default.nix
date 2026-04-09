@@ -22,6 +22,7 @@
     "google-chrome"
     "granola"
     "kap"
+    "notion-mail"
     "slack"
   ];
   ids.gids.nixbld = 350;
