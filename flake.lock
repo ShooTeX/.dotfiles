@@ -435,6 +435,7 @@
         "nvim-config": "nvim-config",
         "sops-nix": "sops-nix",
         "walker": "walker",
+        "wallpaper": "wallpaper",
         "wezterm-config": "wezterm-config",
         "zen-browser": "zen-browser"
       }
@@ -542,6 +543,18 @@
         "owner": "abenz1267",
         "repo": "walker",
         "type": "github"
+      }
+    },
+    "wallpaper": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-jmUlNp+WBeLpe3g0UIfLbIorZd3100RTCyTKEadEd4E=",
+        "type": "file",
+        "url": "https://i.redd.it/67423vc6tbe71.png"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://i.redd.it/67423vc6tbe71.png"
       }
     },
     "wezterm-config": {

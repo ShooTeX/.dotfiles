@@ -78,6 +78,10 @@
         home-manager.follows = "home-manager";
       };
     };
+    wallpaper = {
+      url = "https://i.redd.it/67423vc6tbe71.png";
+      flake = false;
+    };
   };
 
   outputs =

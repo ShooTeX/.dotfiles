@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
     hyprshutdown
@@ -107,7 +107,7 @@
 
   services.hyprpaper =
     let
-      wallpaper = ../../../wallpapers/kanagawa.jpg;
+      inherit (inputs) wallpaper;
     in
     {
       enable = true;
