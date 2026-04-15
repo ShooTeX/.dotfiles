@@ -21,6 +21,7 @@ in
       };
       casks = lib.optionals cfg.withDefaultCasks [
         "1password"
+        "ausweisapp"
         "orbstack"
         "raycast"
         "whatsapp"

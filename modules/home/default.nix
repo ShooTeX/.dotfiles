@@ -10,13 +10,15 @@
 
     ./cli-goodies.nix
     ./git.nix
+    ./misc.nix
     ./sops.nix
   ];
 
   lab = {
     cli-goodies.enable = true;
-    shell.enable = true;
     git.enable = true;
+    misc.enable = true;
+    shell.enable = true;
   };
 
   programs = {
