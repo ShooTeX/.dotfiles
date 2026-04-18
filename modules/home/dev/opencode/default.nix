@@ -14,8 +14,11 @@ in
 
       enableMcpIntegration = true;
 
-      settings = {
+      tui = {
         theme = "kanagawa";
+      };
+
+      settings = {
         plugin = [ "opencode-anthropic-auth" ];
       };
 

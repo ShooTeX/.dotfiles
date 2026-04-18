@@ -88,10 +88,12 @@
     inputs@{ self, ... }:
     let
       mkDarwinSystem =
-        hostname:
+        hostname: hostPlatform:
         inputs.darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
           modules = [
+            {
+              nixpkgs.hostPlatform = hostPlatform;
+            }
             ./modules/core
             ./modules/macos
             {
@@ -105,7 +107,7 @@
                   self.overlays.default
                 ];
                 pkgs = import inputs.nixpkgs-darwin {
-                  system = "aarch64-darwin";
+                  localSystem = hostPlatform;
                   config.allowUnfree = true;
                 };
               };
@@ -126,17 +128,17 @@
     in
     {
       darwinConfigurations = {
-        STX-MacBook-Pro = mkDarwinSystem "STX-MacBook-Pro";
-        Eriks-MacBook-Pro = mkDarwinSystem "Eriks-MacBook-Pro";
+        STX-MacBook-Pro = mkDarwinSystem "STX-MacBook-Pro" "aarch64-darwin";
+        Eriks-MacBook-Pro = mkDarwinSystem "Eriks-MacBook-Pro" "aarch64-darwin";
       };
       # Slightly experimental: Like generic, but with nixos-facter (https://github.com/numtide/nixos-facter)
       # nixos-anywhere --flake .#heisenberg --generate-hardware-config nixos-facter facter.json <hostname>
       nixosConfigurations = {
         badger = inputs.nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             ./modules/core
             {
+              nixpkgs.hostPlatform = "x86_64-linux";
               nixpkgs.config = {
                 allowUnfree = true;
                 cudaSupport = true;
@@ -163,10 +165,10 @@
           ];
         };
         heisenberg = inputs.nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [
             ./modules/core
             {
+              nixpkgs.hostPlatform = "x86_64-linux";
               nixpkgs.config.allowUnfreePredicate =
                 pkg:
                 builtins.elem (inputs.nixpkgs.lib.getName pkg) [

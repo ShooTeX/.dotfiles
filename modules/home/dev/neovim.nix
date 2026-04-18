@@ -17,11 +17,14 @@ in
     programs.neovim = {
       enable = true;
 
+      defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-      defaultEditor = true;
 
-      package = lib.mkDefault inputs.neovim.packages.${pkgs.system}.default;
+      withPython3 = false;
+      withRuby = false;
+
+      package = lib.mkDefault inputs.neovim.packages.${pkgs.stdenv.hostPlatform.system}.default;
     };
 
     xdg.configFile = {

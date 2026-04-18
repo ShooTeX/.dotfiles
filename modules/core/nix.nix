@@ -20,6 +20,7 @@ in
         trusted-users = [
           "root"
           "@wheel"
+          "stx"
         ];
       };
     };
