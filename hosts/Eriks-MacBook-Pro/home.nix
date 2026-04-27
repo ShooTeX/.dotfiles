@@ -5,9 +5,9 @@
 }:
 {
   home.packages = with pkgs; [
-    notion-app
     awscli2
-    bt-cli
+    notion-app
+    opentelemetry-collector-contrib
   ];
 
   home.stateVersion = "22.05";
