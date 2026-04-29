@@ -4,13 +4,19 @@
   ...
 }:
 {
-  home.packages = with pkgs; [
-    awscli2
-    notion-app
-    opentelemetry-collector-contrib
-  ];
+  home = {
+    stateVersion = "22.05";
 
-  home.stateVersion = "22.05";
+    packages = with pkgs; [
+      awscli2
+      notion-app
+      opentelemetry-collector-contrib
+    ];
+
+    sessionVariables = {
+      AWS_PROFILE = "tenant-falkin-dev-admin";
+    };
+  };
 
   lab = {
     dev = {
