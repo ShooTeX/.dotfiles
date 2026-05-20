@@ -15,9 +15,10 @@ in
 
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
+      forgejo-cli
+      git-crypt
       gitleaks
       mob
-      git-crypt
     ];
 
     programs = {
