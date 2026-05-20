@@ -36,7 +36,7 @@ in
         settings = {
           user = {
             name = "Erik Simon";
-            email = "10850738+ShooTeX@users.noreply.github.com";
+            email = "git@stx.wtf";
           };
           push = {
             autoSetupRemote = true;
