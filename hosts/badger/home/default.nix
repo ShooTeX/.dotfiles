@@ -8,14 +8,14 @@
 
   imports = [
     ../../../modules/home
-    inputs.walker.homeManagerModules.default
     ./hyprland.nix
     ./waybar.nix
   ];
 
   home.packages = with pkgs; [
-    gcc
     _1password-gui
+    gcc
+    parsec-bin
     playerctl
     teamspeak6-client
   ];

@@ -67,14 +67,14 @@
   environment.etc."grafana/dashboards/node-exporter.json" = {
     source = pkgs.fetchurl {
       url = "https://grafana.com/api/dashboards/1860/revisions/42/download";
-      hash = "sha256-pNgn6xgZBEu6LW0lc0cXX2gRkQ8lg/rer34SPE3yEl4=";
+      hash = "sha256-anMG2mM3++IwgYqYhLICHX+GLy0A1HsPjljscaUPt9w=";
     };
   };
 
   environment.etc."grafana/dashboards/alerts.json" = {
     source = pkgs.fetchurl {
       url = "https://grafana.com/api/dashboards/11098/revisions/1/download";
-      hash = "sha256-pNgn6xgZBEu6LW0lc0cXX2gRkQ8lg/rer34SPE3yEl4=";
+      hash = "sha256-anMG2mM3++IwgYqYhLICHX+GLy0A1HsPjljscaUPt9w=";
     };
   };
 

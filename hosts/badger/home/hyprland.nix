@@ -6,6 +6,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    configType = "hyprlang";
 
     settings = {
       "$mod" = "SUPER";
@@ -41,7 +42,7 @@
       ];
       bind = [
         "$mod, Return, exec, $terminal"
-        "$mod, Space, exec, walker"
+        "$mod, Space, exec, rofi -show drun"
 
         "$mod, Q, killactive"
         "$mod SHIFT, E, exec, hyprshutdown"
@@ -121,8 +122,11 @@
       };
     };
 
-  programs.walker = {
+  programs.rofi = {
     enable = true;
-    runAsService = true;
+    extraConfig = {
+      modi = "drun";
+      show-icons = true;
+    };
   };
 }
